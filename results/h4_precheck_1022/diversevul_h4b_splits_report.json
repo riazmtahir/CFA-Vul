@@ -1,0 +1,151 @@
+{
+  "seed": 42,
+  "control_pool": "train_minus_decon",
+  "length_decile_edges_chars": [
+    123.0,
+    194.0,
+    278.0,
+    384.0,
+    521.0,
+    715.0,
+    1015.0,
+    1534.0,
+    2774.0
+  ],
+  "reference_train": 264775,
+  "reference_train_pos": 15145,
+  "removed": 35192,
+  "removed_pos": 1646,
+  "removed_neg": 33546,
+  "removed_pct_of_train": 13.29,
+  "train_after": 229583,
+  "train_pos_after": 13499,
+  "borrowed": 0,
+  "unfilled": 0,
+  "borrowed_pct_of_removal": 0.0,
+  "strata": {
+    "label0_decile0": {
+      "decon": 12008,
+      "control_same_stratum": 12008,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile1": {
+      "decon": 6044,
+      "control_same_stratum": 6044,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile2": {
+      "decon": 3304,
+      "control_same_stratum": 3304,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile3": {
+      "decon": 2088,
+      "control_same_stratum": 2088,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile4": {
+      "decon": 1575,
+      "control_same_stratum": 1575,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile5": {
+      "decon": 1374,
+      "control_same_stratum": 1374,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile6": {
+      "decon": 1311,
+      "control_same_stratum": 1311,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile7": {
+      "decon": 1575,
+      "control_same_stratum": 1575,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile8": {
+      "decon": 1691,
+      "control_same_stratum": 1691,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile9": {
+      "decon": 2576,
+      "control_same_stratum": 2576,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile0": {
+      "decon": 146,
+      "control_same_stratum": 146,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile1": {
+      "decon": 87,
+      "control_same_stratum": 87,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile2": {
+      "decon": 70,
+      "control_same_stratum": 70,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile3": {
+      "decon": 60,
+      "control_same_stratum": 60,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile4": {
+      "decon": 52,
+      "control_same_stratum": 52,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile5": {
+      "decon": 80,
+      "control_same_stratum": 80,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile6": {
+      "decon": 101,
+      "control_same_stratum": 101,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile7": {
+      "decon": 129,
+      "control_same_stratum": 129,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile8": {
+      "decon": 201,
+      "control_same_stratum": 201,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile9": {
+      "decon": 720,
+      "control_same_stratum": 720,
+      "borrowed": 0,
+      "unfilled": 0
+    }
+  },
+  "sizectrl_overlap_with_decon_removal": 0,
+  "ref_splitfile": "/root/autodl-tmp/diversevul_audit_splitfile_commitdisjoint_seed42.json",
+  "train_hits": "/root/autodl-tmp/direct_edges/diversevul_hr_direct_commit_disjoint_train_hits.json"
+}

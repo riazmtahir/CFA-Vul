@@ -1,0 +1,231 @@
+{
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "famfile": "/root/autodl-tmp/diversevul_audit_families_theta0.7.json",
+  "id_field": "idx",
+  "size_distribution": {
+    "n_functions": 330491,
+    "n_functions_without_family": 0,
+    "n_families_total": 259209,
+    "n_families_size_gt1": 37954,
+    "functions_in_families_gt1": 109236,
+    "functions_in_families_gt1_pct": 33.05,
+    "largest_family_size": 353,
+    "largest_family_share_pct": 0.11,
+    "top10_family_sizes": [
+      353,
+      296,
+      242,
+      237,
+      214,
+      205,
+      177,
+      175,
+      147,
+      142
+    ],
+    "size_gt1_median": 2,
+    "size_gt1_p90": 4,
+    "size_gt1_p99": 15,
+    "size_bins": {
+      "1": {
+        "families": 221255,
+        "functions": 221255
+      },
+      "2": {
+        "families": 28696,
+        "functions": 57392
+      },
+      "3-5": {
+        "families": 7316,
+        "functions": 25367
+      },
+      "6-10": {
+        "families": 1282,
+        "functions": 9336
+      },
+      "11-50": {
+        "families": 603,
+        "functions": 11516
+      },
+      "51-200": {
+        "families": 51,
+        "functions": 4078
+      },
+      ">200": {
+        "families": 6,
+        "functions": 1547
+      }
+    }
+  },
+  "label_consistency": {
+    "families_gt1": 37954,
+    "families_pure_negative": 29952,
+    "families_pure_positive": 545,
+    "families_mixed_label": 7457,
+    "families_mixed_label_pct": 19.65,
+    "functions_in_mixed_families": 21043,
+    "functions_in_mixed_families_pct": 6.37,
+    "positives_total": 18945,
+    "positives_in_mixed_families": 8442,
+    "positives_in_mixed_families_pct": 44.56
+  },
+  "cross_project": {
+    "families_gt1": 37954,
+    "cross_project_families": 6064,
+    "cross_project_families_pct": 15.98
+  },
+  "arms": {
+    "published": {
+      "n_test": 33050,
+      "n_test_positive": 1931,
+      "leaked_any": 9787,
+      "leaked_any_pct": 29.61,
+      "leaked_croft_definition": 8673,
+      "leaked_croft_definition_pct": 26.24,
+      "categories": {
+        "clean": {
+          "n": 23263,
+          "pct_of_test": 70.39,
+          "negatives": 22204,
+          "positives": 1059,
+          "pos_rate": 0.0455
+        },
+        "leaked_same": {
+          "n": 7987,
+          "pct_of_test": 24.17,
+          "negatives": 7853,
+          "positives": 134,
+          "pos_rate": 0.0168
+        },
+        "leaked_opposite": {
+          "n": 1114,
+          "pct_of_test": 3.37,
+          "negatives": 506,
+          "positives": 608,
+          "pos_rate": 0.5458
+        },
+        "leaked_both": {
+          "n": 686,
+          "pct_of_test": 2.08,
+          "negatives": 556,
+          "positives": 130,
+          "pos_rate": 0.1895
+        }
+      }
+    },
+    "random_control": {
+      "n_test": 33172,
+      "n_test_positive": 1901,
+      "leaked_any": 9748,
+      "leaked_any_pct": 29.39,
+      "leaked_croft_definition": 8598,
+      "leaked_croft_definition_pct": 25.92,
+      "categories": {
+        "clean": {
+          "n": 23424,
+          "pct_of_test": 70.61,
+          "negatives": 22347,
+          "positives": 1077,
+          "pos_rate": 0.046
+        },
+        "leaked_same": {
+          "n": 7996,
+          "pct_of_test": 24.1,
+          "negatives": 7876,
+          "positives": 120,
+          "pos_rate": 0.015
+        },
+        "leaked_opposite": {
+          "n": 1150,
+          "pct_of_test": 3.47,
+          "negatives": 566,
+          "positives": 584,
+          "pos_rate": 0.5078
+        },
+        "leaked_both": {
+          "n": 602,
+          "pct_of_test": 1.81,
+          "negatives": 482,
+          "positives": 120,
+          "pos_rate": 0.1993
+        }
+      }
+    },
+    "family_disjoint": {
+      "n_test": 33172,
+      "n_test_positive": 1891,
+      "leaked_any": 0,
+      "leaked_any_pct": 0.0,
+      "leaked_croft_definition": 0,
+      "leaked_croft_definition_pct": 0.0,
+      "categories": {
+        "clean": {
+          "n": 33172,
+          "pct_of_test": 100.0,
+          "negatives": 31281,
+          "positives": 1891,
+          "pos_rate": 0.057
+        },
+        "leaked_same": {
+          "n": 0,
+          "pct_of_test": 0.0,
+          "negatives": 0,
+          "positives": 0,
+          "pos_rate": null
+        },
+        "leaked_opposite": {
+          "n": 0,
+          "pct_of_test": 0.0,
+          "negatives": 0,
+          "positives": 0,
+          "pos_rate": null
+        },
+        "leaked_both": {
+          "n": 0,
+          "pct_of_test": 0.0,
+          "negatives": 0,
+          "positives": 0,
+          "pos_rate": null
+        }
+      }
+    },
+    "project_disjoint": {
+      "n_test": 33165,
+      "n_test_positive": 1891,
+      "leaked_any": 1934,
+      "leaked_any_pct": 5.83,
+      "leaked_croft_definition": 1879,
+      "leaked_croft_definition_pct": 5.67,
+      "categories": {
+        "clean": {
+          "n": 31231,
+          "pct_of_test": 94.17,
+          "negatives": 29375,
+          "positives": 1856,
+          "pos_rate": 0.0594
+        },
+        "leaked_same": {
+          "n": 1697,
+          "pct_of_test": 5.12,
+          "negatives": 1692,
+          "positives": 5,
+          "pos_rate": 0.0029
+        },
+        "leaked_opposite": {
+          "n": 55,
+          "pct_of_test": 0.17,
+          "negatives": 28,
+          "positives": 27,
+          "pos_rate": 0.4909
+        },
+        "leaked_both": {
+          "n": 182,
+          "pct_of_test": 0.55,
+          "negatives": 179,
+          "positives": 3,
+          "pos_rate": 0.0165
+        }
+      }
+    }
+  }
+}

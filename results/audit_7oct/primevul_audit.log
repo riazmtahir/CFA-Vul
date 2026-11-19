@@ -1,0 +1,672 @@
+nohup: ignoring input
+############ PrimeVul audit  2026-10-07 18:17:27  code: 924bc5f PrimeVul audit runner and theta 0.8/0.9 sensitivity (CPU) ############
+cpus: 12   memory limit: 92160 MB
+
+############ 1/6  merge PrimeVul splits + check against the paper  18:17:27 ############
+{
+  "output": "/root/autodl-tmp/data/primevul/primevul_all.jsonl",
+  "ids_prefixed_with_split": false,
+  "duplicate_idx_values": 0,
+  "counts": {
+    "train": 184427,
+    "valid": 25430,
+    "test": 25911
+  },
+  "positives": {
+    "train": 5574,
+    "valid": 699,
+    "test": 695
+  },
+  "pos_rate": {
+    "train": 0.0302,
+    "valid": 0.0275,
+    "test": 0.0268
+  },
+  "dropped_empty_func": {},
+  "total": 235768,
+  "total_positive": 6968,
+  "paper_total": 235768,
+  "paper_positive": 6968,
+  "matches_paper": true,
+  "hashes_shared_across_splits": {},
+  "projects": {
+    "train": 633,
+    "valid": 218,
+    "test": 222
+  },
+  "projects_in_train_and_test": 149,
+  "paired": {
+    "train": {
+      "functions": 8708,
+      "vulnerable": 4354,
+      "in_main_split_file": 8708
+    },
+    "valid": {
+      "functions": 1124,
+      "vulnerable": 562,
+      "in_main_split_file": 1124
+    },
+    "test": {
+      "functions": 1128,
+      "vulnerable": 564,
+      "in_main_split_file": 1128
+    }
+  }
+}
+
+############ 2/6  PrimeVul clone-family audit, θ 0.7/0.8/0.9 + 1-NN baseline  18:17:36 ############
+minhash self-test passed (no uint64 overflow)
+Loaded 235768 functions: {'train': 184427, 'valid': 25430, 'test': 25911}
+
+Preprocessing (shared across all theta) ...
+  [1/3] normalising 235768 functions ...
+        20000/235768  (5s)
+        40000/235768  (9s)
+        60000/235768  (11s)
+        80000/235768  (16s)
+        100000/235768  (22s)
+        120000/235768  (25s)
+        140000/235768  (30s)
+        160000/235768  (34s)
+        180000/235768  (39s)
+        200000/235768  (43s)
+        220000/235768  (47s)
+  [2/3] 199610 representatives after Type-1/2 collapse (36158 exact duplicates removed); shingling ...
+        20000/199610  (59s)
+        40000/199610  (66s)
+        60000/199610  (72s)
+        80000/199610  (83s)
+        100000/199610  (91s)
+        120000/199610  (98s)
+        140000/199610  (107s)
+        160000/199610  (115s)
+        180000/199610  (123s)
+  [3/3] shingle store 154 MB, signatures 204 MB (132s total)
+
+=== theta = 0.7 ===
+      band 1/16: 9837 verified pairs (2s)
+      band 2/16: 12239 verified pairs (4s)
+      band 3/16: 13510 verified pairs (6s)
+      band 4/16: 13992 verified pairs (8s)
+      band 5/16: 14392 verified pairs (10s)
+      band 6/16: 14624 verified pairs (12s)
+      band 7/16: 14815 verified pairs (14s)
+      band 8/16: 14926 verified pairs (16s)
+      band 9/16: 15016 verified pairs (18s)
+      band 10/16: 15092 verified pairs (21s)
+      band 11/16: 15143 verified pairs (23s)
+      band 12/16: 15331 verified pairs (25s)
+      band 13/16: 15393 verified pairs (27s)
+      band 14/16: 15534 verified pairs (29s)
+      band 15/16: 15594 verified pairs (32s)
+      band 16/16: 15604 verified pairs (33s)
+  theta: 0.7
+  n_functions: 235768
+  n_test_functions: 25911
+  type12_exact_groups: 20803
+  type12_redundant_functions: 36158
+  type12_redundancy_pct: 15.34
+  n_families_total: 184006
+  n_families_size_gt1: 28331
+  largest_family: 409
+  family_size_head: {1: 155675, 2: 21715, 3: 3233, 4: 1517, 5: 510, 6: 350, 7: 190, 8: 195, 9: 91, 10: 92}
+  families_spanning_multiple_splits: 5575
+  families_spanning_train_and_test: 2464
+  leaked_test_functions: 4069
+  leaked_test_pct: 15.7
+  families_with_contradictory_labels: 2935
+  cross_project_families: 5161
+  verified_clone_pairs: 15604
+  jaccard_computations: 3994664
+  buckets_exhaustive: 176660
+  buckets_pivot_approximated: 141
+  lsh_bands: 16
+  lsh_rows_per_band: 8
+  lsh_scurve_midpoint: 0.707
+  runtime_seconds: 33.9
+  family_disjoint_split: {'train': 187285, 'valid': 23834, 'test': 24649, 'train_pos_rate': 0.0299, 'valid_pos_rate': 0.0291, 'test_pos_rate': 0.0276, 'leaked_test_functions': 0, 'leaked_test_pct': 0.0}
+  random_control_split: {'train': 187285, 'valid': 23834, 'test': 24649, 'train_pos_rate': 0.0296, 'valid_pos_rate': 0.0295, 'test_pos_rate': 0.0296, 'leaked_test_functions': 7408, 'leaked_test_pct': 30.05}
+  knn_retrieval_baseline: {'test_functions': 25911, 'test_with_a_clone_in_train': 10611, 'coverage_pct': 40.95, 'pr_auc': 0.0944, 'positive_rate': 0.0268, 'note': 'approximate 1-NN over LSH co-bucket candidates; similarities are exact Jaccard'}
+
+=== theta = 0.8 ===
+      band 1/16: 8060 verified pairs (2s)
+      band 2/16: 9760 verified pairs (4s)
+      band 3/16: 10461 verified pairs (6s)
+      band 4/16: 10684 verified pairs (8s)
+      band 5/16: 10848 verified pairs (10s)
+      band 6/16: 10932 verified pairs (12s)
+      band 7/16: 10988 verified pairs (14s)
+      band 8/16: 11028 verified pairs (16s)
+      band 9/16: 11046 verified pairs (18s)
+      band 10/16: 11058 verified pairs (20s)
+      band 11/16: 11068 verified pairs (22s)
+      band 12/16: 11190 verified pairs (24s)
+      band 13/16: 11201 verified pairs (27s)
+      band 14/16: 11288 verified pairs (28s)
+      band 15/16: 11297 verified pairs (31s)
+      band 16/16: 11299 verified pairs (33s)
+  theta: 0.8
+  n_functions: 235768
+  n_test_functions: 25911
+  type12_exact_groups: 20803
+  type12_redundant_functions: 36158
+  type12_redundancy_pct: 15.34
+  n_families_total: 188311
+  n_families_size_gt1: 26823
+  largest_family: 409
+  family_size_head: {1: 161488, 2: 20871, 3: 2904, 4: 1393, 5: 455, 6: 309, 7: 179, 8: 165, 9: 73, 10: 78}
+  families_spanning_multiple_splits: 5247
+  families_spanning_train_and_test: 2328
+  leaked_test_functions: 3758
+  leaked_test_pct: 14.5
+  families_with_contradictory_labels: 2578
+  cross_project_families: 4851
+  verified_clone_pairs: 11299
+  jaccard_computations: 4036216
+  buckets_exhaustive: 176660
+  buckets_pivot_approximated: 141
+  lsh_bands: 16
+  lsh_rows_per_band: 8
+  lsh_scurve_midpoint: 0.707
+  runtime_seconds: 33.4
+  family_disjoint_split: {'train': 186791, 'valid': 23527, 'test': 25450, 'train_pos_rate': 0.03, 'valid_pos_rate': 0.0297, 'test_pos_rate': 0.0263, 'leaked_test_functions': 0, 'leaked_test_pct': 0.0}
+  random_control_split: {'train': 186791, 'valid': 23527, 'test': 25450, 'train_pos_rate': 0.0296, 'valid_pos_rate': 0.0295, 'test_pos_rate': 0.0295, 'leaked_test_functions': 7091, 'leaked_test_pct': 27.86}
+  knn_retrieval_baseline: {'test_functions': 25911, 'test_with_a_clone_in_train': 10611, 'coverage_pct': 40.95, 'pr_auc': 0.0944, 'positive_rate': 0.0268, 'note': 'approximate 1-NN over LSH co-bucket candidates; similarities are exact Jaccard'}
+
+=== theta = 0.9 ===
+      band 1/16: 5571 verified pairs (2s)
+      band 2/16: 6350 verified pairs (4s)
+      band 3/16: 6532 verified pairs (6s)
+      band 4/16: 6575 verified pairs (8s)
+      band 5/16: 6599 verified pairs (10s)
+      band 6/16: 6607 verified pairs (12s)
+      band 7/16: 6609 verified pairs (14s)
+      band 8/16: 6615 verified pairs (16s)
+      band 9/16: 6615 verified pairs (18s)
+      band 10/16: 6615 verified pairs (21s)
+      band 11/16: 6615 verified pairs (23s)
+      band 12/16: 6668 verified pairs (25s)
+      band 13/16: 6668 verified pairs (27s)
+      band 14/16: 6701 verified pairs (29s)
+      band 15/16: 6701 verified pairs (32s)
+      band 16/16: 6701 verified pairs (34s)
+  theta: 0.9
+  n_functions: 235768
+  n_test_functions: 25911
+  type12_exact_groups: 20803
+  type12_redundant_functions: 36158
+  type12_redundancy_pct: 15.34
+  n_families_total: 192909
+  n_families_size_gt1: 24719
+  largest_family: 409
+  family_size_head: {1: 168190, 2: 19490, 3: 2522, 4: 1226, 5: 402, 6: 283, 7: 159, 8: 140, 9: 70, 10: 68}
+  families_spanning_multiple_splits: 4766
+  families_spanning_train_and_test: 2097
+  leaked_test_functions: 3378
+  leaked_test_pct: 13.04
+  families_with_contradictory_labels: 2018
+  cross_project_families: 4480
+  verified_clone_pairs: 6701
+  jaccard_computations: 4092637
+  buckets_exhaustive: 176660
+  buckets_pivot_approximated: 141
+  lsh_bands: 16
+  lsh_rows_per_band: 8
+  lsh_scurve_midpoint: 0.707
+  runtime_seconds: 34.4
+  family_disjoint_split: {'train': 190074, 'valid': 22961, 'test': 22733, 'train_pos_rate': 0.0292, 'valid_pos_rate': 0.0307, 'test_pos_rate': 0.0312, 'leaked_test_functions': 0, 'leaked_test_pct': 0.0}
+  random_control_split: {'train': 190074, 'valid': 22961, 'test': 22733, 'train_pos_rate': 0.0296, 'valid_pos_rate': 0.0296, 'test_pos_rate': 0.0295, 'leaked_test_functions': 5797, 'leaked_test_pct': 25.5}
+  knn_retrieval_baseline: {'test_functions': 25911, 'test_with_a_clone_in_train': 10611, 'coverage_pct': 40.95, 'pr_auc': 0.0944, 'positive_rate': 0.0268, 'note': 'approximate 1-NN over LSH co-bucket candidates; similarities are exact Jaccard'}
+
+Wrote /root/autodl-tmp/primevul_audit_report.md / _report.json / _families_*.json / _splitfile_*.json
+
+############ 3/6  PrimeVul family label audit (published / random_control / family_disjoint)  18:22:10 ############
+loaded 235,768 functions; 235,768 family ids; 0 functions without one
+  published        test 25,911  leaked 15.7%  (Croft-def 15.49%)
+  random_control   test 24,649  leaked 30.05%  (Croft-def 28.24%)
+  family_disjoint  test 24,649  leaked 0.0%  (Croft-def 0.0%)
+largest family 409 = 0.17% of corpus; mixed-label families 10.36%; positives in mixed families 47.22%
+wrote /root/autodl-tmp/family_label/primevul_theta0.7.json / .md / _leakcat_*.json
+
+############ 4/6  PrimeVul vulnerable/patch pairs vs families  18:22:14 ############
+# PrimeVul vulnerable/patch pairs -- same clone family?
+
+| split | theta | vulnerable fns with a same-commit patch | patch in same family | % |
+|---|---|---|---|---|
+| train | 0.7 | 4354 | 2046 | 46.99 |
+| train | 0.8 | 4354 | 1777 | 40.81 |
+| train | 0.9 | 4354 | 1345 | 30.89 |
+| valid | 0.7 | 562 | 250 | 44.48 |
+| valid | 0.8 | 562 | 217 | 38.61 |
+| valid | 0.9 | 562 | 171 | 30.43 |
+| test | 0.7 | 564 | 269 | 47.7 |
+| test | 0.8 | 564 | 236 | 41.84 |
+| test | 0.9 | 564 | 184 | 32.62 |
+
+
+############ 5/6  Devign θ 0.8/0.9 sensitivity  18:22:15 ############
+minhash self-test passed (no uint64 overflow)
+Loaded 27318 functions: {'train': 21854, 'valid': 2732, 'test': 2732}
+
+Preprocessing (shared across all theta) ...
+  [1/3] normalising 27318 functions ...
+        20000/27318  (7s)
+  [2/3] 25793 representatives after Type-1/2 collapse (1525 exact duplicates removed); shingling ...
+        20000/25793  (19s)
+  [3/3] shingle store 28 MB, signatures 26 MB (23s total)
+
+=== theta = 0.8 ===
+      band 1/16: 741 verified pairs (0s)
+      band 2/16: 891 verified pairs (1s)
+      band 3/16: 953 verified pairs (1s)
+      band 4/16: 976 verified pairs (1s)
+      band 5/16: 989 verified pairs (2s)
+      band 6/16: 996 verified pairs (2s)
+      band 7/16: 999 verified pairs (3s)
+      band 8/16: 1004 verified pairs (3s)
+      band 9/16: 1005 verified pairs (3s)
+      band 10/16: 1008 verified pairs (4s)
+      band 11/16: 1010 verified pairs (4s)
+      band 12/16: 1017 verified pairs (4s)
+      band 13/16: 1017 verified pairs (5s)
+      band 14/16: 1022 verified pairs (5s)
+      band 15/16: 1023 verified pairs (6s)
+      band 16/16: 1024 verified pairs (6s)
+  theta: 0.8
+  n_functions: 27318
+  n_test_functions: 2732
+  type12_exact_groups: 1043
+  type12_redundant_functions: 1525
+  type12_redundancy_pct: 5.58
+  n_families_total: 24769
+  n_families_size_gt1: 1803
+  largest_family: 22
+  family_size_head: {1: 22966, 2: 1495, 3: 151, 4: 80, 5: 25, 6: 17, 7: 5, 8: 10, 9: 6, 10: 3}
+  families_spanning_multiple_splits: 667
+  families_spanning_train_and_test: 343
+  leaked_test_functions: 368
+  leaked_test_pct: 13.47
+  families_with_contradictory_labels: 846
+  cross_project_families: 8
+  verified_clone_pairs: 1024
+  jaccard_computations: 818994
+  buckets_exhaustive: 19636
+  buckets_pivot_approximated: 3
+  lsh_bands: 16
+  lsh_rows_per_band: 8
+  lsh_scurve_midpoint: 0.707
+  runtime_seconds: 5.9
+  family_disjoint_split: {'train': 21904, 'valid': 2706, 'test': 2708, 'train_pos_rate': 0.4545, 'valid_pos_rate': 0.4627, 'test_pos_rate': 0.4623, 'leaked_test_functions': 0, 'leaked_test_pct': 0.0}
+  random_control_split: {'train': 21904, 'valid': 2706, 'test': 2708, 'train_pos_rate': 0.4561, 'valid_pos_rate': 0.456, 'test_pos_rate': 0.4561, 'leaked_test_functions': 353, 'leaked_test_pct': 13.04}
+
+=== theta = 0.9 ===
+      band 1/16: 482 verified pairs (0s)
+      band 2/16: 545 verified pairs (1s)
+      band 3/16: 556 verified pairs (1s)
+      band 4/16: 557 verified pairs (1s)
+      band 5/16: 559 verified pairs (2s)
+      band 6/16: 559 verified pairs (2s)
+      band 7/16: 559 verified pairs (3s)
+      band 8/16: 559 verified pairs (3s)
+      band 9/16: 559 verified pairs (3s)
+      band 10/16: 559 verified pairs (4s)
+      band 11/16: 559 verified pairs (4s)
+      band 12/16: 562 verified pairs (4s)
+      band 13/16: 562 verified pairs (5s)
+      band 14/16: 564 verified pairs (5s)
+      band 15/16: 564 verified pairs (6s)
+      band 16/16: 564 verified pairs (6s)
+  theta: 0.9
+  n_functions: 27318
+  n_test_functions: 2732
+  type12_exact_groups: 1043
+  type12_redundant_functions: 1525
+  type12_redundancy_pct: 5.58
+  n_families_total: 25229
+  n_families_size_gt1: 1495
+  largest_family: 21
+  family_size_head: {1: 23734, 2: 1236, 3: 125, 4: 74, 5: 24, 6: 10, 7: 4, 8: 9, 9: 4, 10: 2}
+  families_spanning_multiple_splits: 555
+  families_spanning_train_and_test: 278
+  leaked_test_functions: 298
+  leaked_test_pct: 10.91
+  families_with_contradictory_labels: 622
+  cross_project_families: 8
+  verified_clone_pairs: 564
+  jaccard_computations: 823231
+  buckets_exhaustive: 19636
+  buckets_pivot_approximated: 3
+  lsh_bands: 16
+  lsh_rows_per_band: 8
+  lsh_scurve_midpoint: 0.707
+  runtime_seconds: 6.0
+  family_disjoint_split: {'train': 21893, 'valid': 2658, 'test': 2767, 'train_pos_rate': 0.4548, 'valid_pos_rate': 0.4752, 'test_pos_rate': 0.4478, 'leaked_test_functions': 0, 'leaked_test_pct': 0.0}
+  random_control_split: {'train': 21893, 'valid': 2658, 'test': 2767, 'train_pos_rate': 0.4561, 'valid_pos_rate': 0.456, 'test_pos_rate': 0.4561, 'leaked_test_functions': 304, 'leaked_test_pct': 10.99}
+
+Wrote /root/autodl-tmp/theta_sens/devign_audit_report.md / _report.json / _families_*.json / _splitfile_*.json
+
+############ 6/6  DiverseVul θ 0.8/0.9 sensitivity  18:22:50 ############
+minhash self-test passed (no uint64 overflow)
+Loaded 330491 functions: {'train': 264392, 'valid': 33049, 'test': 33050}
+
+Preprocessing (shared across all theta) ...
+  [1/3] normalising 330491 functions ...
+        20000/330491  (4s)
+        40000/330491  (9s)
+        60000/330491  (13s)
+        80000/330491  (17s)
+        100000/330491  (22s)
+        120000/330491  (26s)
+        140000/330491  (30s)
+        160000/330491  (34s)
+        180000/330491  (38s)
+        200000/330491  (42s)
+        220000/330491  (47s)
+        240000/330491  (51s)
+        260000/330491  (55s)
+        280000/330491  (59s)
+        300000/330491  (64s)
+        320000/330491  (68s)
+  [2/3] 287485 representatives after Type-1/2 collapse (43006 exact duplicates removed); shingling ...
+        20000/287485  (78s)
+        40000/287485  (87s)
+        60000/287485  (95s)
+        80000/287485  (103s)
+        100000/287485  (111s)
+        120000/287485  (119s)
+        140000/287485  (127s)
+        160000/287485  (135s)
+        180000/287485  (143s)
+        200000/287485  (151s)
+        220000/287485  (160s)
+        240000/287485  (168s)
+        260000/287485  (176s)
+        280000/287485  (185s)
+  [3/3] shingle store 224 MB, signatures 294 MB (189s total)
+
+=== theta = 0.8 ===
+      band 1/16: 14848 verified pairs (3s)
+      band 2/16: 17988 verified pairs (6s)
+      band 3/16: 19293 verified pairs (9s)
+      band 4/16: 19730 verified pairs (12s)
+      band 5/16: 20046 verified pairs (14s)
+      band 6/16: 20197 verified pairs (17s)
+      band 7/16: 20314 verified pairs (21s)
+      band 8/16: 20379 verified pairs (23s)
+      band 9/16: 20418 verified pairs (27s)
+      band 10/16: 20456 verified pairs (31s)
+      band 11/16: 20473 verified pairs (33s)
+      band 12/16: 20704 verified pairs (35s)
+      band 13/16: 20726 verified pairs (39s)
+      band 14/16: 20905 verified pairs (41s)
+      band 15/16: 20914 verified pairs (46s)
+      band 16/16: 20919 verified pairs (48s)
+  theta: 0.8
+  n_functions: 330491
+  n_test_functions: 33050
+  type12_exact_groups: 22414
+  type12_redundant_functions: 43006
+  type12_redundancy_pct: 13.01
+  n_families_total: 266566
+  n_families_size_gt1: 35017
+  largest_family: 353
+  family_size_head: {1: 231549, 2: 26858, 3: 3978, 4: 1844, 5: 601, 6: 462, 7: 228, 8: 234, 9: 130, 10: 95}
+  families_spanning_multiple_splits: 14029
+  families_spanning_train_and_test: 7369
+  leaked_test_functions: 8797
+  leaked_test_pct: 26.62
+  families_with_contradictory_labels: 6633
+  cross_project_families: 5509
+  verified_clone_pairs: 20919
+  jaccard_computations: 5864718
+  buckets_exhaustive: 291590
+  buckets_pivot_approximated: 163
+  lsh_bands: 16
+  lsh_rows_per_band: 8
+  lsh_scurve_midpoint: 0.707
+  runtime_seconds: 48.6
+  family_disjoint_split: {'train': 264441, 'valid': 33011, 'test': 33039, 'train_pos_rate': 0.0573, 'valid_pos_rate': 0.0574, 'test_pos_rate': 0.0574, 'leaked_test_functions': 0, 'leaked_test_pct': 0.0}
+  random_control_split: {'train': 264441, 'valid': 33011, 'test': 33039, 'train_pos_rate': 0.0573, 'valid_pos_rate': 0.0573, 'test_pos_rate': 0.0573, 'leaked_test_functions': 8767, 'leaked_test_pct': 26.54}
+
+=== theta = 0.9 ===
+      band 1/16: 10454 verified pairs (3s)
+      band 2/16: 11954 verified pairs (6s)
+      band 3/16: 12363 verified pairs (9s)
+      band 4/16: 12464 verified pairs (12s)
+      band 5/16: 12525 verified pairs (14s)
+      band 6/16: 12543 verified pairs (17s)
+      band 7/16: 12555 verified pairs (20s)
+      band 8/16: 12561 verified pairs (23s)
+      band 9/16: 12566 verified pairs (26s)
+      band 10/16: 12569 verified pairs (30s)
+      band 11/16: 12570 verified pairs (33s)
+      band 12/16: 12668 verified pairs (35s)
+      band 13/16: 12668 verified pairs (39s)
+      band 14/16: 12746 verified pairs (41s)
+      band 15/16: 12746 verified pairs (46s)
+      band 16/16: 12748 verified pairs (48s)
+  theta: 0.9
+  n_functions: 330491
+  n_test_functions: 33050
+  type12_exact_groups: 22414
+  type12_redundant_functions: 43006
+  type12_redundancy_pct: 13.01
+  n_families_total: 274737
+  n_families_size_gt1: 30787
+  largest_family: 353
+  family_size_head: {1: 243950, 2: 23780, 3: 3368, 4: 1547, 5: 545, 6: 402, 7: 217, 8: 207, 9: 102, 10: 79}
+  families_spanning_multiple_splits: 12302
+  families_spanning_train_and_test: 6473
+  leaked_test_functions: 7695
+  leaked_test_pct: 23.28
+  families_with_contradictory_labels: 5348
+  cross_project_families: 4789
+  verified_clone_pairs: 12748
+  jaccard_computations: 5953789
+  buckets_exhaustive: 291590
+  buckets_pivot_approximated: 163
+  lsh_bands: 16
+  lsh_rows_per_band: 8
+  lsh_scurve_midpoint: 0.707
+  runtime_seconds: 48.4
+  family_disjoint_split: {'train': 264990, 'valid': 32843, 'test': 32658, 'train_pos_rate': 0.0571, 'valid_pos_rate': 0.0579, 'test_pos_rate': 0.0584, 'leaked_test_functions': 0, 'leaked_test_pct': 0.0}
+  random_control_split: {'train': 264990, 'valid': 32843, 'test': 32658, 'train_pos_rate': 0.0573, 'valid_pos_rate': 0.0573, 'test_pos_rate': 0.0573, 'leaked_test_functions': 7564, 'leaked_test_pct': 23.16}
+
+Wrote /root/autodl-tmp/theta_sens/diversevul_audit_report.md / _report.json / _families_*.json / _splitfile_*.json
+
+############ RESULTS -- send these back  2026-10-07 18:27:51 ############
+{
+  "output": "/root/autodl-tmp/data/primevul/primevul_all.jsonl",
+  "ids_prefixed_with_split": false,
+  "duplicate_idx_values": 0,
+  "counts": {
+    "train": 184427,
+    "valid": 25430,
+    "test": 25911
+  },
+  "positives": {
+    "train": 5574,
+    "valid": 699,
+    "test": 695
+  },
+  "pos_rate": {
+    "train": 0.0302,
+    "valid": 0.0275,
+    "test": 0.0268
+  },
+  "dropped_empty_func": {},
+  "total": 235768,
+  "total_positive": 6968,
+  "paper_total": 235768,
+  "paper_positive": 6968,
+  "matches_paper": true,
+  "hashes_shared_across_splits": {},
+  "projects": {
+    "train": 633,
+    "valid": 218,
+    "test": 222
+  },
+  "projects_in_train_and_test": 149,
+  "paired": {
+    "train": {
+      "functions": 8708,
+      "vulnerable": 4354,
+      "in_main_split_file": 8708
+    },
+    "valid": {
+      "functions": 1124,
+      "vulnerable": 562,
+      "in_main_split_file": 1124
+    },
+    "test": {
+      "functions": 1128,
+      "vulnerable": 564,
+      "in_main_split_file": 1128
+    }
+  }
+}
+# Clone-family contamination audit
+
+Input: {'train': 184427, 'valid': 25430, 'test': 25911}  |  representatives: 199610
+
+| theta | families (>1) | span train+test | leaked test fns | leaked test % | contradictory labels | cross-project fams |
+|---|---|---|---|---|---|---|
+| 0.7 | 28331 | 2464 | 4069 | 15.7 | 2935 | 5161 |
+| 0.8 | 26823 | 2328 | 3758 | 14.5 | 2578 | 4851 |
+| 0.9 | 24719 | 2097 | 3378 | 13.04 | 2018 | 4480 |
+
+## 1-NN clone-retrieval baseline (no learning)
+
+| theta | coverage % | PR-AUC | test positive rate |
+|---|---|---|---|
+| 0.7 | 40.95 | 0.0944 | 0.0268 |
+| 0.8 | 40.95 | 0.0944 | 0.0268 |
+| 0.9 | 40.95 | 0.0944 | 0.0268 |
+
+## Split arms -- RQ2 must train on all three
+
+The random control holds partition sizes and label balance fixed while
+ignoring families, so it retains the leakage. Comparing published vs
+family-disjoint alone would confound removed leakage with a different
+test set; the control separates them.
+
+| theta | arm | train | valid | test | test pos rate | leaked test % |
+|---|---|---|---|---|---|---|
+| 0.7 | published | 184427 | 25430 | 25911 | — | 15.7 |
+| 0.7 | random control | 187285 | 23834 | 24649 | 0.0296 | 30.05 |
+| 0.7 | family-disjoint | 187285 | 23834 | 24649 | 0.0276 | 0.0 |
+| 0.8 | published | 184427 | 25430 | 25911 | — | 14.5 |
+| 0.8 | random control | 186791 | 23527 | 25450 | 0.0295 | 27.86 |
+| 0.8 | family-disjoint | 186791 | 23527 | 25450 | 0.0263 | 0.0 |
+| 0.9 | published | 184427 | 25430 | 25911 | — | 13.04 |
+| 0.9 | random control | 190074 | 22961 | 22733 | 0.0295 | 25.5 |
+| 0.9 | family-disjoint | 190074 | 22961 | 22733 | 0.0312 | 0.0 |
+
+# Family label audit — `primevul_audit_families_theta0.7.json`
+
+_Generated by family_label_audit.py from the corpus and families file; do not edit by hand._
+
+## 1. Family size distribution
+
+- functions: 235,768 (without a family id: 0)
+- families: 184,006 total, 28,331 with >1 member
+- functions in families >1: 80,093 (33.97%)
+- largest family: 409 functions = **0.17% of the corpus**
+- size of families >1: median 2, p90 4, p99 15; top-10 [409, 264, 148, 147, 144, 132, 130, 121, 119, 117]
+
+| family size | families | functions |
+|---|---|---|
+| 1 | 155,675 | 155,675 |
+| 2 | 21,715 | 43,430 |
+| 3-5 | 5,260 | 18,317 |
+| 6-10 | 918 | 6,729 |
+| 11-50 | 400 | 7,651 |
+| 51-200 | 36 | 3,293 |
+| >200 | 2 | 673 |
+
+## 2. Label consistency (families >1)
+
+| | count | % |
+|---|---|---|
+| pure negative families | 25,273 | |
+| pure positive families | 123 | |
+| mixed-label families | 2,935 | 10.36 |
+| functions in mixed families | 7,672 | 3.25 (of all functions) |
+| positives in mixed families | 3,290 | 47.22 (of all positives) |
+
+Cross-project families: 5,161 of 28,331 families >1 (18.22%).
+
+## 3. Test-set leak categories per arm
+
+clean = no family member in train · same/opposite/both = labels of the train family-mates relative to the test function. Croft-style duplicate = same + both.
+
+| arm | n test | leaked any % | Croft-def % | clean | same | opposite | both |
+|---|---|---|---|---|---|---|---|
+| published | 25,911 | 15.7 | 15.49 | 21,842 (84.3%, pos 0.0282) | 3,910 (15.09%, pos 0.0077) | 55 (0.21%, pos 0.5636) | 104 (0.4%, pos 0.1635) |
+| random_control | 24,649 | 30.05 | 28.24 | 17,241 (69.95%, pos 0.0243) | 6,774 (27.48%, pos 0.005) | 447 (1.81%, pos 0.5034) | 187 (0.76%, pos 0.2727) |
+| family_disjoint | 24,649 | 0.0 | 0.0 | 24,649 (100.0%, pos 0.0276) | 0 (0.0%, pos None) | 0 (0.0%, pos None) | 0 (0.0%, pos None) |
+
+# PrimeVul vulnerable/patch pairs -- same clone family?
+
+| split | theta | vulnerable fns with a same-commit patch | patch in same family | % |
+|---|---|---|---|---|
+| train | 0.7 | 4354 | 2046 | 46.99 |
+| train | 0.8 | 4354 | 1777 | 40.81 |
+| train | 0.9 | 4354 | 1345 | 30.89 |
+| valid | 0.7 | 562 | 250 | 44.48 |
+| valid | 0.8 | 562 | 217 | 38.61 |
+| valid | 0.9 | 562 | 171 | 30.43 |
+| test | 0.7 | 564 | 269 | 47.7 |
+| test | 0.8 | 564 | 236 | 41.84 |
+| test | 0.9 | 564 | 184 | 32.62 |
+
+# Clone-family contamination audit
+
+Input: {'train': 21854, 'valid': 2732, 'test': 2732}  |  representatives: 25793
+
+| theta | families (>1) | span train+test | leaked test fns | leaked test % | contradictory labels | cross-project fams |
+|---|---|---|---|---|---|---|
+| 0.8 | 1803 | 343 | 368 | 13.47 | 846 | 8 |
+| 0.9 | 1495 | 278 | 298 | 10.91 | 622 | 8 |
+
+## Split arms -- RQ2 must train on all three
+
+The random control holds partition sizes and label balance fixed while
+ignoring families, so it retains the leakage. Comparing published vs
+family-disjoint alone would confound removed leakage with a different
+test set; the control separates them.
+
+| theta | arm | train | valid | test | test pos rate | leaked test % |
+|---|---|---|---|---|---|---|
+| 0.8 | published | 21854 | 2732 | 2732 | — | 13.47 |
+| 0.8 | random control | 21904 | 2706 | 2708 | 0.4561 | 13.04 |
+| 0.8 | family-disjoint | 21904 | 2706 | 2708 | 0.4623 | 0.0 |
+| 0.9 | published | 21854 | 2732 | 2732 | — | 10.91 |
+| 0.9 | random control | 21893 | 2658 | 2767 | 0.4561 | 10.99 |
+| 0.9 | family-disjoint | 21893 | 2658 | 2767 | 0.4478 | 0.0 |
+
+# Clone-family contamination audit
+
+Input: {'train': 264392, 'valid': 33049, 'test': 33050}  |  representatives: 287485
+
+| theta | families (>1) | span train+test | leaked test fns | leaked test % | contradictory labels | cross-project fams |
+|---|---|---|---|---|---|---|
+| 0.8 | 35017 | 7369 | 8797 | 26.62 | 6633 | 5509 |
+| 0.9 | 30787 | 6473 | 7695 | 23.28 | 5348 | 4789 |
+
+## Split arms -- RQ2 must train on all three
+
+The random control holds partition sizes and label balance fixed while
+ignoring families, so it retains the leakage. Comparing published vs
+family-disjoint alone would confound removed leakage with a different
+test set; the control separates them.
+
+| theta | arm | train | valid | test | test pos rate | leaked test % |
+|---|---|---|---|---|---|---|
+| 0.8 | published | 264392 | 33049 | 33050 | — | 26.62 |
+| 0.8 | random control | 264441 | 33011 | 33039 | 0.0573 | 26.54 |
+| 0.8 | family-disjoint | 264441 | 33011 | 33039 | 0.0574 | 0.0 |
+| 0.9 | published | 264392 | 33049 | 33050 | — | 23.28 |
+| 0.9 | random control | 264990 | 32843 | 32658 | 0.0573 | 23.16 |
+| 0.9 | family-disjoint | 264990 | 32843 | 32658 | 0.0584 | 0.0 |
+############ PRIMEVUL AUDIT COMPLETE ############

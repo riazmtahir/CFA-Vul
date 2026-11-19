@@ -1,0 +1,52 @@
+{
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "ref_splitfile": "/root/autodl-tmp/diversevul_audit_splitfile_theta0.7.json",
+  "seed": 42,
+  "n_functions": 330491,
+  "n_projects": 800,
+  "functions_without_project": 0,
+  "largest_project": {
+    "name": "linux",
+    "functions": 72270,
+    "share_pct": 21.87,
+    "partition": "train"
+  },
+  "projects_in_more_than_one_partition": 0,
+  "balance_objective": {
+    "greedy": 0.025579,
+    "final": 0.0,
+    "refined": true,
+    "refine": {
+      "moves": 145,
+      "passes": 4
+    }
+  },
+  "partitions": {
+    "train": {
+      "functions": 264793,
+      "target_functions": 264775,
+      "pos_rate": 0.0572,
+      "target_pos_rate": 0.0572,
+      "projects": 634
+    },
+    "valid": {
+      "functions": 32533,
+      "target_functions": 32544,
+      "pos_rate": 0.0587,
+      "target_pos_rate": 0.0587,
+      "projects": 90
+    },
+    "test": {
+      "functions": 33165,
+      "target_functions": 33172,
+      "pos_rate": 0.057,
+      "target_pos_rate": 0.057,
+      "projects": 76
+    }
+  },
+  "family_leak_under_this_split": {
+    "famfile": "/root/autodl-tmp/diversevul_audit_families_theta0.7.json",
+    "leaked_test_functions": 1934,
+    "leaked_test_pct": 5.83
+  }
+}

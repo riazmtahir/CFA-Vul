@@ -1,0 +1,7829 @@
+{
+ "label": "descriptive/exploratory (referee item 57), not pre-specified",
+ "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+ "functions": 330491,
+ "commit_structure": {
+  "commits_with_vulnerable_functions": 7514,
+  "commits_with_2plus_vulnerable_pct": 37.62,
+  "vulnerable_functions_in_2plus_commits_pct": 75.26,
+  "vulnerable_per_commit_max": 245,
+  "vulnerable_per_commit_hist": {
+   "1": 4687,
+   "2": 1239,
+   "3": 527,
+   "4": 289,
+   "5": 164,
+   "6": 127,
+   "7": 92,
+   "8": 63,
+   "9": 37,
+   "10": 289
+  }
+ },
+ "arms": {
+  "published": {
+   "table": {
+    "test_positives": {
+     "n": 1931,
+     "counterpart_and_vul_mate": 973,
+     "counterpart_only": 396,
+     "vul_mate_only": 366,
+     "neither": 196,
+     "vul_mate_any_pct": 69.34,
+     "vul_mate_without_counterpart_pct": 18.95,
+     "nonvul_mate_any_pct": 91.25
+    },
+    "test_negatives": {
+     "n": 31119,
+     "counterpart_and_vul_mate": 1238,
+     "counterpart_only": 488,
+     "vul_mate_only": 26462,
+     "neither": 2931,
+     "vul_mate_any_pct": 89.01,
+     "vul_mate_without_counterpart_pct": 85.03,
+     "nonvul_mate_any_pct": 99.65
+    }
+   }
+  },
+  "random_control": {
+   "table": {
+    "test_positives": {
+     "n": 1901,
+     "counterpart_and_vul_mate": 958,
+     "counterpart_only": 354,
+     "vul_mate_only": 388,
+     "neither": 201,
+     "vul_mate_any_pct": 70.8,
+     "vul_mate_without_counterpart_pct": 20.41,
+     "nonvul_mate_any_pct": 90.22
+    },
+    "test_negatives": {
+     "n": 31271,
+     "counterpart_and_vul_mate": 1333,
+     "counterpart_only": 486,
+     "vul_mate_only": 26812,
+     "neither": 2640,
+     "vul_mate_any_pct": 90.0,
+     "vul_mate_without_counterpart_pct": 85.74,
+     "nonvul_mate_any_pct": 99.67
+    }
+   },
+   "prediction_files": [
+    "codebert-base_random_control_seed4.preds.json.gz",
+    "codebert-base_random_control_seed5.preds.json.gz"
+   ],
+   "predictions_no_counterpart_stratum": {
+    "recall_positives": {
+     "per_seed": [
+      {
+       "threshold": 0.431216,
+       "without_vul_mate": [
+        0.47761194029850745,
+        201
+       ],
+       "with_vul_mate": [
+        0.39690721649484534,
+        388
+       ]
+      },
+      {
+       "threshold": 0.114821,
+       "without_vul_mate": [
+        0.5223880597014925,
+        201
+       ],
+       "with_vul_mate": [
+        0.41494845360824745,
+        388
+       ]
+      }
+     ],
+     "with_minus_without": -0.09407216494845358,
+     "ci95": [
+      -0.16222367543724675,
+      -0.037069805611119666
+     ]
+    },
+    "fpr_negatives": {
+     "per_seed": [
+      {
+       "threshold": 0.431216,
+       "without_vul_mate": [
+        0.05568181818181818,
+        2640
+       ],
+       "with_vul_mate": [
+        0.04665821274056393,
+        26812
+       ]
+      },
+      {
+       "threshold": 0.114821,
+       "without_vul_mate": [
+        0.06515151515151515,
+        2640
+       ],
+       "with_vul_mate": [
+        0.05441593316425481,
+        26812
+       ]
+      }
+     ],
+     "with_minus_without": -0.009879593714257298,
+     "ci95": [
+      -0.017093488216492838,
+      -0.003609758633628543
+     ]
+    }
+   },
+   "example_commit": {
+    "commit": "d71f05ca07eb5c7cfa4d6d23e5c1f2a800f52e8e",
+    "project": "qpdf",
+    "functions": [
+     {
+      "name": "ArgParser::handleBashArguments",
+      "label": 1,
+      "split": "test",
+      "chars": 3059
+     },
+     {
+      "name": "BitStream::BitStream",
+      "label": 1,
+      "split": "test",
+      "chars": 108
+     },
+     {
+      "name": "BitWriter::writeBitsSigned",
+      "label": 1,
+      "split": "test",
+      "chars": 294
+     },
+     {
+      "name": "ImageInverter::provideStreamData",
+      "label": 1,
+      "split": "test",
+      "chars": 595
+     },
+     {
+      "name": "JSON::encode_string",
+      "label": 1,
+      "split": "test",
+      "chars": 919
+     },
+     {
+      "name": "MD5::getDataChecksum",
+      "label": 1,
+      "split": "test",
+      "chars": 126
+     },
+     {
+      "name": "Pl_LZWDecoder::handleCode",
+      "label": 1,
+      "split": "test",
+      "chars": 1824
+     },
+     {
+      "name": "Pl_LZWDecoder::sendNextCode",
+      "label": 1,
+      "split": "test",
+      "chars": 1103
+     },
+     {
+      "name": "QPDF::addPage",
+      "label": 1,
+      "split": "test",
+      "chars": 242
+     },
+     {
+      "name": "QPDF::compute_encryption_key_from_password",
+      "label": 1,
+      "split": "test",
+      "chars": 1523
+     },
+     {
+      "name": "QPDF::insertPage",
+      "label": 1,
+      "split": "test",
+      "chars": 1684
+     },
+     {
+      "name": "QPDF::lengthNextN",
+      "label": 1,
+      "split": "test",
+      "chars": 655
+     },
+     {
+      "name": "QPDF::outputLengthNextN",
+      "label": 1,
+      "split": "test",
+      "chars": 854
+     },
+     {
+      "name": "QPDF::read_xrefTable",
+      "label": 1,
+      "split": "test",
+      "chars": 4294
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getFlags",
+      "label": 1,
+      "split": "test",
+      "chars": 147
+     },
+     {
+      "name": "QPDFWriter::generateObjectStreams",
+      "label": 1,
+      "split": "test",
+      "chars": 1537
+     },
+     {
+      "name": "QPDFWriter::setEncryptionParametersInternal",
+      "label": 1,
+      "split": "test",
+      "chars": 2821
+     },
+     {
+      "name": "QUtil::toUTF16",
+      "label": 1,
+      "split": "test",
+      "chars": 776
+     },
+     {
+      "name": "QUtil::toUTF8",
+      "label": 1,
+      "split": "test",
+      "chars": 1702
+     },
+     {
+      "name": "compute_O_rc4_key",
+      "label": 1,
+      "split": "test",
+      "chars": 759
+     },
+     {
+      "name": "compute_U_value_R2",
+      "label": 1,
+      "split": "test",
+      "chars": 538
+     },
+     {
+      "name": "compute_U_value_R3",
+      "label": 1,
+      "split": "test",
+      "chars": 998
+     },
+     {
+      "name": "do_json_page_labels",
+      "label": 1,
+      "split": "test",
+      "chars": 1171
+     },
+     {
+      "name": "do_show_pages",
+      "label": 1,
+      "split": "test",
+      "chars": 2008
+     },
+     {
+      "name": "generate_page_contents",
+      "label": 1,
+      "split": "test",
+      "chars": 238
+     },
+     {
+      "name": "process",
+      "label": 1,
+      "split": "test",
+      "chars": 1020
+     },
+     {
+      "name": "validate_under_overlay",
+      "label": 1,
+      "split": "test",
+      "chars": 1243
+     },
+     {
+      "name": "wmain",
+      "label": 1,
+      "split": "test",
+      "chars": 1256
+     },
+     {
+      "name": "write_vector_int",
+      "label": 1,
+      "split": "test",
+      "chars": 443
+     },
+     {
+      "name": "ArgParser::argIiMinBytes",
+      "label": 1,
+      "split": "train",
+      "chars": 99
+     },
+     {
+      "name": "ArgParser::argKeepFilesOpenThreshold",
+      "label": 1,
+      "split": "train",
+      "chars": 153
+     },
+     {
+      "name": "ArgParser::argOiMinArea",
+      "label": 1,
+      "split": "train",
+      "chars": 97
+     },
+     {
+      "name": "ArgParser::argOiMinHeight",
+      "label": 1,
+      "split": "train",
+      "chars": 101
+     },
+     {
+      "name": "ArgParser::checkCompletion",
+      "label": 1,
+      "split": "train",
+      "chars": 2512
+     },
+     {
+      "name": "ArgParser::handleArgFileArguments",
+      "label": 1,
+      "split": "train",
+      "chars": 1387
+     },
+     {
+      "name": "BitStream::getBits",
+      "label": 1,
+      "split": "train",
+      "chars": 118
+     },
+     {
+      "name": "BitStream::getBitsSigned",
+      "label": 1,
+      "split": "train",
+      "chars": 420
+     },
+     {
+      "name": "BitStream::reset",
+      "label": 1,
+      "split": "train",
+      "chars": 241
+     },
+     {
+      "name": "BitStream::skipToNextByte",
+      "label": 1,
+      "split": "train",
+      "chars": 306
+     },
+     {
+      "name": "BitWriter::flush",
+      "label": 1,
+      "split": "train",
+      "chars": 164
+     },
+     {
+      "name": "BitWriter::writeBits",
+      "label": 1,
+      "split": "train",
+      "chars": 132
+     },
+     {
+      "name": "BufferInputSource::findAndSkipNextEOL",
+      "label": 1,
+      "split": "train",
+      "chars": 1151
+     },
+     {
+      "name": "BufferInputSource::read",
+      "label": 1,
+      "split": "train",
+      "chars": 561
+     },
+     {
+      "name": "BufferInputSource::seek",
+      "label": 1,
+      "split": "train",
+      "chars": 555
+     },
+     {
+      "name": "FileInputSource::read",
+      "label": 1,
+      "split": "train",
+      "chars": 626
+     },
+     {
+      "name": "Finder::check",
+      "label": 1,
+      "split": "train",
+      "chars": 317
+     },
+     {
+      "name": "ImageOptimizer::makePipeline",
+      "label": 1,
+      "split": "train",
+      "chars": 3099
+     },
+     {
+      "name": "ImageProvider::ImageProvider",
+      "label": 1,
+      "split": "train",
+      "chars": 50
+     },
+     {
+      "name": "ImageProvider::provideStreamData",
+      "label": 1,
+      "split": "train",
+      "chars": 859
+     },
+     {
+      "name": "ImageProvider::provideStreamData",
+      "label": 1,
+      "split": "train",
+      "chars": 489
+     },
+     {
+      "name": "InlineImageTracker::handleToken",
+      "label": 1,
+      "split": "train",
+      "chars": 2056
+     },
+     {
+      "name": "InputSource::findFirst",
+      "label": 1,
+      "split": "train",
+      "chars": 5327
+     },
+     {
+      "name": "InputSource::findLast",
+      "label": 1,
+      "split": "train",
+      "chars": 758
+     },
+     {
+      "name": "InputSource::readLine",
+      "label": 1,
+      "split": "train",
+      "chars": 935
+     },
+     {
+      "name": "InsecureRandomDataProvider::random",
+      "label": 1,
+      "split": "train",
+      "chars": 441
+     },
+     {
+      "name": "MD5::checkDataChecksum",
+      "label": 1,
+      "split": "train",
+      "chars": 192
+     },
+     {
+      "name": "MD5::checkFileChecksum",
+      "label": 1,
+      "split": "train",
+      "chars": 353
+     },
+     {
+      "name": "MD5::decode",
+      "label": 1,
+      "split": "train",
+      "chars": 350
+     },
+     {
+      "name": "MD5::encode",
+      "label": 1,
+      "split": "train",
+      "chars": 413
+     },
+     {
+      "name": "MD5::encodeDataIncrementally",
+      "label": 1,
+      "split": "train",
+      "chars": 117
+     },
+     {
+      "name": "MD5::encodeFile",
+      "label": 1,
+      "split": "train",
+      "chars": 792
+     },
+     {
+      "name": "MD5::encodeString",
+      "label": 1,
+      "split": "train",
+      "chars": 145
+     },
+     {
+      "name": "MD5::getFileChecksum",
+      "label": 1,
+      "split": "train",
+      "chars": 137
+     },
+     {
+      "name": "MD5::update",
+      "label": 1,
+      "split": "train",
+      "chars": 780
+     },
+     {
+      "name": "Pl_AES_PDF::Pl_AES_PDF",
+      "label": 1,
+      "split": "train",
+      "chars": 1084
+     },
+     {
+      "name": "Pl_AES_PDF::finish",
+      "label": 1,
+      "split": "train",
+      "chars": 1173
+     },
+     {
+      "name": "Pl_AES_PDF::initializeVector",
+      "label": 1,
+      "split": "train",
+      "chars": 503
+     },
+     {
+      "name": "Pl_AES_PDF::setIV",
+      "label": 1,
+      "split": "train",
+      "chars": 343
+     },
+     {
+      "name": "Pl_ASCII85Decoder::flush",
+      "label": 1,
+      "split": "train",
+      "chars": 577
+     },
+     {
+      "name": "Pl_Count::write",
+      "label": 1,
+      "split": "train",
+      "chars": 159
+     },
+     {
+      "name": "Pl_DCT::compress",
+      "label": 1,
+      "split": "train",
+      "chars": 1929
+     },
+     {
+      "name": "Pl_DCT::decompress",
+      "label": 1,
+      "split": "train",
+      "chars": 1216
+     },
+     {
+      "name": "Pl_LZWDecoder::addToTable",
+      "label": 1,
+      "split": "train",
+      "chars": 942
+     },
+     {
+      "name": "Pl_LZWDecoder::getFirstChar",
+      "label": 1,
+      "split": "train",
+      "chars": 611
+     },
+     {
+      "name": "Pl_PNGFilter::decodeAverage",
+      "label": 1,
+      "split": "train",
+      "chars": 495
+     },
+     {
+      "name": "Pl_PNGFilter::decodePaeth",
+      "label": 1,
+      "split": "train",
+      "chars": 580
+     },
+     {
+      "name": "Pl_PNGFilter::decodeSub",
+      "label": 1,
+      "split": "train",
+      "chars": 384
+     },
+     {
+      "name": "Pl_PNGFilter::decodeUp",
+      "label": 1,
+      "split": "train",
+      "chars": 320
+     },
+     {
+      "name": "Pl_PNGFilter::encodeRow",
+      "label": 1,
+      "split": "train",
+      "chars": 384
+     },
+     {
+      "name": "Pl_RunLength::decode",
+      "label": 1,
+      "split": "train",
+      "chars": 1152
+     },
+     {
+      "name": "QPDF::adjusted_offset",
+      "label": 1,
+      "split": "train",
+      "chars": 299
+     },
+     {
+      "name": "QPDF::calculateHPageOffset",
+      "label": 1,
+      "split": "train",
+      "chars": 3613
+     },
+     {
+      "name": "QPDF::calculateHSharedObject",
+      "label": 1,
+      "split": "train",
+      "chars": 1791
+     },
+     {
+      "name": "QPDF::calculateLinearizationData",
+      "label": 1,
+      "split": "train",
+      "chars": 18831
+     },
+     {
+      "name": "QPDF::checkHOutlines",
+      "label": 1,
+      "split": "train",
+      "chars": 2349
+     },
+     {
+      "name": "QPDF::checkHPageOffset",
+      "label": 1,
+      "split": "train",
+      "chars": 5047
+     },
+     {
+      "name": "QPDF::checkHSharedObject",
+      "label": 1,
+      "split": "train",
+      "chars": 3109
+     },
+     {
+      "name": "QPDF::checkLinearizationInternal",
+      "label": 1,
+      "split": "train",
+      "chars": 5520
+     },
+     {
+      "name": "QPDF::compute_data_key",
+      "label": 1,
+      "split": "train",
+      "chars": 1067
+     },
+     {
+      "name": "QPDF::decryptStream",
+      "label": 1,
+      "split": "train",
+      "chars": 4692
+     },
+     {
+      "name": "QPDF::decryptString",
+      "label": 1,
+      "split": "train",
+      "chars": 2318
+     },
+     {
+      "name": "QPDF::dumpHSharedObject",
+      "label": 1,
+      "split": "train",
+      "chars": 1235
+     },
+     {
+      "name": "QPDF::flattenPagesTree",
+      "label": 1,
+      "split": "train",
+      "chars": 987
+     },
+     {
+      "name": "QPDF::generateHintStream",
+      "label": 1,
+      "split": "train",
+      "chars": 984
+     },
+     {
+      "name": "QPDF::getExtensionLevel",
+      "label": 1,
+      "split": "train",
+      "chars": 579
+     },
+     {
+      "name": "QPDF::getObjectCount",
+      "label": 1,
+      "split": "train",
+      "chars": 432
+     },
+     {
+      "name": "QPDF::initializeEncryption",
+      "label": 1,
+      "split": "train",
+      "chars": 9566
+     },
+     {
+      "name": "QPDF::isEncrypted",
+      "label": 1,
+      "split": "train",
+      "chars": 775
+     },
+     {
+      "name": "QPDF::isLinearized",
+      "label": 1,
+      "split": "train",
+      "chars": 2795
+     },
+     {
+      "name": "QPDF::makeIndirectObject",
+      "label": 1,
+      "split": "train",
+      "chars": 318
+     },
+     {
+      "name": "QPDF::parse_xrefFirst",
+      "label": 1,
+      "split": "train",
+      "chars": 1206
+     },
+     {
+      "name": "QPDF::pipeForeignStreamData",
+      "label": 1,
+      "split": "train",
+      "chars": 556
+     },
+     {
+      "name": "QPDF::pipeStreamData",
+      "label": 1,
+      "split": "train",
+      "chars": 557
+     },
+     {
+      "name": "QPDF::readHGeneric",
+      "label": 1,
+      "split": "train",
+      "chars": 239
+     },
+     {
+      "name": "QPDF::readHPageOffset",
+      "label": 1,
+      "split": "train",
+      "chars": 1946
+     },
+     {
+      "name": "QPDF::readHSharedObject",
+      "label": 1,
+      "split": "train",
+      "chars": 1338
+     },
+     {
+      "name": "QPDF::readHintStream",
+      "label": 1,
+      "split": "train",
+      "chars": 1960
+     },
+     {
+      "name": "QPDF::readLinearizationData",
+      "label": 1,
+      "split": "train",
+      "chars": 5183
+     },
+     {
+      "name": "QPDF::readObject",
+      "label": 1,
+      "split": "train",
+      "chars": 7084
+     },
+     {
+      "name": "QPDF::read_xref",
+      "label": 1,
+      "split": "train",
+      "chars": 2446
+     },
+     {
+      "name": "QPDF::reconstruct_xref",
+      "label": 1,
+      "split": "train",
+      "chars": 4253
+     },
+     {
+      "name": "QPDF::recoverStreamLength",
+      "label": 1,
+      "split": "train",
+      "chars": 2393
+     },
+     {
+      "name": "QPDF::removePage",
+      "label": 1,
+      "split": "train",
+      "chars": 1032
+     },
+     {
+      "name": "QPDF::resolveObjectsInStream",
+      "label": 1,
+      "split": "train",
+      "chars": 3779
+     },
+     {
+      "name": "QPDF::trim_user_password",
+      "label": 1,
+      "split": "train",
+      "chars": 744
+     },
+     {
+      "name": "QPDF::writeHGeneric",
+      "label": 1,
+      "split": "train",
+      "chars": 244
+     },
+     {
+      "name": "QPDF::writeHPageOffset",
+      "label": 1,
+      "split": "train",
+      "chars": 1831
+     },
+     {
+      "name": "QPDF::writeHSharedObject",
+      "label": 1,
+      "split": "train",
+      "chars": 1319
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::analyze",
+      "label": 1,
+      "split": "train",
+      "chars": 3155
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::traverseField",
+      "label": 1,
+      "split": "train",
+      "chars": 2803
+     },
+     {
+      "name": "QPDFAnnotationObjectHelper::getFlags",
+      "label": 1,
+      "split": "train",
+      "chars": 162
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getChoices",
+      "label": 1,
+      "split": "train",
+      "chars": 525
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getQuadding",
+      "label": 1,
+      "split": "train",
+      "chars": 294
+     },
+     {
+      "name": "QPDFNameTreeObjectHelper::updateMap",
+      "label": 1,
+      "split": "train",
+      "chars": 904
+     },
+     {
+      "name": "QPDFObjectHandle::getUniqueResourceName",
+      "label": 1,
+      "split": "train",
+      "chars": 868
+     },
+     {
+      "name": "QPDFObjectHandle::isMatrix",
+      "label": 1,
+      "split": "train",
+      "chars": 304
+     },
+     {
+      "name": "QPDFObjectHandle::isRectangle",
+      "label": 1,
+      "split": "train",
+      "chars": 307
+     },
+     {
+      "name": "QPDFObjectHandle::parse",
+      "label": 1,
+      "split": "train",
+      "chars": 869
+     },
+     {
+      "name": "QPDFObjectHandle::parseContentStream_data",
+      "label": 1,
+      "split": "train",
+      "chars": 1756
+     },
+     {
+      "name": "QPDFObjectHandle::parseInternal",
+      "label": 1,
+      "split": "train",
+      "chars": 14217
+     },
+     {
+      "name": "QPDFObjectHandle::rotatePage",
+      "label": 1,
+      "split": "train",
+      "chars": 1553
+     },
+     {
+      "name": "QPDFOutlineObjectHelper::getCount",
+      "label": 1,
+      "split": "train",
+      "chars": 180
+     },
+     {
+      "name": "QPDFPageData::QPDFPageData",
+      "label": 1,
+      "split": "train",
+      "chars": 464
+     },
+     {
+      "name": "QPDFPageDocumentHelper::flattenAnnotationsForPage",
+      "label": 1,
+      "split": "train",
+      "chars": 4330
+     },
+     {
+      "name": "QPDFPageObjectHelper::getAnnotations",
+      "label": 1,
+      "split": "train",
+      "chars": 720
+     },
+     {
+      "name": "QPDFPageObjectHelper::getMatrixForTransformations",
+      "label": 1,
+      "split": "train",
+      "chars": 1716
+     },
+     {
+      "name": "QPDFTokenizer::findEI",
+      "label": 1,
+      "split": "train",
+      "chars": 4218
+     },
+     {
+      "name": "QPDFWriter::bytesNeeded",
+      "label": 1,
+      "split": "train",
+      "chars": 132
+     },
+     {
+      "name": "QPDFWriter::calculateXrefStreamPadding",
+      "label": 1,
+      "split": "train",
+      "chars": 573
+     },
+     {
+      "name": "QPDFWriter::copyEncryptionParameters",
+      "label": 1,
+      "split": "train",
+      "chars": 2162
+     },
+     {
+      "name": "QPDFWriter::doWriteSetup",
+      "label": 1,
+      "split": "train",
+      "chars": 4674
+     },
+     {
+      "name": "QPDFWriter::pushEncryptionFilter",
+      "label": 1,
+      "split": "train",
+      "chars": 684
+     },
+     {
+      "name": "QPDFWriter::unparseObject",
+      "label": 1,
+      "split": "train",
+      "chars": 14235
+     },
+     {
+      "name": "QPDFWriter::write",
+      "label": 1,
+      "split": "train",
+      "chars": 948
+     },
+     {
+      "name": "QPDFWriter::writeHintStream",
+      "label": 1,
+      "split": "train",
+      "chars": 1031
+     },
+     {
+      "name": "QPDFWriter::writeLinearized",
+      "label": 1,
+      "split": "train",
+      "chars": 12743
+     },
+     {
+      "name": "QPDFWriter::writeObject",
+      "label": 1,
+      "split": "train",
+      "chars": 1633
+     },
+     {
+      "name": "QPDFWriter::writeObjectStream",
+      "label": 1,
+      "split": "train",
+      "chars": 4878
+     },
+     {
+      "name": "QPDFWriter::writeObjectStreamOffsets",
+      "label": 1,
+      "split": "train",
+      "chars": 385
+     },
+     {
+      "name": "QPDFWriter::writeTrailer",
+      "label": 1,
+      "split": "train",
+      "chars": 2994
+     },
+     {
+      "name": "QPDFXRefEntry::getObjStreamNumber",
+      "label": 1,
+      "split": "train",
+      "chars": 195
+     },
+     {
+      "name": "QPDF_Array::getItem",
+      "label": 1,
+      "split": "train",
+      "chars": 234
+     },
+     {
+      "name": "QPDF_Array::getNItems",
+      "label": 1,
+      "split": "train",
+      "chars": 64
+     },
+     {
+      "name": "QPDF_Array::insertItem",
+      "label": 1,
+      "split": "train",
+      "chars": 346
+     },
+     {
+      "name": "QPDF_Array::setItem",
+      "label": 1,
+      "split": "train",
+      "chars": 149
+     },
+     {
+      "name": "QPDF_Stream::pipeStreamData",
+      "label": 1,
+      "split": "train",
+      "chars": 8301
+     },
+     {
+      "name": "QPDF_Stream::replaceDict",
+      "label": 1,
+      "split": "train",
+      "chars": 317
+     },
+     {
+      "name": "QPDF_Stream::understandDecodeParams",
+      "label": 1,
+      "split": "train",
+      "chars": 2882
+     },
+     {
+      "name": "QUtil::get_current_time",
+      "label": 1,
+      "split": "train",
+      "chars": 883
+     },
+     {
+      "name": "QUtil::hex_decode",
+      "label": 1,
+      "split": "train",
+      "chars": 892
+     },
+     {
+      "name": "QUtil::safe_fopen",
+      "label": 1,
+      "split": "train",
+      "chars": 1365
+     },
+     {
+      "name": "QUtil::seek",
+      "label": 1,
+      "split": "train",
+      "chars": 513
+     },
+     {
+      "name": "QUtil::utf16_to_utf8",
+      "label": 1,
+      "split": "train",
+      "chars": 1613
+     },
+     {
+      "name": "RC4::RC4",
+      "label": 1,
+      "split": "train",
+      "chars": 448
+     },
+     {
+      "name": "RC4::process",
+      "label": 1,
+      "split": "train",
+      "chars": 429
+     },
+     {
+      "name": "SPH_XCAT",
+      "label": 1,
+      "split": "train",
+      "chars": 2763
+     },
+     {
+      "name": "SPH_XCAT",
+      "label": 1,
+      "split": "train",
+      "chars": 784
+     },
+     {
+      "name": "SecureRandomDataProvider::provideRandomData",
+      "label": 1,
+      "split": "train",
+      "chars": 195
+     },
+     {
+      "name": "add_page",
+      "label": 1,
+      "split": "train",
+      "chars": 2715
+     },
+     {
+      "name": "call_read_memory",
+      "label": 1,
+      "split": "train",
+      "chars": 147
+     },
+     {
+      "name": "check",
+      "label": 1,
+      "split": "train",
+      "chars": 5727
+     },
+     {
+      "name": "check_image",
+      "label": 1,
+      "split": "train",
+      "chars": 244
+     },
+     {
+      "name": "check_owner_password_V4",
+      "label": 1,
+      "split": "train",
+      "chars": 1000
+     },
+     {
+      "name": "check_page_contents",
+      "label": 1,
+      "split": "train",
+      "chars": 626
+     },
+     {
+      "name": "check_pdf",
+      "label": 1,
+      "split": "train",
+      "chars": 459
+     },
+     {
+      "name": "check_user_password_V4",
+      "label": 1,
+      "split": "train",
+      "chars": 412
+     },
+     {
+      "name": "compute_O_value",
+      "label": 1,
+      "split": "train",
+      "chars": 686
+     },
+     {
+      "name": "compute_Perms_value_V5_clear",
+      "label": 1,
+      "split": "train",
+      "chars": 607
+     },
+     {
+      "name": "create_pdf",
+      "label": 1,
+      "split": "train",
+      "chars": 2819
+     },
+     {
+      "name": "do_json_pages",
+      "label": 1,
+      "split": "train",
+      "chars": 4146
+     },
+     {
+      "name": "do_under_overlay_for_page",
+      "label": 1,
+      "split": "train",
+      "chars": 2200
+     },
+     {
+      "name": "doubleBoxSize",
+      "label": 1,
+      "split": "train",
+      "chars": 752
+     },
+     {
+      "name": "get_next_utf8_codepoint",
+      "label": 1,
+      "split": "train",
+      "chars": 1018
+     },
+     {
+      "name": "get_pixel_color",
+      "label": 1,
+      "split": "train",
+      "chars": 130
+     },
+     {
+      "name": "handle_page_specs",
+      "label": 1,
+      "split": "train",
+      "chars": 10346
+     },
+     {
+      "name": "handle_rotations",
+      "label": 1,
+      "split": "train",
+      "chars": 914
+     },
+     {
+      "name": "hash_V5",
+      "label": 1,
+      "split": "train",
+      "chars": 3268
+     },
+     {
+      "name": "int_to_string_base_internal",
+      "label": 1,
+      "split": "train",
+      "chars": 885
+     },
+     {
+      "name": "is_ascii_printable",
+      "label": 1,
+      "split": "train",
+      "chars": 92
+     },
+     {
+      "name": "is_iso_latin1_printable",
+      "label": 1,
+      "split": "train",
+      "chars": 114
+     },
+     {
+      "name": "iterate_md5_digest",
+      "label": 1,
+      "split": "train",
+      "chars": 291
+     },
+     {
+      "name": "iterate_rc4",
+      "label": 1,
+      "split": "train",
+      "chars": 438
+     },
+     {
+      "name": "load_vector_int",
+      "label": 1,
+      "split": "train",
+      "chars": 734
+     },
+     {
+      "name": "load_vector_vector",
+      "label": 1,
+      "split": "train",
+      "chars": 494
+     },
+     {
+      "name": "main",
+      "label": 1,
+      "split": "train",
+      "chars": 1437
+     },
+     {
+      "name": "main",
+      "label": 1,
+      "split": "train",
+      "chars": 1309
+     },
+     {
+      "name": "main",
+      "label": 1,
+      "split": "train",
+      "chars": 718
+     },
+     {
+      "name": "main",
+      "label": 1,
+      "split": "train",
+      "chars": 2799
+     },
+     {
+      "name": "main",
+      "label": 1,
+      "split": "train",
+      "chars": 824
+     },
+     {
+      "name": "main",
+      "label": 1,
+      "split": "train",
+      "chars": 1326
+     },
+     {
+      "name": "main",
+      "label": 1,
+      "split": "train",
+      "chars": 1409
+     },
+     {
+      "name": "newInteger",
+      "label": 1,
+      "split": "train",
+      "chars": 86
+     },
+     {
+      "name": "pad_or_truncate_password_V4",
+      "label": 1,
+      "split": "train",
+      "chars": 358
+     },
+     {
+      "name": "pad_or_truncate_password_V4",
+      "label": 1,
+      "split": "train",
+      "chars": 170
+     },
+     {
+      "name": "pad_short_parameter",
+      "label": 1,
+      "split": "train",
+      "chars": 234
+     },
+     {
+      "name": "print_buffer",
+      "label": 1,
+      "split": "train",
+      "chars": 329
+     },
+     {
+      "name": "print_values",
+      "label": 1,
+      "split": "train",
+      "chars": 260
+     },
+     {
+      "name": "process_with_aes",
+      "label": 1,
+      "split": "train",
+      "chars": 1017
+     },
+     {
+      "name": "qpdf_get_error_file_position",
+      "label": 1,
+      "split": "train",
+      "chars": 158
+     },
+     {
+      "name": "read_file_into_memory",
+      "label": 1,
+      "split": "train",
+      "chars": 1150
+     },
+     {
+      "name": "rijndaelDecrypt",
+      "label": 1,
+      "split": "train",
+      "chars": 8514
+     },
+     {
+      "name": "rijndaelEncrypt",
+      "label": 1,
+      "split": "train",
+      "chars": 8513
+     },
+     {
+      "name": "rijndaelSetupDecrypt",
+      "label": 1,
+      "split": "train",
+      "chars": 1481
+     },
+     {
+      "name": "rijndaelSetupEncrypt",
+      "label": 1,
+      "split": "train",
+      "chars": 2122
+     },
+     {
+      "name": "run",
+      "label": 1,
+      "split": "train",
+      "chars": 1403
+     },
+     {
+      "name": "runtest",
+      "label": 1,
+      "split": "train",
+      "chars": 71101
+     },
+     {
+      "name": "skip_buffer_input_data",
+      "label": 1,
+      "split": "train",
+      "chars": 615
+     },
+     {
+      "name": "sph_enc16be",
+      "label": 1,
+      "split": "train",
+      "chars": 115
+     },
+     {
+      "name": "sph_enc16le",
+      "label": 1,
+      "split": "train",
+      "chars": 113
+     },
+     {
+      "name": "string_conversion_test",
+      "label": 1,
+      "split": "train",
+      "chars": 2572
+     },
+     {
+      "name": "test16",
+      "label": 1,
+      "split": "train",
+      "chars": 949
+     },
+     {
+      "name": "test_read_bits",
+      "label": 1,
+      "split": "train",
+      "chars": 391
+     },
+     {
+      "name": "test_write_bits",
+      "label": 1,
+      "split": "train",
+      "chars": 255
+     },
+     {
+      "name": "transcode_utf8",
+      "label": 1,
+      "split": "train",
+      "chars": 1931
+     },
+     {
+      "name": "write_outfile",
+      "label": 1,
+      "split": "train",
+      "chars": 3257
+     },
+     {
+      "name": "write_vector_vector",
+      "label": 1,
+      "split": "train",
+      "chars": 447
+     },
+     {
+      "name": "ArgParser::argOiMinWidth",
+      "label": 1,
+      "split": "valid",
+      "chars": 99
+     },
+     {
+      "name": "ImageChecker::ImageChecker",
+      "label": 1,
+      "split": "valid",
+      "chars": 113
+     },
+     {
+      "name": "Pl_ASCIIHexDecoder::write",
+      "label": 1,
+      "split": "valid",
+      "chars": 838
+     },
+     {
+      "name": "QPDF::dumpHPageOffset",
+      "label": 1,
+      "split": "valid",
+      "chars": 1995
+     },
+     {
+      "name": "QPDF::optimize",
+      "label": 1,
+      "split": "valid",
+      "chars": 2404
+     },
+     {
+      "name": "QPDF::processXRefStream",
+      "label": 1,
+      "split": "valid",
+      "chars": 6032
+     },
+     {
+      "name": "QPDFNumberTreeObjectHelper::updateMap",
+      "label": 1,
+      "split": "valid",
+      "chars": 897
+     },
+     {
+      "name": "QPDFWriter::unparseObject",
+      "label": 1,
+      "split": "valid",
+      "chars": 141
+     },
+     {
+      "name": "QPDFWriter::writeXRefStream",
+      "label": 1,
+      "split": "valid",
+      "chars": 3412
+     },
+     {
+      "name": "QPDF_Stream::replaceFilterData",
+      "label": 1,
+      "split": "valid",
+      "chars": 536
+     },
+     {
+      "name": "QUtil::parse_numrange",
+      "label": 1,
+      "split": "valid",
+      "chars": 4819
+     },
+     {
+      "name": "QUtil::uint_to_string",
+      "label": 1,
+      "split": "valid",
+      "chars": 109
+     },
+     {
+      "name": "SPH_XCAT",
+      "label": 1,
+      "split": "valid",
+      "chars": 1278
+     },
+     {
+      "name": "SecureRandomDataProvider::provideRandomData",
+      "label": 1,
+      "split": "valid",
+      "chars": 1131
+     },
+     {
+      "name": "ValueSetter::writeAppearance",
+      "label": 1,
+      "split": "valid",
+      "chars": 3724
+     },
+     {
+      "name": "WindowsCryptProvider",
+      "label": 1,
+      "split": "valid",
+      "chars": 1316
+     },
+     {
+      "name": "create_page_contents",
+      "label": 1,
+      "split": "valid",
+      "chars": 149
+     },
+     {
+      "name": "main",
+      "label": 1,
+      "split": "valid",
+      "chars": 671
+     },
+     {
+      "name": "test",
+      "label": 1,
+      "split": "valid",
+      "chars": 3702
+     },
+     {
+      "name": "ArgParser::argCheckLinearization",
+      "label": 0,
+      "split": "test",
+      "chars": 103
+     },
+     {
+      "name": "ArgParser::argEmpty",
+      "label": 0,
+      "split": "test",
+      "chars": 48
+     },
+     {
+      "name": "ArgParser::argEncryptionFilePassword",
+      "label": 0,
+      "split": "test",
+      "chars": 101
+     },
+     {
+      "name": "ArgParser::argExternalizeInlineImages",
+      "label": 0,
+      "split": "test",
+      "chars": 83
+     },
+     {
+      "name": "ArgParser::argJsonHelp",
+      "label": 0,
+      "split": "test",
+      "chars": 1000
+     },
+     {
+      "name": "ArgParser::argNoWarn",
+      "label": 0,
+      "split": "test",
+      "chars": 58
+     },
+     {
+      "name": "ArgParser::argPassword",
+      "label": 0,
+      "split": "test",
+      "chars": 71
+     },
+     {
+      "name": "ArgParser::argShowNpages",
+      "label": 0,
+      "split": "test",
+      "chars": 87
+     },
+     {
+      "name": "ArgParser::argShowPages",
+      "label": 0,
+      "split": "test",
+      "chars": 85
+     },
+     {
+      "name": "ArgParser::handleCompletion",
+      "label": 0,
+      "split": "test",
+      "chars": 2667
+     },
+     {
+      "name": "ArgParser::handleHelpArgs",
+      "label": 0,
+      "split": "test",
+      "chars": 497
+     },
+     {
+      "name": "FileInputSource::~FileInputSource",
+      "label": 0,
+      "split": "test",
+      "chars": 54
+     },
+     {
+      "name": "ImageChecker::ImageChecker",
+      "label": 0,
+      "split": "test",
+      "chars": 116
+     },
+     {
+      "name": "InputSource::getLastOffset",
+      "label": 0,
+      "split": "test",
+      "chars": 68
+     },
+     {
+      "name": "JSON::JSON_bool::~JSON_bool",
+      "label": 0,
+      "split": "test",
+      "chars": 33
+     },
+     {
+      "name": "JSON::Members::Members",
+      "label": 0,
+      "split": "test",
+      "chars": 78
+     },
+     {
+      "name": "JSON::makeArray",
+      "label": 0,
+      "split": "test",
+      "chars": 56
+     },
+     {
+      "name": "MD5::init",
+      "label": 0,
+      "split": "test",
+      "chars": 272
+     },
+     {
+      "name": "NameWatcher",
+      "label": 0,
+      "split": "test",
+      "chars": 54
+     },
+     {
+      "name": "Pl_DCT::Pl_DCT",
+      "label": 0,
+      "split": "test",
+      "chars": 150
+     },
+     {
+      "name": "Pl_PNGFilter::Pl_PNGFilter",
+      "label": 0,
+      "split": "test",
+      "chars": 1663
+     },
+     {
+      "name": "Pl_RunLength::Pl_RunLength",
+      "label": 0,
+      "split": "test",
+      "chars": 201
+     },
+     {
+      "name": "QPDF::ObjUser::ObjUser",
+      "label": 0,
+      "split": "test",
+      "chars": 144
+     },
+     {
+      "name": "QPDF::ObjUser::ObjUser",
+      "label": 0,
+      "split": "test",
+      "chars": 175
+     },
+     {
+      "name": "QPDF::findStartxref",
+      "label": 0,
+      "split": "test",
+      "chars": 443
+     },
+     {
+      "name": "QPDF::fixDanglingReferences",
+      "label": 0,
+      "split": "test",
+      "chars": 3081
+     },
+     {
+      "name": "QPDF::getAllPagesInternal",
+      "label": 0,
+      "split": "test",
+      "chars": 2055
+     },
+     {
+      "name": "QPDF::getObjectCount",
+      "label": 0,
+      "split": "test",
+      "chars": 437
+     },
+     {
+      "name": "QPDF::readToken",
+      "label": 0,
+      "split": "test",
+      "chars": 175
+     },
+     {
+      "name": "QPDF::replaceForeignIndirectObjects",
+      "label": 0,
+      "split": "test",
+      "chars": 6232
+     },
+     {
+      "name": "QPDF::resolve",
+      "label": 0,
+      "split": "test",
+      "chars": 3091
+     },
+     {
+      "name": "QPDF::setImmediateCopyFrom",
+      "label": 0,
+      "split": "test",
+      "chars": 80
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::hasAcroForm",
+      "label": 0,
+      "split": "test",
+      "chars": 98
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::setNeedAppearances",
+      "label": 0,
+      "split": "test",
+      "chars": 586
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getDefaultValue",
+      "label": 0,
+      "split": "test",
+      "chars": 92
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getInheritableFieldValue",
+      "label": 0,
+      "split": "test",
+      "chars": 610
+     },
+     {
+      "name": "QPDFNameTreeObjectHelper::getAsMap",
+      "label": 0,
+      "split": "test",
+      "chars": 75
+     },
+     {
+      "name": "QPDFObjectHandle::isMatrix",
+      "label": 0,
+      "split": "test",
+      "chars": 301
+     },
+     {
+      "name": "QPDFObjectHandle::rotatePage",
+      "label": 0,
+      "split": "test",
+      "chars": 1558
+     },
+     {
+      "name": "QPDFPageObjectHelper::QPDFPageObjectHelper",
+      "label": 0,
+      "split": "test",
+      "chars": 94
+     },
+     {
+      "name": "QPDFPageObjectHelper::filterPageContents",
+      "label": 0,
+      "split": "test",
+      "chars": 155
+     },
+     {
+      "name": "QPDFWriter::Members::Members",
+      "label": 0,
+      "split": "test",
+      "chars": 1198
+     },
+     {
+      "name": "QPDFWriter::indicateProgress",
+      "label": 0,
+      "split": "test",
+      "chars": 857
+     },
+     {
+      "name": "QPDFWriter::setR5EncryptionParameters",
+      "label": 0,
+      "split": "test",
+      "chars": 580
+     },
+     {
+      "name": "QPDFWriter::setR6EncryptionParameters",
+      "label": 0,
+      "split": "test",
+      "chars": 580
+     },
+     {
+      "name": "QPDFWriter::writeXRefStream",
+      "label": 0,
+      "split": "test",
+      "chars": 3524
+     },
+     {
+      "name": "QPDF_Array::getNItems",
+      "label": 0,
+      "split": "test",
+      "chars": 172
+     },
+     {
+      "name": "QPDF_Stream::addTokenFilter",
+      "label": 0,
+      "split": "test",
+      "chars": 144
+     },
+     {
+      "name": "QPDF_Stream::getRawStreamData",
+      "label": 0,
+      "split": "test",
+      "chars": 214
+     },
+     {
+      "name": "QPDF_Stream::replaceStreamData",
+      "label": 0,
+      "split": "test",
+      "chars": 275
+     },
+     {
+      "name": "QPDF_Stream::setDictDescription",
+      "label": 0,
+      "split": "test",
+      "chars": 303
+     },
+     {
+      "name": "QPDF_String::getUTF8Val",
+      "label": 0,
+      "split": "test",
+      "chars": 202
+     },
+     {
+      "name": "QUtil::get_current_time",
+      "label": 0,
+      "split": "test",
+      "chars": 904
+     },
+     {
+      "name": "QUtil::int_to_string_base",
+      "label": 0,
+      "split": "test",
+      "chars": 125
+     },
+     {
+      "name": "QUtil::seek",
+      "label": 0,
+      "split": "test",
+      "chars": 453
+     },
+     {
+      "name": "QUtil::strcasecmp",
+      "label": 0,
+      "split": "test",
+      "chars": 223
+     },
+     {
+      "name": "QUtil::utf8_to_ascii",
+      "label": 0,
+      "split": "test",
+      "chars": 172
+     },
+     {
+      "name": "QUtil::utf8_to_win_ansi",
+      "label": 0,
+      "split": "test",
+      "chars": 176
+     },
+     {
+      "name": "ValueSetter::handleToken",
+      "label": 0,
+      "split": "test",
+      "chars": 977
+     },
+     {
+      "name": "call_check",
+      "label": 0,
+      "split": "test",
+      "chars": 182
+     },
+     {
+      "name": "call_init_write_memory",
+      "label": 0,
+      "split": "test",
+      "chars": 151
+     },
+     {
+      "name": "check",
+      "label": 0,
+      "split": "test",
+      "chars": 5722
+     },
+     {
+      "name": "fill_buffer_input_buffer",
+      "label": 0,
+      "split": "test",
+      "chars": 310
+     },
+     {
+      "name": "get_next_utf8_codepoint",
+      "label": 0,
+      "split": "test",
+      "chars": 1110
+     },
+     {
+      "name": "get_pixel_color",
+      "label": 0,
+      "split": "test",
+      "chars": 221
+     },
+     {
+      "name": "hash_V5",
+      "label": 0,
+      "split": "test",
+      "chars": 3257
+     },
+     {
+      "name": "json_schema",
+      "label": 0,
+      "split": "test",
+      "chars": 9763
+     },
+     {
+      "name": "load_vector_int",
+      "label": 0,
+      "split": "test",
+      "chars": 769
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "test",
+      "chars": 835
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "test",
+      "chars": 1438
+     },
+     {
+      "name": "nbits",
+      "label": 0,
+      "split": "test",
+      "chars": 87
+     },
+     {
+      "name": "newInteger",
+      "label": 0,
+      "split": "test",
+      "chars": 109
+     },
+     {
+      "name": "pad_short_parameter",
+      "label": 0,
+      "split": "test",
+      "chars": 228
+     },
+     {
+      "name": "qpdf_allow_accessibility",
+      "label": 0,
+      "split": "test",
+      "chars": 162
+     },
+     {
+      "name": "qpdf_allow_modify_form",
+      "label": 0,
+      "split": "test",
+      "chars": 155
+     },
+     {
+      "name": "qpdf_force_pdf_version",
+      "label": 0,
+      "split": "test",
+      "chars": 128
+     },
+     {
+      "name": "qpdf_get_error_full_text",
+      "label": 0,
+      "split": "test",
+      "chars": 137
+     },
+     {
+      "name": "qpdf_get_user_password",
+      "label": 0,
+      "split": "test",
+      "chars": 213
+     },
+     {
+      "name": "qpdf_init_write_memory",
+      "label": 0,
+      "split": "test",
+      "chars": 278
+     },
+     {
+      "name": "qpdf_set_static_aes_IV",
+      "label": 0,
+      "split": "test",
+      "chars": 171
+     },
+     {
+      "name": "qpdf_write",
+      "label": 0,
+      "split": "test",
+      "chars": 225
+     },
+     {
+      "name": "run",
+      "label": 0,
+      "split": "test",
+      "chars": 1421
+     },
+     {
+      "name": "skip_buffer_input_data",
+      "label": 0,
+      "split": "test",
+      "chars": 610
+     },
+     {
+      "name": "sph_enc32le",
+      "label": 0,
+      "split": "test",
+      "chars": 624
+     },
+     {
+      "name": "sph_enc64le",
+      "label": 0,
+      "split": "test",
+      "chars": 964
+     },
+     {
+      "name": "test11",
+      "label": 0,
+      "split": "test",
+      "chars": 392
+     },
+     {
+      "name": "test12",
+      "label": 0,
+      "split": "test",
+      "chars": 437
+     },
+     {
+      "name": "test14",
+      "label": 0,
+      "split": "test",
+      "chars": 486
+     },
+     {
+      "name": "to_utf16_test",
+      "label": 0,
+      "split": "test",
+      "chars": 217
+     },
+     {
+      "name": "trap_errors",
+      "label": 0,
+      "split": "test",
+      "chars": 599
+     },
+     {
+      "name": "validate_under_overlay",
+      "label": 0,
+      "split": "test",
+      "chars": 1237
+     },
+     {
+      "name": "~ContentProvider",
+      "label": 0,
+      "split": "test",
+      "chars": 42
+     },
+     {
+      "name": "ArgParser::ArgParser",
+      "label": 0,
+      "split": "train",
+      "chars": 236
+     },
+     {
+      "name": "ArgParser::addChoicesToCompletions",
+      "label": 0,
+      "split": "train",
+      "chars": 443
+     },
+     {
+      "name": "ArgParser::arg128Accessibility",
+      "label": 0,
+      "split": "train",
+      "chars": 107
+     },
+     {
+      "name": "ArgParser::arg128Assemble",
+      "label": 0,
+      "split": "train",
+      "chars": 97
+     },
+     {
+      "name": "ArgParser::arg128ClearTextMetadata",
+      "label": 0,
+      "split": "train",
+      "chars": 73
+     },
+     {
+      "name": "ArgParser::arg128Extract",
+      "label": 0,
+      "split": "train",
+      "chars": 95
+     },
+     {
+      "name": "ArgParser::arg128ForceV4",
+      "label": 0,
+      "split": "train",
+      "chars": 53
+     },
+     {
+      "name": "ArgParser::arg128Form",
+      "label": 0,
+      "split": "train",
+      "chars": 97
+     },
+     {
+      "name": "ArgParser::arg128ModOther",
+      "label": 0,
+      "split": "train",
+      "chars": 101
+     },
+     {
+      "name": "ArgParser::arg128Modify",
+      "label": 0,
+      "split": "train",
+      "chars": 1087
+     },
+     {
+      "name": "ArgParser::arg128Print",
+      "label": 0,
+      "split": "train",
+      "chars": 375
+     },
+     {
+      "name": "ArgParser::arg128UseAes",
+      "label": 0,
+      "split": "train",
+      "chars": 91
+     },
+     {
+      "name": "ArgParser::arg256ForceR5",
+      "label": 0,
+      "split": "train",
+      "chars": 53
+     },
+     {
+      "name": "ArgParser::arg40Annotate",
+      "label": 0,
+      "split": "train",
+      "chars": 96
+     },
+     {
+      "name": "ArgParser::arg40Extract",
+      "label": 0,
+      "split": "train",
+      "chars": 94
+     },
+     {
+      "name": "ArgParser::arg40Modify",
+      "label": 0,
+      "split": "train",
+      "chars": 92
+     },
+     {
+      "name": "ArgParser::arg40Print",
+      "label": 0,
+      "split": "train",
+      "chars": 90
+     },
+     {
+      "name": "ArgParser::argCheck",
+      "label": 0,
+      "split": "train",
+      "chars": 76
+     },
+     {
+      "name": "ArgParser::argCoalesceContents",
+      "label": 0,
+      "split": "train",
+      "chars": 68
+     },
+     {
+      "name": "ArgParser::argCollate",
+      "label": 0,
+      "split": "train",
+      "chars": 49
+     },
+     {
+      "name": "ArgParser::argCompletionBash",
+      "label": 0,
+      "split": "train",
+      "chars": 486
+     },
+     {
+      "name": "ArgParser::argCompletionZsh",
+      "label": 0,
+      "split": "train",
+      "chars": 126
+     },
+     {
+      "name": "ArgParser::argCompressStreams",
+      "label": 0,
+      "split": "train",
+      "chars": 141
+     },
+     {
+      "name": "ArgParser::argCopyEncryption",
+      "label": 0,
+      "split": "train",
+      "chars": 160
+     },
+     {
+      "name": "ArgParser::argCopyright",
+      "label": 0,
+      "split": "train",
+      "chars": 1727
+     },
+     {
+      "name": "ArgParser::argDecodeLevel",
+      "label": 0,
+      "split": "train",
+      "chars": 643
+     },
+     {
+      "name": "ArgParser::argDecrypt",
+      "label": 0,
+      "split": "train",
+      "chars": 103
+     },
+     {
+      "name": "ArgParser::argDeterministicId",
+      "label": 0,
+      "split": "train",
+      "chars": 66
+     },
+     {
+      "name": "ArgParser::argEncrypt",
+      "label": 0,
+      "split": "train",
+      "chars": 1299
+     },
+     {
+      "name": "ArgParser::argEndEncrypt",
+      "label": 0,
+      "split": "train",
+      "chars": 159
+     },
+     {
+      "name": "ArgParser::argEndUnderOverlay",
+      "label": 0,
+      "split": "train",
+      "chars": 228
+     },
+     {
+      "name": "ArgParser::argFilteredStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 78
+     },
+     {
+      "name": "ArgParser::argFlattenAnnotations",
+      "label": 0,
+      "split": "train",
+      "chars": 306
+     },
+     {
+      "name": "ArgParser::argForceVersion",
+      "label": 0,
+      "split": "train",
+      "chars": 80
+     },
+     {
+      "name": "ArgParser::argGenerateAppearances",
+      "label": 0,
+      "split": "train",
+      "chars": 74
+     },
+     {
+      "name": "ArgParser::argHelp",
+      "label": 0,
+      "split": "train",
+      "chars": 26132
+     },
+     {
+      "name": "ArgParser::argIgnoreXrefStreams",
+      "label": 0,
+      "split": "train",
+      "chars": 71
+     },
+     {
+      "name": "ArgParser::argIiMinBytes",
+      "label": 0,
+      "split": "train",
+      "chars": 100
+     },
+     {
+      "name": "ArgParser::argJson",
+      "label": 0,
+      "split": "train",
+      "chars": 74
+     },
+     {
+      "name": "ArgParser::argJsonKey",
+      "label": 0,
+      "split": "train",
+      "chars": 77
+     },
+     {
+      "name": "ArgParser::argKeepFilesOpen",
+      "label": 0,
+      "split": "train",
+      "chars": 137
+     },
+     {
+      "name": "ArgParser::argKeepFilesOpenThreshold",
+      "label": 0,
+      "split": "train",
+      "chars": 125
+     },
+     {
+      "name": "ArgParser::argKeepInlineImages",
+      "label": 0,
+      "split": "train",
+      "chars": 69
+     },
+     {
+      "name": "ArgParser::argLinearizePass1",
+      "label": 0,
+      "split": "train",
+      "chars": 84
+     },
+     {
+      "name": "ArgParser::argMinVersion",
+      "label": 0,
+      "split": "train",
+      "chars": 76
+     },
+     {
+      "name": "ArgParser::argNewlineBeforeEndstream",
+      "label": 0,
+      "split": "train",
+      "chars": 81
+     },
+     {
+      "name": "ArgParser::argNormalizeContent",
+      "label": 0,
+      "split": "train",
+      "chars": 128
+     },
+     {
+      "name": "ArgParser::argObjectStreams",
+      "label": 0,
+      "split": "train",
+      "chars": 575
+     },
+     {
+      "name": "ArgParser::argOiMinArea",
+      "label": 0,
+      "split": "train",
+      "chars": 98
+     },
+     {
+      "name": "ArgParser::argOiMinHeight",
+      "label": 0,
+      "split": "train",
+      "chars": 102
+     },
+     {
+      "name": "ArgParser::argOiMinWidth",
+      "label": 0,
+      "split": "train",
+      "chars": 100
+     },
+     {
+      "name": "ArgParser::argOverlay",
+      "label": 0,
+      "split": "train",
+      "chars": 69
+     },
+     {
+      "name": "ArgParser::argPages",
+      "label": 0,
+      "split": "train",
+      "chars": 178
+     },
+     {
+      "name": "ArgParser::argPasswordIsHexKey",
+      "label": 0,
+      "split": "train",
+      "chars": 70
+     },
+     {
+      "name": "ArgParser::argPasswordMode",
+      "label": 0,
+      "split": "train",
+      "chars": 496
+     },
+     {
+      "name": "ArgParser::argPositional",
+      "label": 0,
+      "split": "train",
+      "chars": 256
+     },
+     {
+      "name": "ArgParser::argPreserveUnreferencedResources",
+      "label": 0,
+      "split": "train",
+      "chars": 100
+     },
+     {
+      "name": "ArgParser::argProgress",
+      "label": 0,
+      "split": "train",
+      "chars": 51
+     },
+     {
+      "name": "ArgParser::argQdf",
+      "label": 0,
+      "split": "train",
+      "chars": 46
+     },
+     {
+      "name": "ArgParser::argRawStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 68
+     },
+     {
+      "name": "ArgParser::argRemovePageLabels",
+      "label": 0,
+      "split": "train",
+      "chars": 69
+     },
+     {
+      "name": "ArgParser::argRotate",
+      "label": 0,
+      "split": "train",
+      "chars": 80
+     },
+     {
+      "name": "ArgParser::argShowEncryption",
+      "label": 0,
+      "split": "train",
+      "chars": 95
+     },
+     {
+      "name": "ArgParser::argShowEncryptionKey",
+      "label": 0,
+      "split": "train",
+      "chars": 71
+     },
+     {
+      "name": "ArgParser::argShowLinearization",
+      "label": 0,
+      "split": "train",
+      "chars": 101
+     },
+     {
+      "name": "ArgParser::argShowObject",
+      "label": 0,
+      "split": "train",
+      "chars": 148
+     },
+     {
+      "name": "ArgParser::argShowXref",
+      "label": 0,
+      "split": "train",
+      "chars": 83
+     },
+     {
+      "name": "ArgParser::argSplitPages",
+      "label": 0,
+      "split": "train",
+      "chars": 151
+     },
+     {
+      "name": "ArgParser::argStaticAesIv",
+      "label": 0,
+      "split": "train",
+      "chars": 59
+     },
+     {
+      "name": "ArgParser::argStaticId",
+      "label": 0,
+      "split": "train",
+      "chars": 52
+     },
+     {
+      "name": "ArgParser::argStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 567
+     },
+     {
+      "name": "ArgParser::argSuppressPasswordRecovery",
+      "label": 0,
+      "split": "train",
+      "chars": 85
+     },
+     {
+      "name": "ArgParser::argSuppressRecovery",
+      "label": 0,
+      "split": "train",
+      "chars": 68
+     },
+     {
+      "name": "ArgParser::argUOfrom",
+      "label": 0,
+      "split": "train",
+      "chars": 159
+     },
+     {
+      "name": "ArgParser::argUOpassword",
+      "label": 0,
+      "split": "train",
+      "chars": 88
+     },
+     {
+      "name": "ArgParser::argUOpositional",
+      "label": 0,
+      "split": "train",
+      "chars": 217
+     },
+     {
+      "name": "ArgParser::argUOrepeat",
+      "label": 0,
+      "split": "train",
+      "chars": 163
+     },
+     {
+      "name": "ArgParser::argUOto",
+      "label": 0,
+      "split": "train",
+      "chars": 112
+     },
+     {
+      "name": "ArgParser::argUnderlay",
+      "label": 0,
+      "split": "train",
+      "chars": 71
+     },
+     {
+      "name": "ArgParser::argVerbose",
+      "label": 0,
+      "split": "train",
+      "chars": 49
+     },
+     {
+      "name": "ArgParser::argVersion",
+      "label": 0,
+      "split": "train",
+      "chars": 714
+     },
+     {
+      "name": "ArgParser::argWithImages",
+      "label": 0,
+      "split": "train",
+      "chars": 61
+     },
+     {
+      "name": "ArgParser::checkCompletion",
+      "label": 0,
+      "split": "train",
+      "chars": 2501
+     },
+     {
+      "name": "ArgParser::doFinalChecks",
+      "label": 0,
+      "split": "train",
+      "chars": 1376
+     },
+     {
+      "name": "ArgParser::handleArgFileArguments",
+      "label": 0,
+      "split": "train",
+      "chars": 1384
+     },
+     {
+      "name": "ArgParser::handleBashArguments",
+      "label": 0,
+      "split": "train",
+      "chars": 3056
+     },
+     {
+      "name": "ArgParser::initOptionTable",
+      "label": 0,
+      "split": "train",
+      "chars": 8864
+     },
+     {
+      "name": "ArgParser::oe_bare",
+      "label": 0,
+      "split": "train",
+      "chars": 141
+     },
+     {
+      "name": "ArgParser::oe_optionalParameter",
+      "label": 0,
+      "split": "train",
+      "chars": 156
+     },
+     {
+      "name": "ArgParser::oe_positional",
+      "label": 0,
+      "split": "train",
+      "chars": 116
+     },
+     {
+      "name": "ArgParser::oe_requiredChoices",
+      "label": 0,
+      "split": "train",
+      "chars": 262
+     },
+     {
+      "name": "ArgParser::parseNumrange",
+      "label": 0,
+      "split": "train",
+      "chars": 350
+     },
+     {
+      "name": "ArgParser::parseOptions",
+      "label": 0,
+      "split": "train",
+      "chars": 3697
+     },
+     {
+      "name": "ArgParser::parsePagesOptions",
+      "label": 0,
+      "split": "train",
+      "chars": 1983
+     },
+     {
+      "name": "ArgParser::parseRotationParameter",
+      "label": 0,
+      "split": "train",
+      "chars": 1481
+     },
+     {
+      "name": "ArgParser::parseUnderOverlayOptions",
+      "label": 0,
+      "split": "train",
+      "chars": 145
+     },
+     {
+      "name": "ArgParser::readArgsFromFile",
+      "label": 0,
+      "split": "train",
+      "chars": 592
+     },
+     {
+      "name": "BitStream::BitStream",
+      "label": 0,
+      "split": "train",
+      "chars": 111
+     },
+     {
+      "name": "BitStream::getBits",
+      "label": 0,
+      "split": "train",
+      "chars": 121
+     },
+     {
+      "name": "BitStream::getBitsInt",
+      "label": 0,
+      "split": "train",
+      "chars": 195
+     },
+     {
+      "name": "BitStream::getBitsSigned",
+      "label": 0,
+      "split": "train",
+      "chars": 427
+     },
+     {
+      "name": "BitStream::reset",
+      "label": 0,
+      "split": "train",
+      "chars": 230
+     },
+     {
+      "name": "BitWriter::flush",
+      "label": 0,
+      "split": "train",
+      "chars": 167
+     },
+     {
+      "name": "BitWriter::writeBits",
+      "label": 0,
+      "split": "train",
+      "chars": 126
+     },
+     {
+      "name": "BitWriter::writeBitsInt",
+      "label": 0,
+      "split": "train",
+      "chars": 108
+     },
+     {
+      "name": "BitWriter::writeBitsSigned",
+      "label": 0,
+      "split": "train",
+      "chars": 291
+     },
+     {
+      "name": "BufferInputSource::BufferInputSource",
+      "label": 0,
+      "split": "train",
+      "chars": 364
+     },
+     {
+      "name": "BufferInputSource::BufferInputSource",
+      "label": 0,
+      "split": "train",
+      "chars": 231
+     },
+     {
+      "name": "BufferInputSource::bufSizeAsOffset",
+      "label": 0,
+      "split": "train",
+      "chars": 97
+     },
+     {
+      "name": "BufferInputSource::findAndSkipNextEOL",
+      "label": 0,
+      "split": "train",
+      "chars": 1164
+     },
+     {
+      "name": "BufferInputSource::getName",
+      "label": 0,
+      "split": "train",
+      "chars": 68
+     },
+     {
+      "name": "BufferInputSource::read",
+      "label": 0,
+      "split": "train",
+      "chars": 571
+     },
+     {
+      "name": "BufferInputSource::seek",
+      "label": 0,
+      "split": "train",
+      "chars": 552
+     },
+     {
+      "name": "BufferInputSource::tell",
+      "label": 0,
+      "split": "train",
+      "chars": 58
+     },
+     {
+      "name": "BufferInputSource::unreadCh",
+      "label": 0,
+      "split": "train",
+      "chars": 103
+     },
+     {
+      "name": "BufferInputSource::~BufferInputSource",
+      "label": 0,
+      "split": "train",
+      "chars": 94
+     },
+     {
+      "name": "ContentProvider",
+      "label": 0,
+      "split": "train",
+      "chars": 90
+     },
+     {
+      "name": "ContentProvider::provideStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 448
+     },
+     {
+      "name": "FileInputSource::FileInputSource",
+      "label": 0,
+      "split": "train",
+      "chars": 75
+     },
+     {
+      "name": "FileInputSource::destroy",
+      "label": 0,
+      "split": "train",
+      "chars": 120
+     },
+     {
+      "name": "FileInputSource::findAndSkipNextEOL",
+      "label": 0,
+      "split": "train",
+      "chars": 1280
+     },
+     {
+      "name": "FileInputSource::getName",
+      "label": 0,
+      "split": "train",
+      "chars": 63
+     },
+     {
+      "name": "FileInputSource::read",
+      "label": 0,
+      "split": "train",
+      "chars": 627
+     },
+     {
+      "name": "FileInputSource::rewind",
+      "label": 0,
+      "split": "train",
+      "chars": 55
+     },
+     {
+      "name": "FileInputSource::seek",
+      "label": 0,
+      "split": "train",
+      "chars": 278
+     },
+     {
+      "name": "FileInputSource::setFile",
+      "label": 0,
+      "split": "train",
+      "chars": 225
+     },
+     {
+      "name": "FileInputSource::setFilename",
+      "label": 0,
+      "split": "train",
+      "chars": 195
+     },
+     {
+      "name": "FileInputSource::tell",
+      "label": 0,
+      "split": "train",
+      "chars": 63
+     },
+     {
+      "name": "FileInputSource::unreadCh",
+      "label": 0,
+      "split": "train",
+      "chars": 160
+     },
+     {
+      "name": "Finder",
+      "label": 0,
+      "split": "train",
+      "chars": 112
+     },
+     {
+      "name": "Finder::check",
+      "label": 0,
+      "split": "train",
+      "chars": 335
+     },
+     {
+      "name": "ImageChecker::finish",
+      "label": 0,
+      "split": "train",
+      "chars": 157
+     },
+     {
+      "name": "ImageChecker::write",
+      "label": 0,
+      "split": "train",
+      "chars": 319
+     },
+     {
+      "name": "ImageChecker::~ImageChecker",
+      "label": 0,
+      "split": "train",
+      "chars": 33
+     },
+     {
+      "name": "ImageInverter::provideStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 584
+     },
+     {
+      "name": "ImageOptimizer::ImageOptimizer",
+      "label": 0,
+      "split": "train",
+      "chars": 100
+     },
+     {
+      "name": "ImageOptimizer::evaluate",
+      "label": 0,
+      "split": "train",
+      "chars": 1493
+     },
+     {
+      "name": "ImageOptimizer::makePipeline",
+      "label": 0,
+      "split": "train",
+      "chars": 3227
+     },
+     {
+      "name": "ImageOptimizer::provideStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 490
+     },
+     {
+      "name": "ImageProvider::ImageProvider",
+      "label": 0,
+      "split": "train",
+      "chars": 53
+     },
+     {
+      "name": "ImageProvider::ImageProvider",
+      "label": 0,
+      "split": "train",
+      "chars": 1563
+     },
+     {
+      "name": "ImageProvider::getHeight",
+      "label": 0,
+      "split": "train",
+      "chars": 74
+     },
+     {
+      "name": "ImageProvider::getWidth",
+      "label": 0,
+      "split": "train",
+      "chars": 53
+     },
+     {
+      "name": "ImageProvider::provideStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 492
+     },
+     {
+      "name": "ImageProvider::provideStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 924
+     },
+     {
+      "name": "ImageProvider::~ImageProvider",
+      "label": 0,
+      "split": "train",
+      "chars": 35
+     },
+     {
+      "name": "InlineImageTracker::handleToken",
+      "label": 0,
+      "split": "train",
+      "chars": 2117
+     },
+     {
+      "name": "InputSource::findFirst",
+      "label": 0,
+      "split": "train",
+      "chars": 5401
+     },
+     {
+      "name": "InputSource::findLast",
+      "label": 0,
+      "split": "train",
+      "chars": 774
+     },
+     {
+      "name": "InputSource::readLine",
+      "label": 0,
+      "split": "train",
+      "chars": 951
+     },
+     {
+      "name": "InputSource::setLastOffset",
+      "label": 0,
+      "split": "train",
+      "chars": 84
+     },
+     {
+      "name": "InsecureRandomDataProvider::InsecureRandomDataProvider",
+      "label": 0,
+      "split": "train",
+      "chars": 87
+     },
+     {
+      "name": "InsecureRandomDataProvider::getInstance",
+      "label": 0,
+      "split": "train",
+      "chars": 115
+     },
+     {
+      "name": "InsecureRandomDataProvider::provideRandomData",
+      "label": 0,
+      "split": "train",
+      "chars": 208
+     },
+     {
+      "name": "InsecureRandomDataProvider::random",
+      "label": 0,
+      "split": "train",
+      "chars": 496
+     },
+     {
+      "name": "InsecureRandomDataProvider::~InsecureRandomDataProvider",
+      "label": 0,
+      "split": "train",
+      "chars": 61
+     },
+     {
+      "name": "JSON::JSON",
+      "label": 0,
+      "split": "train",
+      "chars": 75
+     },
+     {
+      "name": "JSON::JSON_array::unparse",
+      "label": 0,
+      "split": "train",
+      "chars": 674
+     },
+     {
+      "name": "JSON::JSON_array::~JSON_array",
+      "label": 0,
+      "split": "train",
+      "chars": 35
+     },
+     {
+      "name": "JSON::JSON_bool::JSON_bool",
+      "label": 0,
+      "split": "train",
+      "chars": 57
+     },
+     {
+      "name": "JSON::JSON_bool::unparse",
+      "label": 0,
+      "split": "train",
+      "chars": 91
+     },
+     {
+      "name": "JSON::JSON_dictionary::unparse",
+      "label": 0,
+      "split": "train",
+      "chars": 747
+     },
+     {
+      "name": "JSON::JSON_dictionary::~JSON_dictionary",
+      "label": 0,
+      "split": "train",
+      "chars": 45
+     },
+     {
+      "name": "JSON::JSON_null::~JSON_null",
+      "label": 0,
+      "split": "train",
+      "chars": 33
+     },
+     {
+      "name": "JSON::JSON_number::JSON_number",
+      "label": 0,
+      "split": "train",
+      "chars": 81
+     },
+     {
+      "name": "JSON::JSON_number::JSON_number",
+      "label": 0,
+      "split": "train",
+      "chars": 97
+     },
+     {
+      "name": "JSON::JSON_number::~JSON_number",
+      "label": 0,
+      "split": "train",
+      "chars": 37
+     },
+     {
+      "name": "JSON::JSON_string::JSON_string",
+      "label": 0,
+      "split": "train",
+      "chars": 94
+     },
+     {
+      "name": "JSON::JSON_string::unparse",
+      "label": 0,
+      "split": "train",
+      "chars": 90
+     },
+     {
+      "name": "JSON::JSON_string::~JSON_string",
+      "label": 0,
+      "split": "train",
+      "chars": 37
+     },
+     {
+      "name": "JSON::JSON_value::~JSON_value",
+      "label": 0,
+      "split": "train",
+      "chars": 35
+     },
+     {
+      "name": "JSON::Members::~Members",
+      "label": 0,
+      "split": "train",
+      "chars": 29
+     },
+     {
+      "name": "JSON::addArrayElement",
+      "label": 0,
+      "split": "train",
+      "chars": 436
+     },
+     {
+      "name": "JSON::addDictionaryMember",
+      "label": 0,
+      "split": "train",
+      "chars": 528
+     },
+     {
+      "name": "JSON::checkSchema",
+      "label": 0,
+      "split": "train",
+      "chars": 231
+     },
+     {
+      "name": "JSON::checkSchemaInternal",
+      "label": 0,
+      "split": "train",
+      "chars": 3130
+     },
+     {
+      "name": "JSON::encode_string",
+      "label": 0,
+      "split": "train",
+      "chars": 938
+     },
+     {
+      "name": "JSON::makeBool",
+      "label": 0,
+      "split": "train",
+      "chars": 69
+     },
+     {
+      "name": "JSON::makeDictionary",
+      "label": 0,
+      "split": "train",
+      "chars": 66
+     },
+     {
+      "name": "JSON::makeInt",
+      "label": 0,
+      "split": "train",
+      "chars": 79
+     },
+     {
+      "name": "JSON::makeNull",
+      "label": 0,
+      "split": "train",
+      "chars": 54
+     },
+     {
+      "name": "JSON::makeNumber",
+      "label": 0,
+      "split": "train",
+      "chars": 91
+     },
+     {
+      "name": "JSON::makeReal",
+      "label": 0,
+      "split": "train",
+      "chars": 73
+     },
+     {
+      "name": "JSON::makeString",
+      "label": 0,
+      "split": "train",
+      "chars": 85
+     },
+     {
+      "name": "JSON::unparse",
+      "label": 0,
+      "split": "train",
+      "chars": 166
+     },
+     {
+      "name": "MD5::MD5",
+      "label": 0,
+      "split": "train",
+      "chars": 26
+     },
+     {
+      "name": "MD5::appendString",
+      "label": 0,
+      "split": "train",
+      "chars": 130
+     },
+     {
+      "name": "MD5::checkDataChecksum",
+      "label": 0,
+      "split": "train",
+      "chars": 195
+     },
+     {
+      "name": "MD5::checkFileChecksum",
+      "label": 0,
+      "split": "train",
+      "chars": 367
+     },
+     {
+      "name": "MD5::decode",
+      "label": 0,
+      "split": "train",
+      "chars": 344
+     },
+     {
+      "name": "MD5::digest",
+      "label": 0,
+      "split": "train",
+      "chars": 100
+     },
+     {
+      "name": "MD5::encode",
+      "label": 0,
+      "split": "train",
+      "chars": 407
+     },
+     {
+      "name": "MD5::encodeDataIncrementally",
+      "label": 0,
+      "split": "train",
+      "chars": 120
+     },
+     {
+      "name": "MD5::encodeFile",
+      "label": 0,
+      "split": "train",
+      "chars": 931
+     },
+     {
+      "name": "MD5::encodeString",
+      "label": 0,
+      "split": "train",
+      "chars": 139
+     },
+     {
+      "name": "MD5::final",
+      "label": 0,
+      "split": "train",
+      "chars": 661
+     },
+     {
+      "name": "MD5::getDataChecksum",
+      "label": 0,
+      "split": "train",
+      "chars": 129
+     },
+     {
+      "name": "MD5::reset",
+      "label": 0,
+      "split": "train",
+      "chars": 33
+     },
+     {
+      "name": "MD5::transform",
+      "label": 0,
+      "split": "train",
+      "chars": 3631
+     },
+     {
+      "name": "MD5::unparse",
+      "label": 0,
+      "split": "train",
+      "chars": 136
+     },
+     {
+      "name": "NameWatcher::handleToken",
+      "label": 0,
+      "split": "train",
+      "chars": 447
+     },
+     {
+      "name": "OptionEntry",
+      "label": 0,
+      "split": "train",
+      "chars": 146
+     },
+     {
+      "name": "Options",
+      "label": 0,
+      "split": "train",
+      "chars": 2942
+     },
+     {
+      "name": "Pl_AES_PDF::Pl_AES_PDF",
+      "label": 0,
+      "split": "train",
+      "chars": 1066
+     },
+     {
+      "name": "Pl_AES_PDF::finish",
+      "label": 0,
+      "split": "train",
+      "chars": 1162
+     },
+     {
+      "name": "Pl_AES_PDF::flush",
+      "label": 0,
+      "split": "train",
+      "chars": 2040
+     },
+     {
+      "name": "Pl_AES_PDF::~Pl_AES_PDF",
+      "label": 0,
+      "split": "train",
+      "chars": 78
+     },
+     {
+      "name": "Pl_Count::Pl_Count",
+      "label": 0,
+      "split": "train",
+      "chars": 130
+     },
+     {
+      "name": "Pl_Count::getCount",
+      "label": 0,
+      "split": "train",
+      "chars": 54
+     },
+     {
+      "name": "Pl_Count::getLastChar",
+      "label": 0,
+      "split": "train",
+      "chars": 61
+     },
+     {
+      "name": "Pl_Count::write",
+      "label": 0,
+      "split": "train",
+      "chars": 177
+     },
+     {
+      "name": "Pl_DCT::Pl_DCT",
+      "label": 0,
+      "split": "train",
+      "chars": 508
+     },
+     {
+      "name": "Pl_DCT::compress",
+      "label": 0,
+      "split": "train",
+      "chars": 1988
+     },
+     {
+      "name": "Pl_DCT::decompress",
+      "label": 0,
+      "split": "train",
+      "chars": 1249
+     },
+     {
+      "name": "Pl_DCT::finish",
+      "label": 0,
+      "split": "train",
+      "chars": 1914
+     },
+     {
+      "name": "Pl_DCT::write",
+      "label": 0,
+      "split": "train",
+      "chars": 82
+     },
+     {
+      "name": "Pl_DCT::~Pl_DCT",
+      "label": 0,
+      "split": "train",
+      "chars": 21
+     },
+     {
+      "name": "Pl_LZWDecoder::Pl_LZWDecoder",
+      "label": 0,
+      "split": "train",
+      "chars": 333
+     },
+     {
+      "name": "Pl_LZWDecoder::addToTable",
+      "label": 0,
+      "split": "train",
+      "chars": 986
+     },
+     {
+      "name": "Pl_LZWDecoder::finish",
+      "label": 0,
+      "split": "train",
+      "chars": 52
+     },
+     {
+      "name": "Pl_LZWDecoder::getFirstChar",
+      "label": 0,
+      "split": "train",
+      "chars": 620
+     },
+     {
+      "name": "Pl_LZWDecoder::handleCode",
+      "label": 0,
+      "split": "train",
+      "chars": 1877
+     },
+     {
+      "name": "Pl_LZWDecoder::sendNextCode",
+      "label": 0,
+      "split": "train",
+      "chars": 1199
+     },
+     {
+      "name": "Pl_LZWDecoder::write",
+      "label": 0,
+      "split": "train",
+      "chars": 288
+     },
+     {
+      "name": "Pl_LZWDecoder::~Pl_LZWDecoder",
+      "label": 0,
+      "split": "train",
+      "chars": 35
+     },
+     {
+      "name": "Pl_PNGFilter::PaethPredictor",
+      "label": 0,
+      "split": "train",
+      "chars": 286
+     },
+     {
+      "name": "Pl_PNGFilter::decodeAverage",
+      "label": 0,
+      "split": "train",
+      "chars": 534
+     },
+     {
+      "name": "Pl_PNGFilter::decodePaeth",
+      "label": 0,
+      "split": "train",
+      "chars": 644
+     },
+     {
+      "name": "Pl_PNGFilter::decodeRow",
+      "label": 0,
+      "split": "train",
+      "chars": 581
+     },
+     {
+      "name": "Pl_PNGFilter::decodeSub",
+      "label": 0,
+      "split": "train",
+      "chars": 423
+     },
+     {
+      "name": "Pl_PNGFilter::decodeUp",
+      "label": 0,
+      "split": "train",
+      "chars": 359
+     },
+     {
+      "name": "Pl_PNGFilter::encodeRow",
+      "label": 0,
+      "split": "train",
+      "chars": 429
+     },
+     {
+      "name": "Pl_PNGFilter::processRow",
+      "label": 0,
+      "split": "train",
+      "chars": 125
+     },
+     {
+      "name": "Pl_PNGFilter::write",
+      "label": 0,
+      "split": "train",
+      "chars": 608
+     },
+     {
+      "name": "Pl_PNGFilter::~Pl_PNGFilter",
+      "label": 0,
+      "split": "train",
+      "chars": 73
+     },
+     {
+      "name": "Pl_RunLength::encode",
+      "label": 0,
+      "split": "train",
+      "chars": 1258
+     },
+     {
+      "name": "Pl_RunLength::flush_encode",
+      "label": 0,
+      "split": "train",
+      "chars": 1009
+     },
+     {
+      "name": "Pl_RunLength::write",
+      "label": 0,
+      "split": "train",
+      "chars": 177
+     },
+     {
+      "name": "Pl_RunLength::~Pl_RunLength",
+      "label": 0,
+      "split": "train",
+      "chars": 33
+     },
+     {
+      "name": "ProgressReporter",
+      "label": 0,
+      "split": "train",
+      "chars": 83
+     },
+     {
+      "name": "ProgressReporter::reportProgress",
+      "label": 0,
+      "split": "train",
+      "chars": 169
+     },
+     {
+      "name": "QPDF::CopiedStreamDataProvider::CopiedStreamDataProvider",
+      "label": 0,
+      "split": "train",
+      "chars": 130
+     },
+     {
+      "name": "QPDF::CopiedStreamDataProvider::provideStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 567
+     },
+     {
+      "name": "QPDF::CopiedStreamDataProvider::registerForeignStream",
+      "label": 0,
+      "split": "train",
+      "chars": 201
+     },
+     {
+      "name": "QPDF::EncryptionParameters::EncryptionParameters",
+      "label": 0,
+      "split": "train",
+      "chars": 304
+     },
+     {
+      "name": "QPDF::ForeignStreamData::ForeignStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 521
+     },
+     {
+      "name": "QPDF::Members::Members",
+      "label": 0,
+      "split": "train",
+      "chars": 523
+     },
+     {
+      "name": "QPDF::ObjUser::ObjUser",
+      "label": 0,
+      "split": "train",
+      "chars": 103
+     },
+     {
+      "name": "QPDF::ObjUser::ObjUser",
+      "label": 0,
+      "split": "train",
+      "chars": 65
+     },
+     {
+      "name": "QPDF::QPDF",
+      "label": 0,
+      "split": "train",
+      "chars": 386
+     },
+     {
+      "name": "QPDF::addPage",
+      "label": 0,
+      "split": "train",
+      "chars": 253
+     },
+     {
+      "name": "QPDF::addPageAt",
+      "label": 0,
+      "split": "train",
+      "chars": 217
+     },
+     {
+      "name": "QPDF::adjusted_offset",
+      "label": 0,
+      "split": "train",
+      "chars": 309
+     },
+     {
+      "name": "QPDF::calculateHOutline",
+      "label": 0,
+      "split": "train",
+      "chars": 589
+     },
+     {
+      "name": "QPDF::calculateHPageOffset",
+      "label": 0,
+      "split": "train",
+      "chars": 3609
+     },
+     {
+      "name": "QPDF::calculateHSharedObject",
+      "label": 0,
+      "split": "train",
+      "chars": 1807
+     },
+     {
+      "name": "QPDF::calculateLinearizationData",
+      "label": 0,
+      "split": "train",
+      "chars": 18897
+     },
+     {
+      "name": "QPDF::checkHOutlines",
+      "label": 0,
+      "split": "train",
+      "chars": 2374
+     },
+     {
+      "name": "QPDF::checkHPageOffset",
+      "label": 0,
+      "split": "train",
+      "chars": 5131
+     },
+     {
+      "name": "QPDF::checkHSharedObject",
+      "label": 0,
+      "split": "train",
+      "chars": 3154
+     },
+     {
+      "name": "QPDF::checkLinearizationInternal",
+      "label": 0,
+      "split": "train",
+      "chars": 5534
+     },
+     {
+      "name": "QPDF::compute_encryption_key_from_password",
+      "label": 0,
+      "split": "train",
+      "chars": 1509
+     },
+     {
+      "name": "QPDF::copyForeignObject",
+      "label": 0,
+      "split": "train",
+      "chars": 2112
+     },
+     {
+      "name": "QPDF::copyForeignObject",
+      "label": 0,
+      "split": "train",
+      "chars": 163
+     },
+     {
+      "name": "QPDF::decryptStream",
+      "label": 0,
+      "split": "train",
+      "chars": 4697
+     },
+     {
+      "name": "QPDF::decryptString",
+      "label": 0,
+      "split": "train",
+      "chars": 2317
+     },
+     {
+      "name": "QPDF::dumpHGeneric",
+      "label": 0,
+      "split": "train",
+      "chars": 296
+     },
+     {
+      "name": "QPDF::dumpHPageOffset",
+      "label": 0,
+      "split": "train",
+      "chars": 2011
+     },
+     {
+      "name": "QPDF::dumpHSharedObject",
+      "label": 0,
+      "split": "train",
+      "chars": 1243
+     },
+     {
+      "name": "QPDF::filterCompressedObjects",
+      "label": 0,
+      "split": "train",
+      "chars": 1965
+     },
+     {
+      "name": "QPDF::findEndstream",
+      "label": 0,
+      "split": "train",
+      "chars": 404
+     },
+     {
+      "name": "QPDF::findPage",
+      "label": 0,
+      "split": "train",
+      "chars": 509
+     },
+     {
+      "name": "QPDF::findPage",
+      "label": 0,
+      "split": "train",
+      "chars": 81
+     },
+     {
+      "name": "QPDF::flattenPagesTree",
+      "label": 0,
+      "split": "train",
+      "chars": 999
+     },
+     {
+      "name": "QPDF::generateHintStream",
+      "label": 0,
+      "split": "train",
+      "chars": 994
+     },
+     {
+      "name": "QPDF::getAllObjects",
+      "label": 0,
+      "split": "train",
+      "chars": 524
+     },
+     {
+      "name": "QPDF::getAllPages",
+      "label": 0,
+      "split": "train",
+      "chars": 393
+     },
+     {
+      "name": "QPDF::getEncryptionKey",
+      "label": 0,
+      "split": "train",
+      "chars": 76
+     },
+     {
+      "name": "QPDF::getExtensionLevel",
+      "label": 0,
+      "split": "train",
+      "chars": 584
+     },
+     {
+      "name": "QPDF::getKeyForObject",
+      "label": 0,
+      "split": "train",
+      "chars": 682
+     },
+     {
+      "name": "QPDF::getLinearizationOffset",
+      "label": 0,
+      "split": "train",
+      "chars": 572
+     },
+     {
+      "name": "QPDF::getLinearizedParts",
+      "label": 0,
+      "split": "train",
+      "chars": 481
+     },
+     {
+      "name": "QPDF::getPaddedUserPassword",
+      "label": 0,
+      "split": "train",
+      "chars": 80
+     },
+     {
+      "name": "QPDF::getTrimmedUserPassword",
+      "label": 0,
+      "split": "train",
+      "chars": 146
+     },
+     {
+      "name": "QPDF::getUncompressedObject",
+      "label": 0,
+      "split": "train",
+      "chars": 344
+     },
+     {
+      "name": "QPDF::initializeEncryption",
+      "label": 0,
+      "split": "train",
+      "chars": 9601
+     },
+     {
+      "name": "QPDF::insertPage",
+      "label": 0,
+      "split": "train",
+      "chars": 1659
+     },
+     {
+      "name": "QPDF::insertPageobjToPage",
+      "label": 0,
+      "split": "train",
+      "chars": 892
+     },
+     {
+      "name": "QPDF::interpretCF",
+      "label": 0,
+      "split": "train",
+      "chars": 404
+     },
+     {
+      "name": "QPDF::isEncrypted",
+      "label": 0,
+      "split": "train",
+      "chars": 790
+     },
+     {
+      "name": "QPDF::isEncrypted",
+      "label": 0,
+      "split": "train",
+      "chars": 66
+     },
+     {
+      "name": "QPDF::isLinearized",
+      "label": 0,
+      "split": "train",
+      "chars": 2789
+     },
+     {
+      "name": "QPDF::lengthNextN",
+      "label": 0,
+      "split": "train",
+      "chars": 684
+     },
+     {
+      "name": "QPDF::makeIndirectObject",
+      "label": 0,
+      "split": "train",
+      "chars": 323
+     },
+     {
+      "name": "QPDF::maxEnd",
+      "label": 0,
+      "split": "train",
+      "chars": 630
+     },
+     {
+      "name": "QPDF::objGenToIndirect",
+      "label": 0,
+      "split": "train",
+      "chars": 100
+     },
+     {
+      "name": "QPDF::outputLengthNextN",
+      "label": 0,
+      "split": "train",
+      "chars": 864
+     },
+     {
+      "name": "QPDF::parse",
+      "label": 0,
+      "split": "train",
+      "chars": 1785
+     },
+     {
+      "name": "QPDF::parse_xrefFirst",
+      "label": 0,
+      "split": "train",
+      "chars": 1211
+     },
+     {
+      "name": "QPDF::pipeForeignStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 546
+     },
+     {
+      "name": "QPDF::pipeStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 576
+     },
+     {
+      "name": "QPDF::pipeStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 2430
+     },
+     {
+      "name": "QPDF::processXRefStream",
+      "label": 0,
+      "split": "train",
+      "chars": 6043
+     },
+     {
+      "name": "QPDF::pushInheritedAttributesToPage",
+      "label": 0,
+      "split": "train",
+      "chars": 148
+     },
+     {
+      "name": "QPDF::pushInheritedAttributesToPage",
+      "label": 0,
+      "split": "train",
+      "chars": 1221
+     },
+     {
+      "name": "QPDF::pushInheritedAttributesToPageInternal",
+      "label": 0,
+      "split": "train",
+      "chars": 5523
+     },
+     {
+      "name": "QPDF::pushOutlinesToPart",
+      "label": 0,
+      "split": "train",
+      "chars": 953
+     },
+     {
+      "name": "QPDF::readHGeneric",
+      "label": 0,
+      "split": "train",
+      "chars": 308
+     },
+     {
+      "name": "QPDF::readHPageOffset",
+      "label": 0,
+      "split": "train",
+      "chars": 2079
+     },
+     {
+      "name": "QPDF::readHSharedObject",
+      "label": 0,
+      "split": "train",
+      "chars": 1439
+     },
+     {
+      "name": "QPDF::readHintStream",
+      "label": 0,
+      "split": "train",
+      "chars": 1965
+     },
+     {
+      "name": "QPDF::readLinearizationData",
+      "label": 0,
+      "split": "train",
+      "chars": 5244
+     },
+     {
+      "name": "QPDF::readObject",
+      "label": 0,
+      "split": "train",
+      "chars": 7095
+     },
+     {
+      "name": "QPDF::read_xref",
+      "label": 0,
+      "split": "train",
+      "chars": 2451
+     },
+     {
+      "name": "QPDF::reconstruct_xref",
+      "label": 0,
+      "split": "train",
+      "chars": 4258
+     },
+     {
+      "name": "QPDF::recoverStreamLength",
+      "label": 0,
+      "split": "train",
+      "chars": 2409
+     },
+     {
+      "name": "QPDF::removePage",
+      "label": 0,
+      "split": "train",
+      "chars": 1005
+     },
+     {
+      "name": "QPDF::resolveObjectsInStream",
+      "label": 0,
+      "split": "train",
+      "chars": 3790
+     },
+     {
+      "name": "QPDF::setPasswordIsHexKey",
+      "label": 0,
+      "split": "train",
+      "chars": 88
+     },
+     {
+      "name": "QPDF::showLinearizationData",
+      "label": 0,
+      "split": "train",
+      "chars": 227
+     },
+     {
+      "name": "QPDF::stopOnError",
+      "label": 0,
+      "split": "train",
+      "chars": 381
+     },
+     {
+      "name": "QPDF::trim_user_password",
+      "label": 0,
+      "split": "train",
+      "chars": 767
+     },
+     {
+      "name": "QPDF::updateAllPagesCache",
+      "label": 0,
+      "split": "train",
+      "chars": 494
+     },
+     {
+      "name": "QPDF::updateObjectMaps",
+      "label": 0,
+      "split": "train",
+      "chars": 153
+     },
+     {
+      "name": "QPDF::updateObjectMapsInternal",
+      "label": 0,
+      "split": "train",
+      "chars": 1643
+     },
+     {
+      "name": "QPDF::writeHGeneric",
+      "label": 0,
+      "split": "train",
+      "chars": 310
+     },
+     {
+      "name": "QPDF::writeHSharedObject",
+      "label": 0,
+      "split": "train",
+      "chars": 1416
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::Members::Members",
+      "label": 0,
+      "split": "train",
+      "chars": 75
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::Members::~Members",
+      "label": 0,
+      "split": "train",
+      "chars": 51
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::QPDFAcroFormDocumentHelper",
+      "label": 0,
+      "split": "train",
+      "chars": 123
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::analyze",
+      "label": 0,
+      "split": "train",
+      "chars": 3149
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::generateAppearancesIfNeeded",
+      "label": 0,
+      "split": "train",
+      "chars": 1573
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::getAnnotationsForField",
+      "label": 0,
+      "split": "train",
+      "chars": 334
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::getFieldForAnnotation",
+      "label": 0,
+      "split": "train",
+      "chars": 673
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::getFormFields",
+      "label": 0,
+      "split": "train",
+      "chars": 431
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::getNeedAppearances",
+      "label": 0,
+      "split": "train",
+      "chars": 340
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::getWidgetAnnotationsForPage",
+      "label": 0,
+      "split": "train",
+      "chars": 123
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::invalidateCache",
+      "label": 0,
+      "split": "train",
+      "chars": 168
+     },
+     {
+      "name": "QPDFAcroFormDocumentHelper::traverseField",
+      "label": 0,
+      "split": "train",
+      "chars": 2797
+     },
+     {
+      "name": "QPDFAnnotationObjectHelper::Members::Members",
+      "label": 0,
+      "split": "train",
+      "chars": 50
+     },
+     {
+      "name": "QPDFAnnotationObjectHelper::Members::~Members",
+      "label": 0,
+      "split": "train",
+      "chars": 51
+     },
+     {
+      "name": "QPDFAnnotationObjectHelper::QPDFAnnotationObjectHelper",
+      "label": 0,
+      "split": "train",
+      "chars": 106
+     },
+     {
+      "name": "QPDFAnnotationObjectHelper::getAppearanceDictionary",
+      "label": 0,
+      "split": "train",
+      "chars": 92
+     },
+     {
+      "name": "QPDFAnnotationObjectHelper::getAppearanceStream",
+      "label": 0,
+      "split": "train",
+      "chars": 1013
+     },
+     {
+      "name": "QPDFAnnotationObjectHelper::getFlags",
+      "label": 0,
+      "split": "train",
+      "chars": 167
+     },
+     {
+      "name": "QPDFAnnotationObjectHelper::getPageContentForAppearance",
+      "label": 0,
+      "split": "train",
+      "chars": 7577
+     },
+     {
+      "name": "QPDFAnnotationObjectHelper::getRect",
+      "label": 0,
+      "split": "train",
+      "chars": 100
+     },
+     {
+      "name": "QPDFAnnotationObjectHelper::getSubtype",
+      "label": 0,
+      "split": "train",
+      "chars": 94
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::Members::Members",
+      "label": 0,
+      "split": "train",
+      "chars": 49
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::Members::~Members",
+      "label": 0,
+      "split": "train",
+      "chars": 50
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::QPDFFormFieldObjectHelper",
+      "label": 0,
+      "split": "train",
+      "chars": 132
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::QPDFFormFieldObjectHelper",
+      "label": 0,
+      "split": "train",
+      "chars": 126
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::generateAppearance",
+      "label": 0,
+      "split": "train",
+      "chars": 404
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getAlternativeName",
+      "label": 0,
+      "split": "train",
+      "chars": 321
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getChoices",
+      "label": 0,
+      "split": "train",
+      "chars": 519
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getDefaultAppearance",
+      "label": 0,
+      "split": "train",
+      "chars": 105
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getDefaultValueAsString",
+      "label": 0,
+      "split": "train",
+      "chars": 108
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getFieldType",
+      "label": 0,
+      "split": "train",
+      "chars": 95
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getFlags",
+      "label": 0,
+      "split": "train",
+      "chars": 152
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getFullyQualifiedName",
+      "label": 0,
+      "split": "train",
+      "chars": 641
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getInheritableFieldValueAsName",
+      "label": 0,
+      "split": "train",
+      "chars": 256
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getInheritableFieldValueAsString",
+      "label": 0,
+      "split": "train",
+      "chars": 265
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getMappingName",
+      "label": 0,
+      "split": "train",
+      "chars": 314
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getParent",
+      "label": 0,
+      "split": "train",
+      "chars": 96
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getPartialName",
+      "label": 0,
+      "split": "train",
+      "chars": 199
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getQuadding",
+      "label": 0,
+      "split": "train",
+      "chars": 291
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getValue",
+      "label": 0,
+      "split": "train",
+      "chars": 84
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getValueAsString",
+      "label": 0,
+      "split": "train",
+      "chars": 100
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::isCheckbox",
+      "label": 0,
+      "split": "train",
+      "chars": 156
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::isChoice",
+      "label": 0,
+      "split": "train",
+      "chars": 79
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::isPushbutton",
+      "label": 0,
+      "split": "train",
+      "chars": 157
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::isRadioButton",
+      "label": 0,
+      "split": "train",
+      "chars": 148
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::isText",
+      "label": 0,
+      "split": "train",
+      "chars": 77
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::setCheckBoxValue",
+      "label": 0,
+      "split": "train",
+      "chars": 1353
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::setFieldAttribute",
+      "label": 0,
+      "split": "train",
+      "chars": 186
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::setRadioButtonValue",
+      "label": 0,
+      "split": "train",
+      "chars": 3370
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::setV",
+      "label": 0,
+      "split": "train",
+      "chars": 1885
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::setV",
+      "label": 0,
+      "split": "train",
+      "chars": 179
+     },
+     {
+      "name": "QPDFNameTreeObjectHelper::Members::Members",
+      "label": 0,
+      "split": "train",
+      "chars": 48
+     },
+     {
+      "name": "QPDFNameTreeObjectHelper::Members::~Members",
+      "label": 0,
+      "split": "train",
+      "chars": 49
+     },
+     {
+      "name": "QPDFNameTreeObjectHelper::QPDFNameTreeObjectHelper",
+      "label": 0,
+      "split": "train",
+      "chars": 143
+     },
+     {
+      "name": "QPDFNameTreeObjectHelper::findObject",
+      "label": 0,
+      "split": "train",
+      "chars": 297
+     },
+     {
+      "name": "QPDFNameTreeObjectHelper::updateMap",
+      "label": 0,
+      "split": "train",
+      "chars": 892
+     },
+     {
+      "name": "QPDFNameTreeObjectHelper::~QPDFNameTreeObjectHelper",
+      "label": 0,
+      "split": "train",
+      "chars": 57
+     },
+     {
+      "name": "QPDFNumberTreeObjectHelper::Members::Members",
+      "label": 0,
+      "split": "train",
+      "chars": 50
+     },
+     {
+      "name": "QPDFNumberTreeObjectHelper::Members::~Members",
+      "label": 0,
+      "split": "train",
+      "chars": 51
+     },
+     {
+      "name": "QPDFNumberTreeObjectHelper::QPDFNumberTreeObjectHelper",
+      "label": 0,
+      "split": "train",
+      "chars": 147
+     },
+     {
+      "name": "QPDFNumberTreeObjectHelper::findObject",
+      "label": 0,
+      "split": "train",
+      "chars": 262
+     },
+     {
+      "name": "QPDFNumberTreeObjectHelper::findObjectAtOrBelow",
+      "label": 0,
+      "split": "train",
+      "chars": 337
+     },
+     {
+      "name": "QPDFNumberTreeObjectHelper::getAsMap",
+      "label": 0,
+      "split": "train",
+      "chars": 306
+     },
+     {
+      "name": "QPDFNumberTreeObjectHelper::getMin",
+      "label": 0,
+      "split": "train",
+      "chars": 186
+     },
+     {
+      "name": "QPDFNumberTreeObjectHelper::hasIndex",
+      "label": 0,
+      "split": "train",
+      "chars": 105
+     },
+     {
+      "name": "QPDFNumberTreeObjectHelper::updateMap",
+      "label": 0,
+      "split": "train",
+      "chars": 885
+     },
+     {
+      "name": "QPDFObjectHandle::copyObject",
+      "label": 0,
+      "split": "train",
+      "chars": 2830
+     },
+     {
+      "name": "QPDFObjectHandle::getArrayAsRectangle",
+      "label": 0,
+      "split": "train",
+      "chars": 368
+     },
+     {
+      "name": "QPDFObjectHandle::getJSON",
+      "label": 0,
+      "split": "train",
+      "chars": 417
+     },
+     {
+      "name": "QPDFObjectHandle::getPageImages",
+      "label": 0,
+      "split": "train",
+      "chars": 844
+     },
+     {
+      "name": "QPDFObjectHandle::getResourceNames",
+      "label": 0,
+      "split": "train",
+      "chars": 729
+     },
+     {
+      "name": "QPDFObjectHandle::getUIntValue",
+      "label": 0,
+      "split": "train",
+      "chars": 401
+     },
+     {
+      "name": "QPDFObjectHandle::getUIntValueAsUInt",
+      "label": 0,
+      "split": "train",
+      "chars": 704
+     },
+     {
+      "name": "QPDFObjectHandle::getUniqueResourceName",
+      "label": 0,
+      "split": "train",
+      "chars": 883
+     },
+     {
+      "name": "QPDFObjectHandle::isPageObject",
+      "label": 0,
+      "split": "train",
+      "chars": 607
+     },
+     {
+      "name": "QPDFObjectHandle::isRectangle",
+      "label": 0,
+      "split": "train",
+      "chars": 304
+     },
+     {
+      "name": "QPDFObjectHandle::makeDirect",
+      "label": 0,
+      "split": "train",
+      "chars": 99
+     },
+     {
+      "name": "QPDFObjectHandle::mergeResources",
+      "label": 0,
+      "split": "train",
+      "chars": 2869
+     },
+     {
+      "name": "QPDFObjectHandle::newArray",
+      "label": 0,
+      "split": "train",
+      "chars": 361
+     },
+     {
+      "name": "QPDFObjectHandle::newArray",
+      "label": 0,
+      "split": "train",
+      "chars": 282
+     },
+     {
+      "name": "QPDFObjectHandle::newFromMatrix",
+      "label": 0,
+      "split": "train",
+      "chars": 82
+     },
+     {
+      "name": "QPDFObjectHandle::newFromRectangle",
+      "label": 0,
+      "split": "train",
+      "chars": 88
+     },
+     {
+      "name": "QPDFObjectHandle::newUnicodeString",
+      "label": 0,
+      "split": "train",
+      "chars": 130
+     },
+     {
+      "name": "QPDFObjectHandle::objectWarning",
+      "label": 0,
+      "split": "train",
+      "chars": 98
+     },
+     {
+      "name": "QPDFObjectHandle::parse",
+      "label": 0,
+      "split": "train",
+      "chars": 885
+     },
+     {
+      "name": "QPDFObjectHandle::parseContentStream_data",
+      "label": 0,
+      "split": "train",
+      "chars": 1751
+     },
+     {
+      "name": "QPDFObjectHandle::parseInternal",
+      "label": 0,
+      "split": "train",
+      "chars": 14227
+     },
+     {
+      "name": "QPDFObjectHandle::pipeContentStreams",
+      "label": 0,
+      "split": "train",
+      "chars": 949
+     },
+     {
+      "name": "QPDFObjectHandle::pipeStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 499
+     },
+     {
+      "name": "QPDFObjectHandle::pipeStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 408
+     },
+     {
+      "name": "QPDFObjectHandle::shallowCopy",
+      "label": 0,
+      "split": "train",
+      "chars": 745
+     },
+     {
+      "name": "QPDFObjectHandle::unparseBinary",
+      "label": 0,
+      "split": "train",
+      "chars": 220
+     },
+     {
+      "name": "QPDFObjectHandle::warnIfPossible",
+      "label": 0,
+      "split": "train",
+      "chars": 488
+     },
+     {
+      "name": "QPDFObjectHandle::wrapInArray",
+      "label": 0,
+      "split": "train",
+      "chars": 197
+     },
+     {
+      "name": "QPDFOutlineObjectHelper::Members::Members",
+      "label": 0,
+      "split": "train",
+      "chars": 89
+     },
+     {
+      "name": "QPDFOutlineObjectHelper::Members::~Members",
+      "label": 0,
+      "split": "train",
+      "chars": 48
+     },
+     {
+      "name": "QPDFOutlineObjectHelper::QPDFOutlineObjectHelper",
+      "label": 0,
+      "split": "train",
+      "chars": 813
+     },
+     {
+      "name": "QPDFOutlineObjectHelper::getCount",
+      "label": 0,
+      "split": "train",
+      "chars": 185
+     },
+     {
+      "name": "QPDFOutlineObjectHelper::getDest",
+      "label": 0,
+      "split": "train",
+      "chars": 804
+     },
+     {
+      "name": "QPDFOutlineObjectHelper::getDestPage",
+      "label": 0,
+      "split": "train",
+      "chars": 227
+     },
+     {
+      "name": "QPDFOutlineObjectHelper::getKids",
+      "label": 0,
+      "split": "train",
+      "chars": 64
+     },
+     {
+      "name": "QPDFOutlineObjectHelper::getParent",
+      "label": 0,
+      "split": "train",
+      "chars": 68
+     },
+     {
+      "name": "QPDFOutlineObjectHelper::getTitle",
+      "label": 0,
+      "split": "train",
+      "chars": 188
+     },
+     {
+      "name": "QPDFPageData::QPDFPageData",
+      "label": 0,
+      "split": "train",
+      "chars": 196
+     },
+     {
+      "name": "QPDFPageData::QPDFPageData",
+      "label": 0,
+      "split": "train",
+      "chars": 513
+     },
+     {
+      "name": "QPDFPageDocumentHelper::Members::~Members",
+      "label": 0,
+      "split": "train",
+      "chars": 47
+     },
+     {
+      "name": "QPDFPageDocumentHelper::QPDFPageDocumentHelper",
+      "label": 0,
+      "split": "train",
+      "chars": 93
+     },
+     {
+      "name": "QPDFPageDocumentHelper::addPage",
+      "label": 0,
+      "split": "train",
+      "chars": 135
+     },
+     {
+      "name": "QPDFPageDocumentHelper::addPageAt",
+      "label": 0,
+      "split": "train",
+      "chars": 257
+     },
+     {
+      "name": "QPDFPageDocumentHelper::flattenAnnotationsForPage",
+      "label": 0,
+      "split": "train",
+      "chars": 4335
+     },
+     {
+      "name": "QPDFPageDocumentHelper::getAllPages",
+      "label": 0,
+      "split": "train",
+      "chars": 366
+     },
+     {
+      "name": "QPDFPageDocumentHelper::pushInheritedAttributesToPage",
+      "label": 0,
+      "split": "train",
+      "chars": 107
+     },
+     {
+      "name": "QPDFPageDocumentHelper::removePage",
+      "label": 0,
+      "split": "train",
+      "chars": 116
+     },
+     {
+      "name": "QPDFPageObjectHelper::Members::Members",
+      "label": 0,
+      "split": "train",
+      "chars": 44
+     },
+     {
+      "name": "QPDFPageObjectHelper::Members::~Members",
+      "label": 0,
+      "split": "train",
+      "chars": 45
+     },
+     {
+      "name": "QPDFPageObjectHelper::addContentTokenFilter",
+      "label": 0,
+      "split": "train",
+      "chars": 161
+     },
+     {
+      "name": "QPDFPageObjectHelper::addPageContents",
+      "label": 0,
+      "split": "train",
+      "chars": 127
+     },
+     {
+      "name": "QPDFPageObjectHelper::coalesceContentStreams",
+      "label": 0,
+      "split": "train",
+      "chars": 89
+     },
+     {
+      "name": "QPDFPageObjectHelper::externalizeInlineImages",
+      "label": 0,
+      "split": "train",
+      "chars": 681
+     },
+     {
+      "name": "QPDFPageObjectHelper::getAnnotations",
+      "label": 0,
+      "split": "train",
+      "chars": 714
+     },
+     {
+      "name": "QPDFPageObjectHelper::getAttribute",
+      "label": 0,
+      "split": "train",
+      "chars": 1090
+     },
+     {
+      "name": "QPDFPageObjectHelper::getCropBox",
+      "label": 0,
+      "split": "train",
+      "chars": 217
+     },
+     {
+      "name": "QPDFPageObjectHelper::getFormXObjectForPage",
+      "label": 0,
+      "split": "train",
+      "chars": 1656
+     },
+     {
+      "name": "QPDFPageObjectHelper::getMatrixForTransformations",
+      "label": 0,
+      "split": "train",
+      "chars": 1721
+     },
+     {
+      "name": "QPDFPageObjectHelper::getMediaBox",
+      "label": 0,
+      "split": "train",
+      "chars": 112
+     },
+     {
+      "name": "QPDFPageObjectHelper::getPageContents",
+      "label": 0,
+      "split": "train",
+      "chars": 82
+     },
+     {
+      "name": "QPDFPageObjectHelper::getPageImages",
+      "label": 0,
+      "split": "train",
+      "chars": 78
+     },
+     {
+      "name": "QPDFPageObjectHelper::getTrimBox",
+      "label": 0,
+      "split": "train",
+      "chars": 230
+     },
+     {
+      "name": "QPDFPageObjectHelper::parsePageContents",
+      "label": 0,
+      "split": "train",
+      "chars": 137
+     },
+     {
+      "name": "QPDFPageObjectHelper::pipePageContents",
+      "label": 0,
+      "split": "train",
+      "chars": 89
+     },
+     {
+      "name": "QPDFPageObjectHelper::placeFormXObject",
+      "label": 0,
+      "split": "train",
+      "chars": 4031
+     },
+     {
+      "name": "QPDFPageObjectHelper::removeUnreferencedResources",
+      "label": 0,
+      "split": "train",
+      "chars": 1803
+     },
+     {
+      "name": "QPDFPageObjectHelper::rotatePage",
+      "label": 0,
+      "split": "train",
+      "chars": 104
+     },
+     {
+      "name": "QPDFPageObjectHelper::shallowCopyPage",
+      "label": 0,
+      "split": "train",
+      "chars": 370
+     },
+     {
+      "name": "QPDFTokenizer::Members::Members",
+      "label": 0,
+      "split": "train",
+      "chars": 136
+     },
+     {
+      "name": "QPDFTokenizer::Members::reset",
+      "label": 0,
+      "split": "train",
+      "chars": 329
+     },
+     {
+      "name": "QPDFTokenizer::Members::~Members",
+      "label": 0,
+      "split": "train",
+      "chars": 38
+     },
+     {
+      "name": "QPDFTokenizer::QPDFTokenizer",
+      "label": 0,
+      "split": "train",
+      "chars": 57
+     },
+     {
+      "name": "QPDFTokenizer::Token::Token",
+      "label": 0,
+      "split": "train",
+      "chars": 344
+     },
+     {
+      "name": "QPDFTokenizer::allowEOF",
+      "label": 0,
+      "split": "train",
+      "chars": 60
+     },
+     {
+      "name": "QPDFTokenizer::betweenTokens",
+      "label": 0,
+      "split": "train",
+      "chars": 224
+     },
+     {
+      "name": "QPDFTokenizer::expectInlineImage",
+      "label": 0,
+      "split": "train",
+      "chars": 91
+     },
+     {
+      "name": "QPDFTokenizer::expectInlineImage",
+      "label": 0,
+      "split": "train",
+      "chars": 318
+     },
+     {
+      "name": "QPDFTokenizer::findEI",
+      "label": 0,
+      "split": "train",
+      "chars": 4234
+     },
+     {
+      "name": "QPDFTokenizer::getToken",
+      "label": 0,
+      "split": "train",
+      "chars": 472
+     },
+     {
+      "name": "QPDFTokenizer::includeIgnorable",
+      "label": 0,
+      "split": "train",
+      "chars": 76
+     },
+     {
+      "name": "QPDFTokenizer::isDelimiter",
+      "label": 0,
+      "split": "train",
+      "chars": 68
+     },
+     {
+      "name": "QPDFTokenizer::presentCharacter",
+      "label": 0,
+      "split": "train",
+      "chars": 9199
+     },
+     {
+      "name": "QPDFTokenizer::presentEOF",
+      "label": 0,
+      "split": "train",
+      "chars": 1210
+     },
+     {
+      "name": "QPDFTokenizer::readToken",
+      "label": 0,
+      "split": "train",
+      "chars": 2258
+     },
+     {
+      "name": "QPDFTokenizer::resolveLiteral",
+      "label": 0,
+      "split": "train",
+      "chars": 2493
+     },
+     {
+      "name": "QPDFWordTokenFinder",
+      "label": 0,
+      "split": "train",
+      "chars": 149
+     },
+     {
+      "name": "QPDFWordTokenFinder::check",
+      "label": 0,
+      "split": "train",
+      "chars": 1009
+     },
+     {
+      "name": "QPDFWriter::bytesNeeded",
+      "label": 0,
+      "split": "train",
+      "chars": 132
+     },
+     {
+      "name": "QPDFWriter::calculateXrefStreamPadding",
+      "label": 0,
+      "split": "train",
+      "chars": 598
+     },
+     {
+      "name": "QPDFWriter::copyEncryptionParameters",
+      "label": 0,
+      "split": "train",
+      "chars": 2182
+     },
+     {
+      "name": "QPDFWriter::doWriteSetup",
+      "label": 0,
+      "split": "train",
+      "chars": 4671
+     },
+     {
+      "name": "QPDFWriter::generateID",
+      "label": 0,
+      "split": "train",
+      "chars": 3147
+     },
+     {
+      "name": "QPDFWriter::generateObjectStreams",
+      "label": 0,
+      "split": "train",
+      "chars": 1527
+     },
+     {
+      "name": "QPDFWriter::getFinalVersion",
+      "label": 0,
+      "split": "train",
+      "chars": 92
+     },
+     {
+      "name": "QPDFWriter::getOriginalID1",
+      "label": 0,
+      "split": "train",
+      "chars": 244
+     },
+     {
+      "name": "QPDFWriter::interpretR3EncryptionParameters",
+      "label": 0,
+      "split": "train",
+      "chars": 2934
+     },
+     {
+      "name": "QPDFWriter::prepareFileForWrite",
+      "label": 0,
+      "split": "train",
+      "chars": 3928
+     },
+     {
+      "name": "QPDFWriter::pushEncryptionFilter",
+      "label": 0,
+      "split": "train",
+      "chars": 699
+     },
+     {
+      "name": "QPDFWriter::registerProgressReporter",
+      "label": 0,
+      "split": "train",
+      "chars": 113
+     },
+     {
+      "name": "QPDFWriter::setEncryptionParametersInternal",
+      "label": 0,
+      "split": "train",
+      "chars": 2820
+     },
+     {
+      "name": "QPDFWriter::setR3EncryptionParameters",
+      "label": 0,
+      "split": "train",
+      "chars": 629
+     },
+     {
+      "name": "QPDFWriter::setR3EncryptionParameters",
+      "label": 0,
+      "split": "train",
+      "chars": 466
+     },
+     {
+      "name": "QPDFWriter::setR4EncryptionParameters",
+      "label": 0,
+      "split": "train",
+      "chars": 597
+     },
+     {
+      "name": "QPDFWriter::setR4EncryptionParameters",
+      "label": 0,
+      "split": "train",
+      "chars": 760
+     },
+     {
+      "name": "QPDFWriter::setR5EncryptionParameters",
+      "label": 0,
+      "split": "train",
+      "chars": 743
+     },
+     {
+      "name": "QPDFWriter::unparseObject",
+      "label": 0,
+      "split": "train",
+      "chars": 127
+     },
+     {
+      "name": "QPDFWriter::unparseObject",
+      "label": 0,
+      "split": "train",
+      "chars": 14242
+     },
+     {
+      "name": "QPDFWriter::write",
+      "label": 0,
+      "split": "train",
+      "chars": 961
+     },
+     {
+      "name": "QPDFWriter::writeHeader",
+      "label": 0,
+      "split": "train",
+      "chars": 734
+     },
+     {
+      "name": "QPDFWriter::writeHintStream",
+      "label": 0,
+      "split": "train",
+      "chars": 1041
+     },
+     {
+      "name": "QPDFWriter::writeLinearized",
+      "label": 0,
+      "split": "train",
+      "chars": 12893
+     },
+     {
+      "name": "QPDFWriter::writeObject",
+      "label": 0,
+      "split": "train",
+      "chars": 1634
+     },
+     {
+      "name": "QPDFWriter::writeObjectStream",
+      "label": 0,
+      "split": "train",
+      "chars": 4880
+     },
+     {
+      "name": "QPDFWriter::writeObjectStreamOffsets",
+      "label": 0,
+      "split": "train",
+      "chars": 396
+     },
+     {
+      "name": "QPDFWriter::writeStandard",
+      "label": 0,
+      "split": "train",
+      "chars": 1567
+     },
+     {
+      "name": "QPDFWriter::writeTrailer",
+      "label": 0,
+      "split": "train",
+      "chars": 3033
+     },
+     {
+      "name": "QPDFXRefEntry::QPDFXRefEntry",
+      "label": 0,
+      "split": "train",
+      "chars": 261
+     },
+     {
+      "name": "QPDFXRefEntry::QPDFXRefEntry",
+      "label": 0,
+      "split": "train",
+      "chars": 78
+     },
+     {
+      "name": "QPDFXRefEntry::getObjStreamIndex",
+      "label": 0,
+      "split": "train",
+      "chars": 193
+     },
+     {
+      "name": "QPDFXRefEntry::getObjStreamNumber",
+      "label": 0,
+      "split": "train",
+      "chars": 210
+     },
+     {
+      "name": "QPDFXRefEntry::getOffset",
+      "label": 0,
+      "split": "train",
+      "chars": 177
+     },
+     {
+      "name": "QPDFXRefEntry::getType",
+      "label": 0,
+      "split": "train",
+      "chars": 57
+     },
+     {
+      "name": "QPDF_Array::QPDF_Array",
+      "label": 0,
+      "split": "train",
+      "chars": 89
+     },
+     {
+      "name": "QPDF_Array::appendItem",
+      "label": 0,
+      "split": "train",
+      "chars": 89
+     },
+     {
+      "name": "QPDF_Array::eraseItem",
+      "label": 0,
+      "split": "train",
+      "chars": 146
+     },
+     {
+      "name": "QPDF_Array::getAsVector",
+      "label": 0,
+      "split": "train",
+      "chars": 59
+     },
+     {
+      "name": "QPDF_Array::getItem",
+      "label": 0,
+      "split": "train",
+      "chars": 247
+     },
+     {
+      "name": "QPDF_Array::getJSON",
+      "label": 0,
+      "split": "train",
+      "chars": 243
+     },
+     {
+      "name": "QPDF_Array::getTypeCode",
+      "label": 0,
+      "split": "train",
+      "chars": 68
+     },
+     {
+      "name": "QPDF_Array::getTypeName",
+      "label": 0,
+      "split": "train",
+      "chars": 55
+     },
+     {
+      "name": "QPDF_Array::insertItem",
+      "label": 0,
+      "split": "train",
+      "chars": 343
+     },
+     {
+      "name": "QPDF_Array::releaseResolved",
+      "label": 0,
+      "split": "train",
+      "chars": 219
+     },
+     {
+      "name": "QPDF_Array::setDescription",
+      "label": 0,
+      "split": "train",
+      "chars": 131
+     },
+     {
+      "name": "QPDF_Array::setItem",
+      "label": 0,
+      "split": "train",
+      "chars": 165
+     },
+     {
+      "name": "QPDF_Array::unparse",
+      "label": 0,
+      "split": "train",
+      "chars": 266
+     },
+     {
+      "name": "QPDF_Array::~QPDF_Array",
+      "label": 0,
+      "split": "train",
+      "chars": 29
+     },
+     {
+      "name": "QPDF_Stream::QPDF_Stream",
+      "label": 0,
+      "split": "train",
+      "chars": 464
+     },
+     {
+      "name": "QPDF_Stream::filterable",
+      "label": 0,
+      "split": "train",
+      "chars": 5010
+     },
+     {
+      "name": "QPDF_Stream::getLength",
+      "label": 0,
+      "split": "train",
+      "chars": 59
+     },
+     {
+      "name": "QPDF_Stream::getOffset",
+      "label": 0,
+      "split": "train",
+      "chars": 59
+     },
+     {
+      "name": "QPDF_Stream::getStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 431
+     },
+     {
+      "name": "QPDF_Stream::getStreamDataBuffer",
+      "label": 0,
+      "split": "train",
+      "chars": 74
+     },
+     {
+      "name": "QPDF_Stream::getStreamDataProvider",
+      "label": 0,
+      "split": "train",
+      "chars": 80
+     },
+     {
+      "name": "QPDF_Stream::getTypeCode",
+      "label": 0,
+      "split": "train",
+      "chars": 70
+     },
+     {
+      "name": "QPDF_Stream::getTypeName",
+      "label": 0,
+      "split": "train",
+      "chars": 57
+     },
+     {
+      "name": "QPDF_Stream::isDataModified",
+      "label": 0,
+      "split": "train",
+      "chars": 83
+     },
+     {
+      "name": "QPDF_Stream::pipeStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 8493
+     },
+     {
+      "name": "QPDF_Stream::releaseResolved",
+      "label": 0,
+      "split": "train",
+      "chars": 140
+     },
+     {
+      "name": "QPDF_Stream::replaceDict",
+      "label": 0,
+      "split": "train",
+      "chars": 334
+     },
+     {
+      "name": "QPDF_Stream::replaceFilterData",
+      "label": 0,
+      "split": "train",
+      "chars": 573
+     },
+     {
+      "name": "QPDF_Stream::replaceStreamData",
+      "label": 0,
+      "split": "train",
+      "chars": 292
+     },
+     {
+      "name": "QPDF_Stream::setDescription",
+      "label": 0,
+      "split": "train",
+      "chars": 158
+     },
+     {
+      "name": "QPDF_Stream::setObjGen",
+      "label": 0,
+      "split": "train",
+      "chars": 300
+     },
+     {
+      "name": "QPDF_Stream::understandDecodeParams",
+      "label": 0,
+      "split": "train",
+      "chars": 2897
+     },
+     {
+      "name": "QPDF_Stream::warn",
+      "label": 0,
+      "split": "train",
+      "chars": 78
+     },
+     {
+      "name": "QPDF_Stream::~QPDF_Stream",
+      "label": 0,
+      "split": "train",
+      "chars": 31
+     },
+     {
+      "name": "QPDF_String::QPDF_String",
+      "label": 0,
+      "split": "train",
+      "chars": 67
+     },
+     {
+      "name": "QPDF_String::getJSON",
+      "label": 0,
+      "split": "train",
+      "chars": 69
+     },
+     {
+      "name": "QPDF_String::getVal",
+      "label": 0,
+      "split": "train",
+      "chars": 53
+     },
+     {
+      "name": "QPDF_String::new_utf16",
+      "label": 0,
+      "split": "train",
+      "chars": 115
+     },
+     {
+      "name": "QPDF_String::unparse",
+      "label": 0,
+      "split": "train",
+      "chars": 2086
+     },
+     {
+      "name": "QPDF_String::unparse",
+      "label": 0,
+      "split": "train",
+      "chars": 53
+     },
+     {
+      "name": "QUtil::analyze_encoding",
+      "label": 0,
+      "split": "train",
+      "chars": 801
+     },
+     {
+      "name": "QUtil::binary_stdin",
+      "label": 0,
+      "split": "train",
+      "chars": 181
+     },
+     {
+      "name": "QUtil::hex_decode",
+      "label": 0,
+      "split": "train",
+      "chars": 937
+     },
+     {
+      "name": "QUtil::hex_encode",
+      "label": 0,
+      "split": "train",
+      "chars": 277
+     },
+     {
+      "name": "QUtil::is_number",
+      "label": 0,
+      "split": "train",
+      "chars": 633
+     },
+     {
+      "name": "QUtil::is_utf16",
+      "label": 0,
+      "split": "train",
+      "chars": 139
+     },
+     {
+      "name": "QUtil::mac_roman_to_utf8",
+      "label": 0,
+      "split": "train",
+      "chars": 411
+     },
+     {
+      "name": "QUtil::parse_numrange",
+      "label": 0,
+      "split": "train",
+      "chars": 4851
+     },
+     {
+      "name": "QUtil::pdf_doc_to_utf8",
+      "label": 0,
+      "split": "train",
+      "chars": 424
+     },
+     {
+      "name": "QUtil::possible_repaired_encodings",
+      "label": 0,
+      "split": "train",
+      "chars": 2601
+     },
+     {
+      "name": "QUtil::safe_fopen",
+      "label": 0,
+      "split": "train",
+      "chars": 1387
+     },
+     {
+      "name": "QUtil::same_file",
+      "label": 0,
+      "split": "train",
+      "chars": 1425
+     },
+     {
+      "name": "QUtil::setLineBuf",
+      "label": 0,
+      "split": "train",
+      "chars": 108
+     },
+     {
+      "name": "QUtil::string_to_int",
+      "label": 0,
+      "split": "train",
+      "chars": 127
+     },
+     {
+      "name": "QUtil::string_to_ll",
+      "label": 0,
+      "split": "train",
+      "chars": 363
+     },
+     {
+      "name": "QUtil::string_to_uint",
+      "label": 0,
+      "split": "train",
+      "chars": 131
+     },
+     {
+      "name": "QUtil::string_to_ull",
+      "label": 0,
+      "split": "train",
+      "chars": 633
+     },
+     {
+      "name": "QUtil::tell",
+      "label": 0,
+      "split": "train",
+      "chars": 305
+     },
+     {
+      "name": "QUtil::throw_system_error",
+      "label": 0,
+      "split": "train",
+      "chars": 108
+     },
+     {
+      "name": "QUtil::toUTF16",
+      "label": 0,
+      "split": "train",
+      "chars": 966
+     },
+     {
+      "name": "QUtil::toUTF8",
+      "label": 0,
+      "split": "train",
+      "chars": 1753
+     },
+     {
+      "name": "QUtil::uint_to_string",
+      "label": 0,
+      "split": "train",
+      "chars": 110
+     },
+     {
+      "name": "QUtil::uint_to_string_base",
+      "label": 0,
+      "split": "train",
+      "chars": 135
+     },
+     {
+      "name": "QUtil::utf16_to_utf8",
+      "label": 0,
+      "split": "train",
+      "chars": 1649
+     },
+     {
+      "name": "QUtil::utf8_to_ascii",
+      "label": 0,
+      "split": "train",
+      "chars": 124
+     },
+     {
+      "name": "QUtil::utf8_to_mac_roman",
+      "label": 0,
+      "split": "train",
+      "chars": 179
+     },
+     {
+      "name": "QUtil::utf8_to_mac_roman",
+      "label": 0,
+      "split": "train",
+      "chars": 131
+     },
+     {
+      "name": "QUtil::utf8_to_pdf_doc",
+      "label": 0,
+      "split": "train",
+      "chars": 179
+     },
+     {
+      "name": "QUtil::utf8_to_pdf_doc",
+      "label": 0,
+      "split": "train",
+      "chars": 127
+     },
+     {
+      "name": "QUtil::utf8_to_utf16",
+      "label": 0,
+      "split": "train",
+      "chars": 94
+     },
+     {
+      "name": "QUtil::utf8_to_win_ansi",
+      "label": 0,
+      "split": "train",
+      "chars": 129
+     },
+     {
+      "name": "QUtil::win_ansi_to_utf8",
+      "label": 0,
+      "split": "train",
+      "chars": 426
+     },
+     {
+      "name": "RC4::RC4",
+      "label": 0,
+      "split": "train",
+      "chars": 504
+     },
+     {
+      "name": "RC4::process",
+      "label": 0,
+      "split": "train",
+      "chars": 491
+     },
+     {
+      "name": "SPH_XCAT",
+      "label": 0,
+      "split": "train",
+      "chars": 794
+     },
+     {
+      "name": "SPH_XCAT",
+      "label": 0,
+      "split": "train",
+      "chars": 2764
+     },
+     {
+      "name": "SPH_XCAT",
+      "label": 0,
+      "split": "train",
+      "chars": 120
+     },
+     {
+      "name": "SecureRandomDataProvider::SecureRandomDataProvider",
+      "label": 0,
+      "split": "train",
+      "chars": 56
+     },
+     {
+      "name": "SecureRandomDataProvider::getInstance",
+      "label": 0,
+      "split": "train",
+      "chars": 57
+     },
+     {
+      "name": "SecureRandomDataProvider::getInstance",
+      "label": 0,
+      "split": "train",
+      "chars": 111
+     },
+     {
+      "name": "SecureRandomDataProvider::provideRandomData",
+      "label": 0,
+      "split": "train",
+      "chars": 1177
+     },
+     {
+      "name": "SecureRandomDataProvider::~SecureRandomDataProvider",
+      "label": 0,
+      "split": "train",
+      "chars": 57
+     },
+     {
+      "name": "TfFinder::TfFinder",
+      "label": 0,
+      "split": "train",
+      "chars": 94
+     },
+     {
+      "name": "TfFinder::getDA",
+      "label": 0,
+      "split": "train",
+      "chars": 619
+     },
+     {
+      "name": "TfFinder::getFontName",
+      "label": 0,
+      "split": "train",
+      "chars": 55
+     },
+     {
+      "name": "TfFinder::getTf",
+      "label": 0,
+      "split": "train",
+      "chars": 42
+     },
+     {
+      "name": "TokenFilter",
+      "label": 0,
+      "split": "train",
+      "chars": 29
+     },
+     {
+      "name": "UnderOverlay",
+      "label": 0,
+      "split": "train",
+      "chars": 181
+     },
+     {
+      "name": "ValueSetter::ValueSetter",
+      "label": 0,
+      "split": "train",
+      "chars": 317
+     },
+     {
+      "name": "ValueSetter::handleEOF",
+      "label": 0,
+      "split": "train",
+      "chars": 195
+     },
+     {
+      "name": "ValueSetter::writeAppearance",
+      "label": 0,
+      "split": "train",
+      "chars": 3967
+     },
+     {
+      "name": "WindowsCryptProvider",
+      "label": 0,
+      "split": "train",
+      "chars": 1378
+     },
+     {
+      "name": "_qpdf_data::~_qpdf_data",
+      "label": 0,
+      "split": "train",
+      "chars": 96
+     },
+     {
+      "name": "abs_diff",
+      "label": 0,
+      "split": "train",
+      "chars": 71
+     },
+     {
+      "name": "add_outlines_to_json",
+      "label": 0,
+      "split": "train",
+      "chars": 1194
+     },
+     {
+      "name": "add_page",
+      "label": 0,
+      "split": "train",
+      "chars": 2721
+     },
+     {
+      "name": "assert_hex_decode",
+      "label": 0,
+      "split": "train",
+      "chars": 342
+     },
+     {
+      "name": "assert_hex_encode",
+      "label": 0,
+      "split": "train",
+      "chars": 342
+     },
+     {
+      "name": "call_init_write",
+      "label": 0,
+      "split": "train",
+      "chars": 118
+     },
+     {
+      "name": "call_read",
+      "label": 0,
+      "split": "train",
+      "chars": 102
+     },
+     {
+      "name": "call_read_memory",
+      "label": 0,
+      "split": "train",
+      "chars": 163
+     },
+     {
+      "name": "call_write",
+      "label": 0,
+      "split": "train",
+      "chars": 74
+     },
+     {
+      "name": "check_analyze",
+      "label": 0,
+      "split": "train",
+      "chars": 437
+     },
+     {
+      "name": "check_image",
+      "label": 0,
+      "split": "train",
+      "chars": 247
+     },
+     {
+      "name": "check_owner_password_V4",
+      "label": 0,
+      "split": "train",
+      "chars": 1016
+     },
+     {
+      "name": "check_page_contents",
+      "label": 0,
+      "split": "train",
+      "chars": 629
+     },
+     {
+      "name": "check_pdf",
+      "label": 0,
+      "split": "train",
+      "chars": 460
+     },
+     {
+      "name": "check_user_password_V4",
+      "label": 0,
+      "split": "train",
+      "chars": 418
+     },
+     {
+      "name": "compare_numbers",
+      "label": 0,
+      "split": "train",
+      "chars": 262
+     },
+     {
+      "name": "compute_O_rc4_key",
+      "label": 0,
+      "split": "train",
+      "chars": 756
+     },
+     {
+      "name": "compute_O_value",
+      "label": 0,
+      "split": "train",
+      "chars": 702
+     },
+     {
+      "name": "compute_Perms_value_V5_clear",
+      "label": 0,
+      "split": "train",
+      "chars": 648
+     },
+     {
+      "name": "compute_U_value_R2",
+      "label": 0,
+      "split": "train",
+      "chars": 554
+     },
+     {
+      "name": "createPageContents",
+      "label": 0,
+      "split": "train",
+      "chars": 355
+     },
+     {
+      "name": "create_page_contents",
+      "label": 0,
+      "split": "train",
+      "chars": 152
+     },
+     {
+      "name": "create_pdf",
+      "label": 0,
+      "split": "train",
+      "chars": 2822
+     },
+     {
+      "name": "create_pdf",
+      "label": 0,
+      "split": "train",
+      "chars": 1405
+     },
+     {
+      "name": "do_check",
+      "label": 0,
+      "split": "train",
+      "chars": 2658
+     },
+     {
+      "name": "do_inspection",
+      "label": 0,
+      "split": "train",
+      "chars": 1271
+     },
+     {
+      "name": "do_json",
+      "label": 0,
+      "split": "train",
+      "chars": 2321
+     },
+     {
+      "name": "do_json_acroform",
+      "label": 0,
+      "split": "train",
+      "chars": 4214
+     },
+     {
+      "name": "do_json_objects",
+      "label": 0,
+      "split": "train",
+      "chars": 1251
+     },
+     {
+      "name": "do_json_page_labels",
+      "label": 0,
+      "split": "train",
+      "chars": 1199
+     },
+     {
+      "name": "do_json_pages",
+      "label": 0,
+      "split": "train",
+      "chars": 4143
+     },
+     {
+      "name": "do_process",
+      "label": 0,
+      "split": "train",
+      "chars": 3407
+     },
+     {
+      "name": "do_process_once",
+      "label": 0,
+      "split": "train",
+      "chars": 345
+     },
+     {
+      "name": "do_show_obj",
+      "label": 0,
+      "split": "train",
+      "chars": 1317
+     },
+     {
+      "name": "do_show_pages",
+      "label": 0,
+      "split": "train",
+      "chars": 2018
+     },
+     {
+      "name": "do_under_overlay_for_page",
+      "label": 0,
+      "split": "train",
+      "chars": 2252
+     },
+     {
+      "name": "dump_tokens",
+      "label": 0,
+      "split": "train",
+      "chars": 2419
+     },
+     {
+      "name": "empty_pipeline_output_buffer",
+      "label": 0,
+      "split": "train",
+      "chars": 363
+     },
+     {
+      "name": "encode_macroman",
+      "label": 0,
+      "split": "train",
+      "chars": 6015
+     },
+     {
+      "name": "encode_pdfdoc",
+      "label": 0,
+      "split": "train",
+      "chars": 1990
+     },
+     {
+      "name": "encode_winansi",
+      "label": 0,
+      "split": "train",
+      "chars": 1714
+     },
+     {
+      "name": "fopen_wrapper_test",
+      "label": 0,
+      "split": "train",
+      "chars": 349
+     },
+     {
+      "name": "generate_page_contents",
+      "label": 0,
+      "split": "train",
+      "chars": 242
+     },
+     {
+      "name": "get_uo_pagenos",
+      "label": 0,
+      "split": "train",
+      "chars": 639
+     },
+     {
+      "name": "handleToken",
+      "label": 0,
+      "split": "train",
+      "chars": 390
+     },
+     {
+      "name": "handle_page_specs",
+      "label": 0,
+      "split": "train",
+      "chars": 10393
+     },
+     {
+      "name": "handle_rotations",
+      "label": 0,
+      "split": "train",
+      "chars": 948
+     },
+     {
+      "name": "handle_transformations",
+      "label": 0,
+      "split": "train",
+      "chars": 2779
+     },
+     {
+      "name": "handle_under_overlay",
+      "label": 0,
+      "split": "train",
+      "chars": 1715
+     },
+     {
+      "name": "hex_encode_decode_test",
+      "label": 0,
+      "split": "train",
+      "chars": 438
+     },
+     {
+      "name": "if",
+      "label": 0,
+      "split": "train",
+      "chars": 326
+     },
+     {
+      "name": "init_buffer_source",
+      "label": 0,
+      "split": "train",
+      "chars": 40
+     },
+     {
+      "name": "init_pipeline_destination",
+      "label": 0,
+      "split": "train",
+      "chars": 45
+     },
+     {
+      "name": "int_to_string_base_internal",
+      "label": 0,
+      "split": "train",
+      "chars": 901
+     },
+     {
+      "name": "is_ascii_printable",
+      "label": 0,
+      "split": "train",
+      "chars": 83
+     },
+     {
+      "name": "is_delimiter",
+      "label": 0,
+      "split": "train",
+      "chars": 92
+     },
+     {
+      "name": "is_iso_latin1_printable",
+      "label": 0,
+      "split": "train",
+      "chars": 145
+     },
+     {
+      "name": "iterate_md5_digest",
+      "label": 0,
+      "split": "train",
+      "chars": 326
+     },
+     {
+      "name": "iterate_rc4",
+      "label": 0,
+      "split": "train",
+      "chars": 500
+     },
+     {
+      "name": "jpeg_buffer_src",
+      "label": 0,
+      "split": "train",
+      "chars": 705
+     },
+     {
+      "name": "jpeg_pipeline_dest",
+      "label": 0,
+      "split": "train",
+      "chars": 796
+     },
+     {
+      "name": "load_vector_vector",
+      "label": 0,
+      "split": "train",
+      "chars": 549
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 1341
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 398
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 345
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 1425
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 592
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 1630
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 1330
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 1940
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 1122
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 2815
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 69
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 3489
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 212
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 790
+     },
+     {
+      "name": "main",
+      "label": 0,
+      "split": "train",
+      "chars": 1005
+     },
+     {
+      "name": "maybe_fix_write_password",
+      "label": 0,
+      "split": "train",
+      "chars": 3768
+     },
+     {
+      "name": "maybe_from_end",
+      "label": 0,
+      "split": "train",
+      "chars": 238
+     },
+     {
+      "name": "newInteger",
+      "label": 0,
+      "split": "train",
+      "chars": 104
+     },
+     {
+      "name": "pad_or_truncate_password_V4",
+      "label": 0,
+      "split": "train",
+      "chars": 362
+     },
+     {
+      "name": "parse_object_id",
+      "label": 0,
+      "split": "train",
+      "chars": 536
+     },
+     {
+      "name": "print_alternatives",
+      "label": 0,
+      "split": "train",
+      "chars": 287
+     },
+     {
+      "name": "print_buffer",
+      "label": 0,
+      "split": "train",
+      "chars": 363
+     },
+     {
+      "name": "print_info",
+      "label": 0,
+      "split": "train",
+      "chars": 167
+     },
+     {
+      "name": "print_rect",
+      "label": 0,
+      "split": "train",
+      "chars": 197
+     },
+     {
+      "name": "print_utf8",
+      "label": 0,
+      "split": "train",
+      "chars": 630
+     },
+     {
+      "name": "print_values",
+      "label": 0,
+      "split": "train",
+      "chars": 254
+     },
+     {
+      "name": "process",
+      "label": 0,
+      "split": "train",
+      "chars": 1948
+     },
+     {
+      "name": "process",
+      "label": 0,
+      "split": "train",
+      "chars": 1044
+     },
+     {
+      "name": "process_file",
+      "label": 0,
+      "split": "train",
+      "chars": 294
+     },
+     {
+      "name": "qpdf_allow_extract_all",
+      "label": 0,
+      "split": "train",
+      "chars": 155
+     },
+     {
+      "name": "qpdf_allow_modify_all",
+      "label": 0,
+      "split": "train",
+      "chars": 152
+     },
+     {
+      "name": "qpdf_allow_modify_annotation",
+      "label": 0,
+      "split": "train",
+      "chars": 173
+     },
+     {
+      "name": "qpdf_allow_modify_other",
+      "label": 0,
+      "split": "train",
+      "chars": 158
+     },
+     {
+      "name": "qpdf_allow_print_high_res",
+      "label": 0,
+      "split": "train",
+      "chars": 163
+     },
+     {
+      "name": "qpdf_allow_print_low_res",
+      "label": 0,
+      "split": "train",
+      "chars": 160
+     },
+     {
+      "name": "qpdf_force_pdf_version_and_extension",
+      "label": 0,
+      "split": "train",
+      "chars": 235
+     },
+     {
+      "name": "qpdf_get_buffer",
+      "label": 0,
+      "split": "train",
+      "chars": 233
+     },
+     {
+      "name": "qpdf_get_buffer_internal",
+      "label": 0,
+      "split": "train",
+      "chars": 181
+     },
+     {
+      "name": "qpdf_get_buffer_length",
+      "label": 0,
+      "split": "train",
+      "chars": 210
+     },
+     {
+      "name": "qpdf_get_error",
+      "label": 0,
+      "split": "train",
+      "chars": 261
+     },
+     {
+      "name": "qpdf_get_error_code",
+      "label": 0,
+      "split": "train",
+      "chars": 163
+     },
+     {
+      "name": "qpdf_get_error_file_position",
+      "label": 0,
+      "split": "train",
+      "chars": 179
+     },
+     {
+      "name": "qpdf_get_error_message_detail",
+      "label": 0,
+      "split": "train",
+      "chars": 162
+     },
+     {
+      "name": "qpdf_get_info_key",
+      "label": 0,
+      "split": "train",
+      "chars": 532
+     },
+     {
+      "name": "qpdf_get_pdf_extension_level",
+      "label": 0,
+      "split": "train",
+      "chars": 163
+     },
+     {
+      "name": "qpdf_get_pdf_version",
+      "label": 0,
+      "split": "train",
+      "chars": 200
+     },
+     {
+      "name": "qpdf_get_qpdf_version",
+      "label": 0,
+      "split": "train",
+      "chars": 139
+     },
+     {
+      "name": "qpdf_has_error",
+      "label": 0,
+      "split": "train",
+      "chars": 161
+     },
+     {
+      "name": "qpdf_init_write",
+      "label": 0,
+      "split": "train",
+      "chars": 287
+     },
+     {
+      "name": "qpdf_is_encrypted",
+      "label": 0,
+      "split": "train",
+      "chars": 168
+     },
+     {
+      "name": "qpdf_is_linearized",
+      "label": 0,
+      "split": "train",
+      "chars": 171
+     },
+     {
+      "name": "qpdf_more_warnings",
+      "label": 0,
+      "split": "train",
+      "chars": 379
+     },
+     {
+      "name": "qpdf_next_warning",
+      "label": 0,
+      "split": "train",
+      "chars": 304
+     },
+     {
+      "name": "qpdf_read",
+      "label": 0,
+      "split": "train",
+      "chars": 601
+     },
+     {
+      "name": "qpdf_set_attempt_recovery",
+      "label": 0,
+      "split": "train",
+      "chars": 174
+     },
+     {
+      "name": "qpdf_set_compress_streams",
+      "label": 0,
+      "split": "train",
+      "chars": 181
+     },
+     {
+      "name": "qpdf_set_content_normalization",
+      "label": 0,
+      "split": "train",
+      "chars": 196
+     },
+     {
+      "name": "qpdf_set_decode_level",
+      "label": 0,
+      "split": "train",
+      "chars": 186
+     },
+     {
+      "name": "qpdf_set_deterministic_ID",
+      "label": 0,
+      "split": "train",
+      "chars": 181
+     },
+     {
+      "name": "qpdf_set_ignore_xref_streams",
+      "label": 0,
+      "split": "train",
+      "chars": 182
+     },
+     {
+      "name": "qpdf_set_info_key",
+      "label": 0,
+      "split": "train",
+      "chars": 887
+     },
+     {
+      "name": "qpdf_set_linearization",
+      "label": 0,
+      "split": "train",
+      "chars": 173
+     },
+     {
+      "name": "qpdf_set_minimum_pdf_version",
+      "label": 0,
+      "split": "train",
+      "chars": 140
+     },
+     {
+      "name": "qpdf_set_minimum_pdf_version_and_extension",
+      "label": 0,
+      "split": "train",
+      "chars": 252
+     },
+     {
+      "name": "qpdf_set_newline_before_endstream",
+      "label": 0,
+      "split": "train",
+      "chars": 204
+     },
+     {
+      "name": "qpdf_set_object_stream_mode",
+      "label": 0,
+      "split": "train",
+      "chars": 195
+     },
+     {
+      "name": "qpdf_set_preserve_encryption",
+      "label": 0,
+      "split": "train",
+      "chars": 190
+     },
+     {
+      "name": "qpdf_set_preserve_unreferenced_objects",
+      "label": 0,
+      "split": "train",
+      "chars": 219
+     },
+     {
+      "name": "qpdf_set_qdf_mode",
+      "label": 0,
+      "split": "train",
+      "chars": 157
+     },
+     {
+      "name": "qpdf_set_r2_encryption_parameters",
+      "label": 0,
+      "split": "train",
+      "chars": 438
+     },
+     {
+      "name": "qpdf_set_r3_encryption_parameters",
+      "label": 0,
+      "split": "train",
+      "chars": 365
+     },
+     {
+      "name": "qpdf_set_r3_encryption_parameters2",
+      "label": 0,
+      "split": "train",
+      "chars": 658
+     },
+     {
+      "name": "qpdf_set_r4_encryption_parameters",
+      "label": 0,
+      "split": "train",
+      "chars": 444
+     },
+     {
+      "name": "qpdf_set_r4_encryption_parameters2",
+      "label": 0,
+      "split": "train",
+      "chars": 736
+     },
+     {
+      "name": "qpdf_set_r5_encryption_parameters",
+      "label": 0,
+      "split": "train",
+      "chars": 416
+     },
+     {
+      "name": "qpdf_set_r5_encryption_parameters2",
+      "label": 0,
+      "split": "train",
+      "chars": 704
+     },
+     {
+      "name": "qpdf_set_r6_encryption_parameters",
+      "label": 0,
+      "split": "train",
+      "chars": 416
+     },
+     {
+      "name": "qpdf_set_r6_encryption_parameters2",
+      "label": 0,
+      "split": "train",
+      "chars": 704
+     },
+     {
+      "name": "qpdf_set_static_ID",
+      "label": 0,
+      "split": "train",
+      "chars": 160
+     },
+     {
+      "name": "qpdf_set_stream_data_mode",
+      "label": 0,
+      "split": "train",
+      "chars": 187
+     },
+     {
+      "name": "qpdf_set_suppress_original_object_IDs",
+      "label": 0,
+      "split": "train",
+      "chars": 220
+     },
+     {
+      "name": "qpdf_set_suppress_warnings",
+      "label": 0,
+      "split": "train",
+      "chars": 177
+     },
+     {
+      "name": "read_file_into_memory",
+      "label": 0,
+      "split": "train",
+      "chars": 1166
+     },
+     {
+      "name": "read_file_into_memory",
+      "label": 0,
+      "split": "train",
+      "chars": 989
+     },
+     {
+      "name": "read_file_into_memory",
+      "label": 0,
+      "split": "train",
+      "chars": 846
+     },
+     {
+      "name": "realmain",
+      "label": 0,
+      "split": "train",
+      "chars": 1469
+     },
+     {
+      "name": "report_errors",
+      "label": 0,
+      "split": "train",
+      "chars": 1419
+     },
+     {
+      "name": "rijndaelDecrypt",
+      "label": 0,
+      "split": "train",
+      "chars": 8544
+     },
+     {
+      "name": "rijndaelEncrypt",
+      "label": 0,
+      "split": "train",
+      "chars": 8543
+     },
+     {
+      "name": "rijndaelSetupDecrypt",
+      "label": 0,
+      "split": "train",
+      "chars": 1502
+     },
+     {
+      "name": "rijndaelSetupEncrypt",
+      "label": 0,
+      "split": "train",
+      "chars": 2134
+     },
+     {
+      "name": "safe_fopen",
+      "label": 0,
+      "split": "train",
+      "chars": 580
+     },
+     {
+      "name": "same_file_test",
+      "label": 0,
+      "split": "train",
+      "chars": 645
+     },
+     {
+      "name": "sanitize",
+      "label": 0,
+      "split": "train",
+      "chars": 441
+     },
+     {
+      "name": "set_encryption_options",
+      "label": 0,
+      "split": "train",
+      "chars": 2484
+     },
+     {
+      "name": "set_parameters",
+      "label": 0,
+      "split": "train",
+      "chars": 160
+     },
+     {
+      "name": "set_qpdf_options",
+      "label": 0,
+      "split": "train",
+      "chars": 380
+     },
+     {
+      "name": "set_writer_options",
+      "label": 0,
+      "split": "train",
+      "chars": 2201
+     },
+     {
+      "name": "show_encryption",
+      "label": 0,
+      "split": "train",
+      "chars": 2270
+     },
+     {
+      "name": "sph_bswap32",
+      "label": 0,
+      "split": "train",
+      "chars": 150
+     },
+     {
+      "name": "sph_bswap32",
+      "label": 0,
+      "split": "train",
+      "chars": 95
+     },
+     {
+      "name": "sph_bswap64",
+      "label": 0,
+      "split": "train",
+      "chars": 260
+     },
+     {
+      "name": "sph_bswap64",
+      "label": 0,
+      "split": "train",
+      "chars": 95
+     },
+     {
+      "name": "sph_bswap64",
+      "label": 0,
+      "split": "train",
+      "chars": 121
+     },
+     {
+      "name": "sph_dec16be",
+      "label": 0,
+      "split": "train",
+      "chars": 140
+     },
+     {
+      "name": "sph_dec32be",
+      "label": 0,
+      "split": "train",
+      "chars": 801
+     },
+     {
+      "name": "sph_dec32be_aligned",
+      "label": 0,
+      "split": "train",
+      "chars": 387
+     },
+     {
+      "name": "sph_dec32le_aligned",
+      "label": 0,
+      "split": "train",
+      "chars": 716
+     },
+     {
+      "name": "sph_dec64be",
+      "label": 0,
+      "split": "train",
+      "chars": 1245
+     },
+     {
+      "name": "sph_dec64be_aligned",
+      "label": 0,
+      "split": "train",
+      "chars": 607
+     },
+     {
+      "name": "sph_dec64le",
+      "label": 0,
+      "split": "train",
+      "chars": 1716
+     },
+     {
+      "name": "sph_dec64le_aligned",
+      "label": 0,
+      "split": "train",
+      "chars": 1063
+     },
+     {
+      "name": "sph_enc16be",
+      "label": 0,
+      "split": "train",
+      "chars": 145
+     },
+     {
+      "name": "sph_enc32be",
+      "label": 0,
+      "split": "train",
+      "chars": 630
+     },
+     {
+      "name": "sph_enc32be_aligned",
+      "label": 0,
+      "split": "train",
+      "chars": 323
+     },
+     {
+      "name": "sph_enc32le_aligned",
+      "label": 0,
+      "split": "train",
+      "chars": 323
+     },
+     {
+      "name": "sph_enc64be",
+      "label": 0,
+      "split": "train",
+      "chars": 970
+     },
+     {
+      "name": "sph_enc64be_aligned",
+      "label": 0,
+      "split": "train",
+      "chars": 491
+     },
+     {
+      "name": "sph_enc64le_aligned",
+      "label": 0,
+      "split": "train",
+      "chars": 491
+     },
+     {
+      "name": "string_conversion_test",
+      "label": 0,
+      "split": "train",
+      "chars": 2646
+     },
+     {
+      "name": "swap_byte",
+      "label": 0,
+      "split": "train",
+      "chars": 116
+     },
+     {
+      "name": "term_buffer_source",
+      "label": 0,
+      "split": "train",
+      "chars": 40
+     },
+     {
+      "name": "term_pipeline_destination",
+      "label": 0,
+      "split": "train",
+      "chars": 277
+     },
+     {
+      "name": "test",
+      "label": 0,
+      "split": "train",
+      "chars": 3691
+     },
+     {
+      "name": "test01",
+      "label": 0,
+      "split": "train",
+      "chars": 1297
+     },
+     {
+      "name": "test02",
+      "label": 0,
+      "split": "train",
+      "chars": 385
+     },
+     {
+      "name": "test03",
+      "label": 0,
+      "split": "train",
+      "chars": 334
+     },
+     {
+      "name": "test05",
+      "label": 0,
+      "split": "train",
+      "chars": 326
+     },
+     {
+      "name": "test07",
+      "label": 0,
+      "split": "train",
+      "chars": 321
+     },
+     {
+      "name": "test08",
+      "label": 0,
+      "split": "train",
+      "chars": 381
+     },
+     {
+      "name": "test09",
+      "label": 0,
+      "split": "train",
+      "chars": 337
+     },
+     {
+      "name": "test10",
+      "label": 0,
+      "split": "train",
+      "chars": 231
+     },
+     {
+      "name": "test13",
+      "label": 0,
+      "split": "train",
+      "chars": 398
+     },
+     {
+      "name": "test16",
+      "label": 0,
+      "split": "train",
+      "chars": 966
+     },
+     {
+      "name": "test18",
+      "label": 0,
+      "split": "train",
+      "chars": 493
+     },
+     {
+      "name": "test19",
+      "label": 0,
+      "split": "train",
+      "chars": 288
+     },
+     {
+      "name": "test20",
+      "label": 0,
+      "split": "train",
+      "chars": 429
+     },
+     {
+      "name": "test21",
+      "label": 0,
+      "split": "train",
+      "chars": 387
+     },
+     {
+      "name": "test22",
+      "label": 0,
+      "split": "train",
+      "chars": 431
+     },
+     {
+      "name": "test23",
+      "label": 0,
+      "split": "train",
+      "chars": 285
+     },
+     {
+      "name": "test_read_bits",
+      "label": 0,
+      "split": "train",
+      "chars": 399
+     },
+     {
+      "name": "test_to_number",
+      "label": 0,
+      "split": "train",
+      "chars": 913
+     },
+     {
+      "name": "test_to_ull",
+      "label": 0,
+      "split": "train",
+      "chars": 138
+     },
+     {
+      "name": "test_write_bits",
+      "label": 0,
+      "split": "train",
+      "chars": 283
+     },
+     {
+      "name": "tokenTypeName",
+      "label": 0,
+      "split": "train",
+      "chars": 1368
+     },
+     {
+      "name": "transcode_utf8",
+      "label": 0,
+      "split": "train",
+      "chars": 197
+     },
+     {
+      "name": "transcode_utf8",
+      "label": 0,
+      "split": "train",
+      "chars": 1958
+     },
+     {
+      "name": "transcoding_test",
+      "label": 0,
+      "split": "train",
+      "chars": 735
+     },
+     {
+      "name": "transcoding_test",
+      "label": 0,
+      "split": "train",
+      "chars": 2039
+     },
+     {
+      "name": "try_convert_real",
+      "label": 0,
+      "split": "train",
+      "chars": 478
+     },
+     {
+      "name": "try_skipping",
+      "label": 0,
+      "split": "train",
+      "chars": 373
+     },
+     {
+      "name": "usage",
+      "label": 0,
+      "split": "train",
+      "chars": 163
+     },
+     {
+      "name": "usage",
+      "label": 0,
+      "split": "train",
+      "chars": 672
+     },
+     {
+      "name": "usage",
+      "label": 0,
+      "split": "train",
+      "chars": 167
+     },
+     {
+      "name": "usage",
+      "label": 0,
+      "split": "train",
+      "chars": 230
+     },
+     {
+      "name": "usage",
+      "label": 0,
+      "split": "train",
+      "chars": 135
+     },
+     {
+      "name": "usage",
+      "label": 0,
+      "split": "train",
+      "chars": 236
+     },
+     {
+      "name": "usageExit",
+      "label": 0,
+      "split": "train",
+      "chars": 294
+     },
+     {
+      "name": "utf8_to_ascii_test",
+      "label": 0,
+      "split": "train",
+      "chars": 710
+     },
+     {
+      "name": "wmain",
+      "label": 0,
+      "split": "train",
+      "chars": 1329
+     },
+     {
+      "name": "write_outfile",
+      "label": 0,
+      "split": "train",
+      "chars": 3479
+     },
+     {
+      "name": "write_vector_int",
+      "label": 0,
+      "split": "train",
+      "chars": 519
+     },
+     {
+      "name": "write_vector_vector",
+      "label": 0,
+      "split": "train",
+      "chars": 546
+     },
+     {
+      "name": "~Finder",
+      "label": 0,
+      "split": "train",
+      "chars": 33
+     },
+     {
+      "name": "~ImageInverter",
+      "label": 0,
+      "split": "train",
+      "chars": 40
+     },
+     {
+      "name": "~ImageOptimizer",
+      "label": 0,
+      "split": "train",
+      "chars": 41
+     },
+     {
+      "name": "~NameWatcher",
+      "label": 0,
+      "split": "train",
+      "chars": 38
+     },
+     {
+      "name": "~ProgressReporter",
+      "label": 0,
+      "split": "train",
+      "chars": 43
+     },
+     {
+      "name": "~TfFinder",
+      "label": 0,
+      "split": "train",
+      "chars": 35
+     },
+     {
+      "name": "~TokenFilter",
+      "label": 0,
+      "split": "train",
+      "chars": 38
+     },
+     {
+      "name": "~ValueSetter",
+      "label": 0,
+      "split": "train",
+      "chars": 38
+     },
+     {
+      "name": "ArgParser::addOptionsToCompletions",
+      "label": 0,
+      "split": "valid",
+      "chars": 527
+     },
+     {
+      "name": "ArgParser::arg128Annotate",
+      "label": 0,
+      "split": "valid",
+      "chars": 106
+     },
+     {
+      "name": "ArgParser::argJsonObject",
+      "label": 0,
+      "split": "valid",
+      "chars": 83
+     },
+     {
+      "name": "ArgParser::argLinearize",
+      "label": 0,
+      "split": "valid",
+      "chars": 53
+     },
+     {
+      "name": "ArgParser::argNoOriginalObjectIds",
+      "label": 0,
+      "split": "valid",
+      "chars": 81
+     },
+     {
+      "name": "ArgParser::argOptimizeImages",
+      "label": 0,
+      "split": "valid",
+      "chars": 64
+     },
+     {
+      "name": "ArgParser::argPreserveUnreferenced",
+      "label": 0,
+      "split": "valid",
+      "chars": 84
+     },
+     {
+      "name": "ArgParser::oe_requiredParameter",
+      "label": 0,
+      "split": "valid",
+      "chars": 203
+     },
+     {
+      "name": "ArgParser::usage",
+      "label": 0,
+      "split": "valid",
+      "chars": 230
+     },
+     {
+      "name": "BitStream::skipToNextByte",
+      "label": 0,
+      "split": "valid",
+      "chars": 300
+     },
+     {
+      "name": "BitWriter::BitWriter",
+      "label": 0,
+      "split": "valid",
+      "chars": 81
+     },
+     {
+      "name": "BufferInputSource::rewind",
+      "label": 0,
+      "split": "valid",
+      "chars": 57
+     },
+     {
+      "name": "InlineImageTracker::InlineImageTracker",
+      "label": 0,
+      "split": "valid",
+      "chars": 266
+     },
+     {
+      "name": "InlineImageTracker::convertIIDict",
+      "label": 0,
+      "split": "valid",
+      "chars": 4129
+     },
+     {
+      "name": "JSON::JSON_null::unparse",
+      "label": 0,
+      "split": "valid",
+      "chars": 73
+     },
+     {
+      "name": "JSON::JSON_number::JSON_number",
+      "label": 0,
+      "split": "valid",
+      "chars": 94
+     },
+     {
+      "name": "JSON::JSON_number::unparse",
+      "label": 0,
+      "split": "valid",
+      "chars": 76
+     },
+     {
+      "name": "MD5::getFileChecksum",
+      "label": 0,
+      "split": "valid",
+      "chars": 151
+     },
+     {
+      "name": "MD5::print",
+      "label": 0,
+      "split": "valid",
+      "chars": 146
+     },
+     {
+      "name": "MD5::update",
+      "label": 0,
+      "split": "valid",
+      "chars": 774
+     },
+     {
+      "name": "Pl_PNGFilter::finish",
+      "label": 0,
+      "split": "valid",
+      "chars": 244
+     },
+     {
+      "name": "Pl_RunLength::decode",
+      "label": 0,
+      "split": "valid",
+      "chars": 1154
+     },
+     {
+      "name": "Pl_RunLength::finish",
+      "label": 0,
+      "split": "valid",
+      "chars": 421
+     },
+     {
+      "name": "QPDF::checkLinearization",
+      "label": 0,
+      "split": "valid",
+      "chars": 243
+     },
+     {
+      "name": "QPDF::compute_data_key",
+      "label": 0,
+      "split": "valid",
+      "chars": 1091
+     },
+     {
+      "name": "QPDF::dumpLinearizationDataInternal",
+      "label": 0,
+      "split": "valid",
+      "chars": 1244
+     },
+     {
+      "name": "QPDF::getUniqueId",
+      "label": 0,
+      "split": "valid",
+      "chars": 60
+     },
+     {
+      "name": "QPDF::optimize",
+      "label": 0,
+      "split": "valid",
+      "chars": 2414
+     },
+     {
+      "name": "QPDF::readObjectAtOffset",
+      "label": 0,
+      "split": "valid",
+      "chars": 5616
+     },
+     {
+      "name": "QPDF::read_xrefTable",
+      "label": 0,
+      "split": "valid",
+      "chars": 4304
+     },
+     {
+      "name": "QPDF::writeHPageOffset",
+      "label": 0,
+      "split": "valid",
+      "chars": 1958
+     },
+     {
+      "name": "QPDFAnnotationObjectHelper::getAppearanceState",
+      "label": 0,
+      "split": "valid",
+      "chars": 296
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::generateTextAppearance",
+      "label": 0,
+      "split": "valid",
+      "chars": 3303
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::getFontFromResource",
+      "label": 0,
+      "split": "valid",
+      "chars": 361
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::isNull",
+      "label": 0,
+      "split": "valid",
+      "chars": 69
+     },
+     {
+      "name": "QPDFFormFieldObjectHelper::setFieldAttribute",
+      "label": 0,
+      "split": "valid",
+      "chars": 138
+     },
+     {
+      "name": "QPDFNameTreeObjectHelper::hasName",
+      "label": 0,
+      "split": "valid",
+      "chars": 108
+     },
+     {
+      "name": "QPDFNumberTreeObjectHelper::getMax",
+      "label": 0,
+      "split": "valid",
+      "chars": 185
+     },
+     {
+      "name": "QPDFObjectHandle::getArrayAsMatrix",
+      "label": 0,
+      "split": "valid",
+      "chars": 465
+     },
+     {
+      "name": "QPDFObjectHandle::getIntValueAsInt",
+      "label": 0,
+      "split": "valid",
+      "chars": 662
+     },
+     {
+      "name": "QPDFPageDocumentHelper::Members::Members",
+      "label": 0,
+      "split": "valid",
+      "chars": 46
+     },
+     {
+      "name": "QPDFPageDocumentHelper::flattenAnnotations",
+      "label": 0,
+      "split": "valid",
+      "chars": 1114
+     },
+     {
+      "name": "QPDFPageDocumentHelper::removeUnreferencedResources",
+      "label": 0,
+      "split": "valid",
+      "chars": 290
+     },
+     {
+      "name": "QPDFTokenizer::allowPoundAnywhereInName",
+      "label": 0,
+      "split": "valid",
+      "chars": 156
+     },
+     {
+      "name": "QPDFTokenizer::isSpace",
+      "label": 0,
+      "split": "valid",
+      "chars": 85
+     },
+     {
+      "name": "QPDFWriter::Members::~Members",
+      "label": 0,
+      "split": "valid",
+      "chars": 116
+     },
+     {
+      "name": "QPDFWriter::setLinearizationPass1Filename",
+      "label": 0,
+      "split": "valid",
+      "chars": 118
+     },
+     {
+      "name": "QPDFWriter::setR6EncryptionParameters",
+      "label": 0,
+      "split": "valid",
+      "chars": 743
+     },
+     {
+      "name": "QPDF_Array::setFromVector",
+      "label": 0,
+      "split": "valid",
+      "chars": 98
+     },
+     {
+      "name": "QPDF_Stream::getDict",
+      "label": 0,
+      "split": "valid",
+      "chars": 62
+     },
+     {
+      "name": "QPDF_Stream::getJSON",
+      "label": 0,
+      "split": "valid",
+      "chars": 66
+     },
+     {
+      "name": "QPDF_Stream::setStreamDescription",
+      "label": 0,
+      "split": "valid",
+      "chars": 197
+     },
+     {
+      "name": "QPDF_Stream::unparse",
+      "label": 0,
+      "split": "valid",
+      "chars": 180
+     },
+     {
+      "name": "QPDF_String::getTypeCode",
+      "label": 0,
+      "split": "valid",
+      "chars": 70
+     },
+     {
+      "name": "QPDF_String::getTypeName",
+      "label": 0,
+      "split": "valid",
+      "chars": 57
+     },
+     {
+      "name": "QPDF_String::~QPDF_String",
+      "label": 0,
+      "split": "valid",
+      "chars": 31
+     },
+     {
+      "name": "QUtil::binary_stdout",
+      "label": 0,
+      "split": "valid",
+      "chars": 184
+     },
+     {
+      "name": "TfFinder::handleToken",
+      "label": 0,
+      "split": "valid",
+      "chars": 892
+     },
+     {
+      "name": "_qpdf_data::_qpdf_data",
+      "label": 0,
+      "split": "valid",
+      "chars": 109
+     },
+     {
+      "name": "compute_U_value_R3",
+      "label": 0,
+      "split": "valid",
+      "chars": 1014
+     },
+     {
+      "name": "do_json_outlines",
+      "label": 0,
+      "split": "valid",
+      "chars": 633
+     },
+     {
+      "name": "doubleBoxSize",
+      "label": 0,
+      "split": "valid",
+      "chars": 743
+     },
+     {
+      "name": "error_handler",
+      "label": 0,
+      "split": "valid",
+      "chars": 258
+     },
+     {
+      "name": "handleEOF",
+      "label": 0,
+      "split": "valid",
+      "chars": 135
+     },
+     {
+      "name": "print_utf16",
+      "label": 0,
+      "split": "valid",
+      "chars": 424
+     },
+     {
+      "name": "process_input_source",
+      "label": 0,
+      "split": "valid",
+      "chars": 195
+     },
+     {
+      "name": "process_with_aes",
+      "label": 0,
+      "split": "valid",
+      "chars": 1033
+     },
+     {
+      "name": "qpdf_allow_modify_assembly",
+      "label": 0,
+      "split": "valid",
+      "chars": 167
+     },
+     {
+      "name": "qpdf_check_pdf",
+      "label": 0,
+      "split": "valid",
+      "chars": 183
+     },
+     {
+      "name": "qpdf_cleanup",
+      "label": 0,
+      "split": "valid",
+      "chars": 122
+     },
+     {
+      "name": "qpdf_get_error_filename",
+      "label": 0,
+      "split": "valid",
+      "chars": 151
+     },
+     {
+      "name": "qpdf_init",
+      "label": 0,
+      "split": "valid",
+      "chars": 158
+     },
+     {
+      "name": "qpdf_init_write_internal",
+      "label": 0,
+      "split": "valid",
+      "chars": 365
+     },
+     {
+      "name": "qpdf_read_memory",
+      "label": 0,
+      "split": "valid",
+      "chars": 455
+     },
+     {
+      "name": "runtest",
+      "label": 0,
+      "split": "valid",
+      "chars": 71232
+     },
+     {
+      "name": "sph_dec16le",
+      "label": 0,
+      "split": "valid",
+      "chars": 140
+     },
+     {
+      "name": "sph_dec32le",
+      "label": 0,
+      "split": "valid",
+      "chars": 1893
+     },
+     {
+      "name": "sph_enc16le",
+      "label": 0,
+      "split": "valid",
+      "chars": 145
+     },
+     {
+      "name": "test04",
+      "label": 0,
+      "split": "valid",
+      "chars": 332
+     },
+     {
+      "name": "test06",
+      "label": 0,
+      "split": "valid",
+      "chars": 468
+     },
+     {
+      "name": "test15",
+      "label": 0,
+      "split": "valid",
+      "chars": 504
+     },
+     {
+      "name": "test17",
+      "label": 0,
+      "split": "valid",
+      "chars": 493
+     },
+     {
+      "name": "test_to_uint",
+      "label": 0,
+      "split": "valid",
+      "chars": 134
+     },
+     {
+      "name": "usage",
+      "label": 0,
+      "split": "valid",
+      "chars": 103
+     },
+     {
+      "name": "~InlineImageTracker",
+      "label": 0,
+      "split": "valid",
+      "chars": 45
+     },
+     {
+      "name": "~QPDFWordTokenFinder",
+      "label": 0,
+      "split": "valid",
+      "chars": 46
+     },
+     {
+      "name": "~WindowsCryptProvider",
+      "label": 0,
+      "split": "valid",
+      "chars": 107
+     }
+    ]
+   }
+  },
+  "family_disjoint": {
+   "table": {
+    "test_positives": {
+     "n": 1891,
+     "counterpart_and_vul_mate": 636,
+     "counterpart_only": 234,
+     "vul_mate_only": 664,
+     "neither": 357,
+     "vul_mate_any_pct": 68.75,
+     "vul_mate_without_counterpart_pct": 35.11,
+     "nonvul_mate_any_pct": 90.69
+    },
+    "test_negatives": {
+     "n": 31281,
+     "counterpart_and_vul_mate": 962,
+     "counterpart_only": 330,
+     "vul_mate_only": 26820,
+     "neither": 3169,
+     "vul_mate_any_pct": 88.81,
+     "vul_mate_without_counterpart_pct": 85.74,
+     "nonvul_mate_any_pct": 99.64
+    }
+   },
+   "prediction_files": [
+    "codebert-base_family_disjoint_seed4.preds.json.gz",
+    "codebert-base_family_disjoint_seed5.preds.json.gz"
+   ],
+   "predictions_no_counterpart_stratum": {
+    "recall_positives": {
+     "per_seed": [
+      {
+       "threshold": 0.05514,
+       "without_vul_mate": [
+        0.38095238095238093,
+        357
+       ],
+       "with_vul_mate": [
+        0.3990963855421687,
+        664
+       ]
+      },
+      {
+       "threshold": 0.168082,
+       "without_vul_mate": [
+        0.4425770308123249,
+        357
+       ],
+       "with_vul_mate": [
+        0.4608433734939759,
+        664
+       ]
+      }
+     ],
+     "with_minus_without": 0.018205173635719385,
+     "ci95": [
+      -0.025393591171408353,
+      0.06451435996085181
+     ]
+    },
+    "fpr_negatives": {
+     "per_seed": [
+      {
+       "threshold": 0.05514,
+       "without_vul_mate": [
+        0.06342694856421584,
+        3169
+       ],
+       "with_vul_mate": [
+        0.04299030574198359,
+        26820
+       ]
+      },
+      {
+       "threshold": 0.168082,
+       "without_vul_mate": [
+        0.07952035342379299,
+        3169
+       ],
+       "with_vul_mate": [
+        0.05615212527964206,
+        26820
+       ]
+      }
+     ],
+     "with_minus_without": -0.02190243548319159,
+     "ci95": [
+      -0.028571900041156527,
+      -0.015376218724034496
+     ]
+    }
+   }
+  }
+ }
+}

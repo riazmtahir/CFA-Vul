@@ -1,0 +1,233 @@
+{
+  "arm": "family_disjoint",
+  "model": "microsoft/graphcodebert-base",
+  "seed": 2,
+  "data": "/root/autodl-tmp/data/devign/devign_all.jsonl",
+  "splitfile": "/root/autodl-tmp/devign_audit_splitfile_theta0.7.json",
+  "epochs": 15,
+  "lr": 5e-05,
+  "max_len": 512,
+  "class_weight": "balanced",
+  "batch_size": 16,
+  "n_train": 21807,
+  "n_valid": 2773,
+  "n_test": 2738,
+  "test": {
+    "pr_auc": 0.7178,
+    "roc_auc": 0.7317,
+    "best_f1": 0.6737,
+    "best_f1_threshold": 0.1555,
+    "mcc": 0.2958,
+    "vd_s": 0.8474,
+    "positive_rate": 0.4547,
+    "n": 2738
+  },
+  "length_only_floor": {
+    "pr_auc": 0.4811,
+    "roc_auc": 0.5331,
+    "best_f1": 0.6252,
+    "best_f1_threshold": 0.3706,
+    "mcc": 0.0,
+    "vd_s": 0.9944,
+    "positive_rate": 0.4547,
+    "n": 2738
+  },
+  "worst_family": {
+    "worst_family_pr_auc": 0.4167,
+    "worst_family_id": 8637,
+    "families_scored": 3,
+    "median_family_pr_auc": 0.9167
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6784,
+      "valid": {
+        "pr_auc": 0.6368,
+        "roc_auc": 0.653,
+        "best_f1": 0.6299,
+        "best_f1_threshold": 0.4555,
+        "mcc": 0.146,
+        "vd_s": 0.8795,
+        "positive_rate": 0.4461,
+        "n": 2773
+      },
+      "test": {
+        "pr_auc": 0.645,
+        "roc_auc": 0.6555,
+        "best_f1": 0.6385,
+        "best_f1_threshold": 0.5348,
+        "mcc": 0.1615,
+        "vd_s": 0.8859,
+        "positive_rate": 0.4547,
+        "n": 2738
+      },
+      "eligible_for_selection": false
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.6344,
+      "valid": {
+        "pr_auc": 0.7007,
+        "roc_auc": 0.7088,
+        "best_f1": 0.6484,
+        "best_f1_threshold": 0.3836,
+        "mcc": 0.2572,
+        "vd_s": 0.827,
+        "positive_rate": 0.4461,
+        "n": 2773
+      },
+      "test": {
+        "pr_auc": 0.689,
+        "roc_auc": 0.6963,
+        "best_f1": 0.6533,
+        "best_f1_threshold": 0.3002,
+        "mcc": 0.2278,
+        "vd_s": 0.8361,
+        "positive_rate": 0.4547,
+        "n": 2738
+      },
+      "eligible_for_selection": true
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5722,
+      "valid": {
+        "pr_auc": 0.7162,
+        "roc_auc": 0.7287,
+        "best_f1": 0.6583,
+        "best_f1_threshold": 0.4011,
+        "mcc": 0.2995,
+        "vd_s": 0.8165,
+        "positive_rate": 0.4461,
+        "n": 2773
+      },
+      "test": {
+        "pr_auc": 0.7298,
+        "roc_auc": 0.7391,
+        "best_f1": 0.673,
+        "best_f1_threshold": 0.341,
+        "mcc": 0.3081,
+        "vd_s": 0.8169,
+        "positive_rate": 0.4547,
+        "n": 2738
+      },
+      "eligible_for_selection": true
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.5051,
+      "valid": {
+        "pr_auc": 0.7374,
+        "roc_auc": 0.7497,
+        "best_f1": 0.6702,
+        "best_f1_threshold": 0.0711,
+        "mcc": 0.3123,
+        "vd_s": 0.8124,
+        "positive_rate": 0.4461,
+        "n": 2773
+      },
+      "test": {
+        "pr_auc": 0.7457,
+        "roc_auc": 0.753,
+        "best_f1": 0.6824,
+        "best_f1_threshold": 0.0697,
+        "mcc": 0.3247,
+        "vd_s": 0.8072,
+        "positive_rate": 0.4547,
+        "n": 2738
+      },
+      "eligible_for_selection": true
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.4331,
+      "valid": {
+        "pr_auc": 0.7375,
+        "roc_auc": 0.7498,
+        "best_f1": 0.6716,
+        "best_f1_threshold": 0.3767,
+        "mcc": 0.3337,
+        "vd_s": 0.8092,
+        "positive_rate": 0.4461,
+        "n": 2773
+      },
+      "test": {
+        "pr_auc": 0.7178,
+        "roc_auc": 0.7317,
+        "best_f1": 0.6737,
+        "best_f1_threshold": 0.1555,
+        "mcc": 0.2958,
+        "vd_s": 0.8474,
+        "positive_rate": 0.4547,
+        "n": 2738
+      },
+      "eligible_for_selection": true
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.3689,
+      "valid": {
+        "pr_auc": 0.7341,
+        "roc_auc": 0.7447,
+        "best_f1": 0.6695,
+        "best_f1_threshold": 0.0215,
+        "mcc": 0.3058,
+        "vd_s": 0.8165,
+        "positive_rate": 0.4461,
+        "n": 2773
+      },
+      "test": {
+        "pr_auc": 0.7295,
+        "roc_auc": 0.738,
+        "best_f1": 0.68,
+        "best_f1_threshold": 0.0205,
+        "mcc": 0.3161,
+        "vd_s": 0.8193,
+        "positive_rate": 0.4547,
+        "n": 2738
+      },
+      "eligible_for_selection": true
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.3068,
+      "valid": {
+        "pr_auc": 0.7307,
+        "roc_auc": 0.7407,
+        "best_f1": 0.6694,
+        "best_f1_threshold": 0.0298,
+        "mcc": 0.3103,
+        "vd_s": 0.8141,
+        "positive_rate": 0.4461,
+        "n": 2773
+      },
+      "test": {
+        "pr_auc": 0.7224,
+        "roc_auc": 0.7323,
+        "best_f1": 0.6752,
+        "best_f1_threshold": 0.0235,
+        "mcc": 0.3044,
+        "vd_s": 0.8289,
+        "positive_rate": 0.4547,
+        "n": 2738
+      },
+      "eligible_for_selection": true
+    }
+  ],
+  "runtime_seconds": 953.0,
+  "resumed": false,
+  "epochs_run": 7,
+  "best_epoch": 5,
+  "max_epochs": 15,
+  "patience": 2,
+  "converged": true,
+  "selected_on": "valid pr_auc",
+  "preds_file": "graphcodebert-base_family_disjoint_seed2_postwarmup.preds.json.gz",
+  "best_weights_file": null,
+  "selection_rule": "best valid pr_auc among epochs ending after the warm-up; patience counted from the first such epoch",
+  "warmup_steps": 2044,
+  "steps_per_epoch": 1363,
+  "first_eligible_epoch": 2,
+  "test_per_epoch_note": "history[].test is for reporting only; not used for selection"
+}

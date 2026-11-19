@@ -1,0 +1,96 @@
+{
+  "note": "per vulnerable function in a _paired file: is a target-0 function of the same commit in the same family?",
+  "splits": {
+    "train": {
+      "commits": 4074,
+      "vulnerable": 4354,
+      "commit_shapes_top": {
+        "1v+1p": 3895,
+        "2v+2p": 141,
+        "3v+3p": 21,
+        "5v+5p": 5,
+        "6v+6p": 4
+      },
+      "theta": {
+        "0.7": {
+          "vulnerable_with_a_same_commit_patch": 4354,
+          "patch_in_same_family": 2046,
+          "pct": 46.99,
+          "vulnerable_not_in_family_file": 0
+        },
+        "0.8": {
+          "vulnerable_with_a_same_commit_patch": 4354,
+          "patch_in_same_family": 1777,
+          "pct": 40.81,
+          "vulnerable_not_in_family_file": 0
+        },
+        "0.9": {
+          "vulnerable_with_a_same_commit_patch": 4354,
+          "patch_in_same_family": 1345,
+          "pct": 30.89,
+          "vulnerable_not_in_family_file": 0
+        }
+      }
+    },
+    "valid": {
+      "commits": 541,
+      "vulnerable": 562,
+      "commit_shapes_top": {
+        "1v+1p": 530,
+        "2v+2p": 6,
+        "3v+3p": 3,
+        "4v+4p": 1,
+        "7v+7p": 1
+      },
+      "theta": {
+        "0.7": {
+          "vulnerable_with_a_same_commit_patch": 562,
+          "patch_in_same_family": 250,
+          "pct": 44.48,
+          "vulnerable_not_in_family_file": 0
+        },
+        "0.8": {
+          "vulnerable_with_a_same_commit_patch": 562,
+          "patch_in_same_family": 217,
+          "pct": 38.61,
+          "vulnerable_not_in_family_file": 0
+        },
+        "0.9": {
+          "vulnerable_with_a_same_commit_patch": 562,
+          "patch_in_same_family": 171,
+          "pct": 30.43,
+          "vulnerable_not_in_family_file": 0
+        }
+      }
+    },
+    "test": {
+      "commits": 550,
+      "vulnerable": 564,
+      "commit_shapes_top": {
+        "1v+1p": 538,
+        "2v+2p": 10,
+        "3v+3p": 2
+      },
+      "theta": {
+        "0.7": {
+          "vulnerable_with_a_same_commit_patch": 564,
+          "patch_in_same_family": 269,
+          "pct": 47.7,
+          "vulnerable_not_in_family_file": 0
+        },
+        "0.8": {
+          "vulnerable_with_a_same_commit_patch": 564,
+          "patch_in_same_family": 236,
+          "pct": 41.84,
+          "vulnerable_not_in_family_file": 0
+        },
+        "0.9": {
+          "vulnerable_with_a_same_commit_patch": 564,
+          "patch_in_same_family": 184,
+          "pct": 32.62,
+          "vulnerable_not_in_family_file": 0
+        }
+      }
+    }
+  }
+}

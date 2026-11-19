@@ -1,0 +1,183 @@
+{
+  "arm": "project_disjoint",
+  "model": "microsoft/codebert-base",
+  "seed": 1,
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "splitfile": "/root/autodl-tmp/diversevul_audit_splitfile_projectdisjoint_seed42.json",
+  "epochs": 15,
+  "lr": 1e-05,
+  "max_len": 512,
+  "class_weight": "balanced",
+  "batch_size": 16,
+  "n_train": 264793,
+  "n_valid": 32533,
+  "n_test": 33165,
+  "test": {
+    "pr_auc": 0.1489,
+    "roc_auc": 0.7386,
+    "best_f1": 0.2126,
+    "best_f1_threshold": 0.219,
+    "mcc": 0.1686,
+    "vd_s": 0.9609,
+    "positive_rate": 0.057,
+    "n": 33165
+  },
+  "length_only_floor": {
+    "pr_auc": 0.1444,
+    "roc_auc": 0.7273,
+    "best_f1": 0.22,
+    "best_f1_threshold": 0.1078,
+    "mcc": 0.1676,
+    "vd_s": 0.963,
+    "positive_rate": 0.057,
+    "n": 33165
+  },
+  "worst_family": {
+    "worst_family_pr_auc": 0.1327,
+    "worst_family_id": 3798,
+    "families_scored": 21,
+    "median_family_pr_auc": 0.4778
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6548,
+      "valid": {
+        "pr_auc": 0.19,
+        "roc_auc": 0.7509,
+        "best_f1": 0.2713,
+        "best_f1_threshold": 0.5243,
+        "mcc": 0.2212,
+        "vd_s": 0.9612,
+        "positive_rate": 0.0587,
+        "n": 32533
+      },
+      "test": {
+        "pr_auc": 0.1474,
+        "roc_auc": 0.7386,
+        "best_f1": 0.2265,
+        "best_f1_threshold": 0.345,
+        "mcc": 0.1849,
+        "vd_s": 0.9656,
+        "positive_rate": 0.057,
+        "n": 33165
+      },
+      "eligible_for_selection": false
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.6812,
+      "valid": {
+        "pr_auc": 0.1702,
+        "roc_auc": 0.7421,
+        "best_f1": 0.2577,
+        "best_f1_threshold": 0.6016,
+        "mcc": 0.207,
+        "vd_s": 0.9728,
+        "positive_rate": 0.0587,
+        "n": 32533
+      },
+      "test": {
+        "pr_auc": 0.1513,
+        "roc_auc": 0.7406,
+        "best_f1": 0.2363,
+        "best_f1_threshold": 0.3663,
+        "mcc": 0.1888,
+        "vd_s": 0.9693,
+        "positive_rate": 0.057,
+        "n": 33165
+      },
+      "eligible_for_selection": true
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.6988,
+      "valid": {
+        "pr_auc": 0.1736,
+        "roc_auc": 0.7363,
+        "best_f1": 0.2501,
+        "best_f1_threshold": 0.3677,
+        "mcc": 0.1986,
+        "vd_s": 0.9607,
+        "positive_rate": 0.0587,
+        "n": 32533
+      },
+      "test": {
+        "pr_auc": 0.1489,
+        "roc_auc": 0.7386,
+        "best_f1": 0.2126,
+        "best_f1_threshold": 0.219,
+        "mcc": 0.1686,
+        "vd_s": 0.9609,
+        "positive_rate": 0.057,
+        "n": 33165
+      },
+      "eligible_for_selection": true
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.7086,
+      "valid": {
+        "pr_auc": 0.1531,
+        "roc_auc": 0.7283,
+        "best_f1": 0.245,
+        "best_f1_threshold": 0.5262,
+        "mcc": 0.1926,
+        "vd_s": 0.9843,
+        "positive_rate": 0.0587,
+        "n": 32533
+      },
+      "test": {
+        "pr_auc": 0.1435,
+        "roc_auc": 0.7354,
+        "best_f1": 0.2164,
+        "best_f1_threshold": 0.4664,
+        "mcc": 0.1646,
+        "vd_s": 0.9693,
+        "positive_rate": 0.057,
+        "n": 33165
+      },
+      "eligible_for_selection": true
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.6921,
+      "valid": {
+        "pr_auc": 0.1322,
+        "roc_auc": 0.7159,
+        "best_f1": 0.2222,
+        "best_f1_threshold": 0.2009,
+        "mcc": 0.1668,
+        "vd_s": 0.9948,
+        "positive_rate": 0.0587,
+        "n": 32533
+      },
+      "test": {
+        "pr_auc": 0.145,
+        "roc_auc": 0.736,
+        "best_f1": 0.2224,
+        "best_f1_threshold": 0.1049,
+        "mcc": 0.1722,
+        "vd_s": 0.9725,
+        "positive_rate": 0.057,
+        "n": 33165
+      },
+      "eligible_for_selection": true
+    }
+  ],
+  "runtime_seconds": 8142.2,
+  "resumed": false,
+  "epochs_run": 5,
+  "best_epoch": 3,
+  "max_epochs": 15,
+  "patience": 2,
+  "converged": true,
+  "selected_on": "valid pr_auc",
+  "preds_file": "codebert-base_project_disjoint_seed1_postwarmup.preds.json.gz",
+  "best_weights_file": null,
+  "selection_rule": "best valid pr_auc among epochs ending after the warm-up; patience counted from the first such epoch",
+  "warmup_steps": 24825,
+  "steps_per_epoch": 16550,
+  "first_eligible_epoch": 2,
+  "test_per_epoch_note": "history[].test is for reporting only; not used for selection"
+}

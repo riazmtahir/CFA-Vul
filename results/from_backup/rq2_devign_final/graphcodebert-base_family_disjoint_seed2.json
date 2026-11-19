@@ -1,0 +1,93 @@
+{
+  "arm": "family_disjoint",
+  "model": "microsoft/graphcodebert-base",
+  "seed": 2,
+  "data": "/root/autodl-tmp/data/devign/devign_all.jsonl",
+  "splitfile": "/root/autodl-tmp/devign_audit_splitfile_theta0.7.json",
+  "epochs": 15,
+  "lr": 5e-05,
+  "max_len": 512,
+  "class_weight": "balanced",
+  "batch_size": 16,
+  "n_train": 21807,
+  "n_valid": 2773,
+  "n_test": 2738,
+  "test": {
+    "pr_auc": 0.6391,
+    "roc_auc": 0.6487,
+    "best_f1": 0.6425,
+    "best_f1_threshold": 0.3326,
+    "mcc": 0.1798,
+    "vd_s": 0.89,
+    "positive_rate": 0.4547,
+    "n": 2738
+  },
+  "length_only_floor": {
+    "pr_auc": 0.4811,
+    "roc_auc": 0.5331,
+    "best_f1": 0.6252,
+    "best_f1_threshold": 0.3706,
+    "mcc": 0.0,
+    "vd_s": 0.9944,
+    "positive_rate": 0.4547,
+    "n": 2738
+  },
+  "worst_family": {
+    "worst_family_pr_auc": 0.962,
+    "worst_family_id": 700,
+    "families_scored": 3,
+    "median_family_pr_auc": 1.0
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6777,
+      "valid": {
+        "pr_auc": 0.6401,
+        "roc_auc": 0.6602,
+        "best_f1": 0.6361,
+        "best_f1_threshold": 0.3491,
+        "mcc": 0.1891,
+        "vd_s": 0.8779,
+        "positive_rate": 0.4461,
+        "n": 2773
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.6696,
+      "valid": {
+        "pr_auc": 0.5008,
+        "roc_auc": 0.5305,
+        "best_f1": 0.617,
+        "best_f1_threshold": 0.5536,
+        "mcc": 0.0,
+        "vd_s": 0.9701,
+        "positive_rate": 0.4461,
+        "n": 2773
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.6973,
+      "valid": {
+        "pr_auc": 0.5067,
+        "roc_auc": 0.5264,
+        "best_f1": 0.6175,
+        "best_f1_threshold": 0.5287,
+        "mcc": 0.0485,
+        "vd_s": 0.958,
+        "positive_rate": 0.4461,
+        "n": 2773
+      }
+    }
+  ],
+  "runtime_seconds": 407.4,
+  "resumed": false,
+  "epochs_run": 3,
+  "best_epoch": 1,
+  "max_epochs": 15,
+  "patience": 2,
+  "converged": true,
+  "selected_on": "valid pr_auc"
+}

@@ -1,0 +1,8 @@
+m1 sensitivity started 2026-11-12 02:37:32 CST
+code: 5793120 Citation rounds: printed published pages, Arp 2022 (md5 finetune_vd.py 2b19d4d5a3858e726de076668eea098a)
+gpu:  NVIDIA GeForce RTX 4090 D, 580.142
+lr:   1e-05
+rule: --select-after-warmup (first eligible epoch after the 10% warm-up; patience from there)
+ba84d1def26d89f1b61cdd3b203fb8b7  /root/autodl-tmp/diversevul_audit_families_theta0.7.json
+aae66bcb79411a8fb67b810116a2f982  /root/autodl-tmp/diversevul_audit_splitfile_projectdisjoint_seed42.json
+95e7d2e7431a171fdb42e01447a8a98e  /root/autodl-tmp/data/diversevul/diversevul.jsonl

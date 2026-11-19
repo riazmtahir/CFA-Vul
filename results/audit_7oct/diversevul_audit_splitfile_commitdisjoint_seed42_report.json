@@ -1,0 +1,53 @@
+{
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "ref_splitfile": "/root/autodl-tmp/diversevul_audit_splitfile_theta0.7.json",
+  "seed": 42,
+  "group_field": "commit_id",
+  "n_functions": 330491,
+  "n_projects": 7653,
+  "functions_without_project": 0,
+  "largest_project": {
+    "name": "619cb58dd90b4e03ac68286c70ed98acbefd1c90",
+    "functions": 2282,
+    "share_pct": 0.69,
+    "partition": "train"
+  },
+  "projects_in_more_than_one_partition": 0,
+  "balance_objective": {
+    "greedy": 0.012174,
+    "final": 0.0,
+    "refined": true,
+    "refine": {
+      "moves": 205,
+      "passes": 2
+    }
+  },
+  "partitions": {
+    "train": {
+      "functions": 264775,
+      "target_functions": 264775,
+      "pos_rate": 0.0572,
+      "target_pos_rate": 0.0572,
+      "projects": 6124
+    },
+    "valid": {
+      "functions": 32544,
+      "target_functions": 32544,
+      "pos_rate": 0.0587,
+      "target_pos_rate": 0.0587,
+      "projects": 758
+    },
+    "test": {
+      "functions": 33172,
+      "target_functions": 33172,
+      "pos_rate": 0.057,
+      "target_pos_rate": 0.057,
+      "projects": 771
+    }
+  },
+  "family_leak_under_this_split": {
+    "famfile": "/root/autodl-tmp/diversevul_audit_families_theta0.7.json",
+    "leaked_test_functions": 5680,
+    "leaked_test_pct": 17.12
+  }
+}

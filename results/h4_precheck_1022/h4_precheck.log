@@ -1,0 +1,441 @@
+nohup: ignoring input
+############ H4 / H4b pre-checks  2026-10-22 06:09:13  code: 0936287 Amend H4b pre-registration (§13.8): size control drawn from non-clone training functions; borrowing limit in gate ############
+cpus: 16   memory limit: 63488 MB
+
+############ 1/7  H4: build the commit + high-recall-family split (seed 42)  06:09:13 ############
+  ! largest group is 97.18% of the corpus (> 15%): precheck_h4.py will refuse this split
+  train  321,171 (target 264,775)  pos 0.0543 (target 0.0572)
+  valid    4,885 (target 32,544)  pos 0.1529 (target 0.0587)
+  test     4,435 (target 33,172)  pos 0.1693 (target 0.057)
+  groups 753; largest 321,171 fns (97.18% of corpus, 6,693 commits) -> train; top10 [321171, 223, 139, 120, 93, 92, 80, 78, 78, 74]
+  balance objective J: greedy 2.20684 -> final 2.20675 (31 moves)
+wrote /root/autodl-tmp/diversevul_audit_splitfile_commithrfamily_seed42.json and /root/autodl-tmp/diversevul_audit_splitfile_commithrfamily_seed42_report.json
+
+############ 2/7  H4 pre-check (§13.7)  06:09:22 ############
+# H4 pre-check (commit_hrfamily_disjoint vs commit_disjoint)
+
+Functions 330,491; groups 753; largest group 321,171 (97.18% of corpus); top 10 [321171, 223, 139, 120, 93, 92, 80, 78, 78, 74]
+
+| quantity | commit_hrfamily_disjoint | commit_disjoint |
+|---|---|---|
+| train functions / pos rate / mean chars | 321,171 / 0.0543 / 1287 | 264,775 / 0.0572 / 1325 |
+| valid functions / pos rate / mean chars | 4,885 / 0.1529 / 2036 | 32,544 / 0.0587 / 1292 |
+| test functions / pos rate / mean chars | 4,435 / 0.1693 / 2472 | 33,172 / 0.0570 / 1245 |
+| test sharing a commit with train | 0 | 0 |
+| test with own twin in train | 0 | 0 |
+| high-recall family leak: any / same-label % | 0.00 / 0.00 | 38.38 / 37.01 |
+| strict family leak: any / same-label % | 0.07 / 0.05 | 17.12 / 16.42 |
+| length-only floor PR-AUC (test) | 0.2825 | 0.1413 |
+
+**FAIL**: train size 321,171 vs 264,775 (21.30% > 2%); valid size 4,885 vs 32,544 (84.99% > 2%); valid positive rate 0.1529 vs 0.0587 (> 0.003); test size 4,435 vs 33,172 (86.63% > 2%); test positive rate 0.1693 vs 0.0570 (> 0.003); strict family leak: 3 test functions (must be 0); largest group 321,171 functions = 97.18% of corpus (> 15%)
+
+############ 3/7  direct high-recall clone edges, test -> train, five splits  06:09:41 ############
+330,491 functions; splits ['published', 'random_control', 'family_disjoint', 'project_disjoint', 'commit_disjoint']
+  [1/3] normalising 330491 functions ...
+        50000/330491  (14s)
+        100000/330491  (27s)
+        150000/330491  (39s)
+        200000/330491  (52s)
+        250000/330491  (64s)
+        300000/330491  (77s)
+  [2/3] 284746 representatives after Type-1/2 collapse (45745 exact duplicates removed); shingling ...
+        50000/284746  (92s)
+        100000/284746  (100s)
+        150000/284746  (108s)
+        200000/284746  (116s)
+        250000/284746  (124s)
+  [3/3] shingle store 101 MB, signatures 292 MB (130s total)
+  band 1/16: published 50,490, random_control 50,734, family_disjoint 31,844, project_disjoint 13,962, commit_disjoint 31,730 rep edges (153s)
+  band 2/16: published 64,497, random_control 63,983, family_disjoint 41,555, project_disjoint 18,298, commit_disjoint 40,594 rep edges (161s)
+  band 3/16: published 73,127, random_control 72,929, family_disjoint 47,870, project_disjoint 21,228, commit_disjoint 46,559 rep edges (175s)
+  band 4/16: published 77,505, random_control 77,189, family_disjoint 51,306, project_disjoint 22,694, commit_disjoint 49,339 rep edges (184s)
+  band 5/16: published 80,474, random_control 79,738, family_disjoint 53,262, project_disjoint 23,447, commit_disjoint 51,177 rep edges (193s)
+  band 6/16: published 82,943, random_control 82,120, family_disjoint 54,910, project_disjoint 24,157, commit_disjoint 52,793 rep edges (210s)
+  band 7/16: published 84,730, random_control 83,955, family_disjoint 56,271, project_disjoint 24,683, commit_disjoint 54,005 rep edges (221s)
+  band 8/16: published 85,736, random_control 84,979, family_disjoint 57,012, project_disjoint 24,933, commit_disjoint 54,725 rep edges (230s)
+  band 9/16: published 87,186, random_control 86,329, family_disjoint 58,104, project_disjoint 25,375, commit_disjoint 55,662 rep edges (244s)
+  band 10/16: published 88,330, random_control 87,567, family_disjoint 58,965, project_disjoint 25,743, commit_disjoint 56,517 rep edges (263s)
+  band 11/16: published 88,655, random_control 87,954, family_disjoint 59,183, project_disjoint 25,914, commit_disjoint 56,749 rep edges (273s)
+  band 12/16: published 89,407, random_control 88,746, family_disjoint 59,876, project_disjoint 26,083, commit_disjoint 57,173 rep edges (281s)
+  band 13/16: published 89,954, random_control 89,295, family_disjoint 60,207, project_disjoint 26,363, commit_disjoint 57,547 rep edges (302s)
+  band 14/16: published 90,114, random_control 89,492, family_disjoint 60,327, project_disjoint 26,385, commit_disjoint 57,635 rep edges (310s)
+  band 15/16: published 90,551, random_control 89,928, family_disjoint 60,674, project_disjoint 26,507, commit_disjoint 57,944 rep edges (342s)
+  band 16/16: published 90,824, random_control 90,216, family_disjoint 60,936, project_disjoint 26,578, commit_disjoint 58,227 rep edges (350s)
+# Direct high-recall clone edges, test -> train (no transitive closure)
+
+Criterion: blind identifiers, 3-token shingles, exact Jaccard >= 0.7; LSH candidates (16 bands x 8 rows; P(candidate | J = 0.7) = 0.613), so the rates are lower bounds.
+
+| split | test n | direct leak % | positives: direct leak % | train functions hit (% of train) | positives hit / train positives |
+|---|---|---|---|---|---|
+| published | 33,050 | 56.45 | 84.46 | 60,535 (22.9%) | 3,724 / 15,145 |
+| random_control | 33,172 | 56.23 | 83.53 | 60,938 (23.02%) | 3,820 / 15,178 |
+| family_disjoint | 33,172 | 44.87 | 59.7 | 38,630 (14.59%) | 2,359 / 15,145 |
+| project_disjoint | 33,165 | 16.53 | 6.87 | 19,199 (7.25%) | 359 / 15,145 |
+| commit_disjoint | 33,172 | 37.15 | 40.4 | 35,192 (13.29%) | 1,646 / 15,145 |
+
+############ 4/7  H4b: build commit_decon and commit_sizectrl (seed 42)  06:15:40 ############
+{
+  "seed": 42,
+  "control_pool": "train_minus_decon",
+  "length_decile_edges_chars": [
+    123.0,
+    194.0,
+    278.0,
+    384.0,
+    521.0,
+    715.0,
+    1015.0,
+    1534.0,
+    2774.0
+  ],
+  "reference_train": 264775,
+  "reference_train_pos": 15145,
+  "removed": 35192,
+  "removed_pos": 1646,
+  "removed_neg": 33546,
+  "removed_pct_of_train": 13.29,
+  "train_after": 229583,
+  "train_pos_after": 13499,
+  "borrowed": 0,
+  "unfilled": 0,
+  "borrowed_pct_of_removal": 0.0,
+  "sizectrl_overlap_with_decon_removal": 0,
+  "ref_splitfile": "/root/autodl-tmp/diversevul_audit_splitfile_commitdisjoint_seed42.json",
+  "train_hits": "/root/autodl-tmp/direct_edges/diversevul_hr_direct_commit_disjoint_train_hits.json"
+}
+
+############ 5/7  H4b pre-check (§13.8)  06:15:47 ############
+# H4b pre-check (commit_decon / commit_sizectrl vs commit_disjoint)
+
+commit_disjoint train 264,775; removed 35,192 (13.29%), of which 1,646 positives; positives left 13,499; borrowed 0 (0.00% of the removal)
+
+train positive rate: commit_disjoint 0.0572, decon 0.0588, sizectrl 0.0588
+
+| set | n | mean chars | median chars | pos rate | top-10 projects (% of set) | top-10 CWEs (% of set) |
+|---|---|---|---|---|---|---|
+| removed_by_decon | 35,192 | 1256 | 182 | 0.0468 | linux 27.49, gpac 6.75, linux-2.6 5.52, openssl 3.72, server 3.44, qemu 2.56, ImageMagick 1.91, php-src 1.85, net 1.41, vim 1.4 | (none) 16.29, CWE-787 11.03, CWE-125 7.72, CWE-703 7.65, CWE-416 7.1, CWE-119 7.02, CWE-20 6.71, CWE-476 5.69, CWE-400 4.4, CWE-401 3.9 |
+| removed_by_control | 35,192 | 1038 | 186 | 0.0468 | linux 17.32, server 3.85, envoy 3.38, linux-2.6 2.87, php-src 2.6, mongo 2.17, vim 2.16, cimg 2.09, qemu 2.03, ceph 1.83 | (none) 14.21, CWE-787 10.62, CWE-125 8.41, CWE-703 7.91, CWE-119 7.59, CWE-416 7.13, CWE-20 7.0, CWE-476 5.11, CWE-200 3.59, CWE-400 3.41 |
+| kept | 229,583 | 1336 | 574 | 0.0588 | linux 20.69, php-src 3.05, linux-2.6 2.73, envoy 2.42, server 2.22, qemu 2.19, vim 1.94, mongo 1.53, openssl 1.53, gpac 1.44 | (none) 14.76, CWE-787 11.14, CWE-125 8.18, CWE-703 7.86, CWE-119 7.78, CWE-416 6.96, CWE-20 6.93, CWE-476 5.74, CWE-200 3.98, CWE-190 3.28 |
+
+| split | direct leak % (test) | positives: direct leak % |
+|---|---|---|
+| published | 56.45 | 84.46 |
+| random_control | 56.23 | 83.53 |
+| family_disjoint | 44.87 | 59.7 |
+| project_disjoint | 16.53 | 6.87 |
+| commit_disjoint | 37.15 | 40.4 |
+
+**PASS**
+
+############ 6/7  Croft re-scoring with the lift CI (EXPLORATORY)  06:15:57 ############
+  random_control: removed 9,748 leaked of 33,172; PR-AUC 0.2572 -> 0.2046
+  family_disjoint: removed 0 leaked of 33,172; PR-AUC 0.2621 -> 0.2621
+  project_disjoint: removed 1,934 leaked of 33,165; PR-AUC 0.1472 -> 0.1476
+  commit_disjoint: removed 5,680 leaked of 33,172; PR-AUC 0.1723 -> 0.1594
+# Croft-style re-scoring: test set with family-leaked functions removed (EXPLORATORY, A5)
+
+Leaked = a training function of the arm's split is in the test function's θ=0.7 family. Mean over seeds; 95% bootstrap CI over test functions (paired for the difference). Removal changes the positive rate, so PR/pos is shown too; Δ lift = change in PR/pos with its paired bootstrap CI (same resamples).
+
+| arm | seeds | test n | removed (leaked %) | PR-AUC full | PR-AUC without leaked | Δ (without − full) | pos rate full → without | PR/pos full → without | Δ lift [95% CI] |
+|---|---|---|---|---|---|---|---|---|---|
+| random_control | 4,5 | 33,172 | 9,748 (29.39%) | 0.2572 [0.2401, 0.2766] | 0.2046 [0.1853, 0.2286] | -0.0525 [-0.0675, -0.0361] | 0.0573 → 0.0460 | 4.49 → 4.45 | -0.04 [-0.31, +0.30] |
+| family_disjoint | 4,5 | 33,172 | 0 (0.0%) | 0.2621 [0.2455, 0.2806] | 0.2621 [0.2455, 0.2806] | +0.0000 [+0.0000, +0.0000] | 0.0570 → 0.0570 | 4.60 → 4.60 | +0.00 [+0.00, +0.00] |
+| project_disjoint | 1,2,3 | 33,165 | 1,934 (5.83%) | 0.1472 [0.1367, 0.1595] | 0.1476 [0.1369, 0.1601] | +0.0004 [-0.0013, +0.0018] | 0.0570 → 0.0594 | 2.58 → 2.48 | -0.10 [-0.13, -0.07] |
+| commit_disjoint | 1,2,3 | 33,172 | 5,680 (17.12%) | 0.1723 [0.1599, 0.1863] | 0.1594 [0.1476, 0.1732] | -0.0129 [-0.0205, -0.0060] | 0.0570 → 0.0600 | 3.02 → 2.66 | -0.37 [-0.48, -0.26] |
+
+############ 7/7  §13.8 precedence  06:18:36 ############
+H4 pre-check: FAIL   H4b pre-check: PASS   -> selected design: H4b (run_phase4b.sh (after .phase4b_approved))
+
+############ SUMMARY -- send these back  2026-10-22 06:18:36 ############
+{
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "hr_famfile": "/root/autodl-tmp/audit_highrecall/diversevul_hr_families_theta0.7.json",
+  "ref_splitfile": "/root/autodl-tmp/diversevul_audit_splitfile_commitdisjoint_seed42.json",
+  "seed": 42,
+  "relations": "same commit_id OR same high-recall theta=0.7 family (connected components)",
+  "n_functions": 330491,
+  "functions_without_hr_family": 0,
+  "functions_without_commit": 0,
+  "n_groups": 753,
+  "n_groups_gt1": 736,
+  "largest_group": {
+    "functions": 321171,
+    "share_pct": 97.18,
+    "partition": "train",
+    "positives": 17447,
+    "commits": 6693
+  },
+  "top10_group_sizes": [
+    321171,
+    223,
+    139,
+    120,
+    93,
+    92,
+    80,
+    78,
+    78,
+    74
+  ],
+  "split_across_partitions": {
+    "commit": 0,
+    "hr_family": 0
+  },
+  "balance_objective": {
+    "greedy": 2.206837,
+    "final": 2.206748,
+    "refine": {
+      "moves": 31,
+      "passes": 2
+    }
+  },
+  "partitions": {
+    "train": {
+      "functions": 321171,
+      "target_functions": 264775,
+      "pos_rate": 0.0543,
+      "target_pos_rate": 0.0572
+    },
+    "valid": {
+      "functions": 4885,
+      "target_functions": 32544,
+      "pos_rate": 0.1529,
+      "target_pos_rate": 0.0587
+    },
+    "test": {
+      "functions": 4435,
+      "target_functions": 33172,
+      "pos_rate": 0.1693,
+      "target_pos_rate": 0.057
+    }
+  },
+  "hr_family_leak_under_this_split": {
+    "leaked_test_functions": 0,
+    "leaked_test_pct": 0.0
+  },
+  "strict_family_leak_under_this_split": {
+    "leaked_test_functions": 3,
+    "leaked_test_pct": 0.07
+  }
+}
+# H4 pre-check (commit_hrfamily_disjoint vs commit_disjoint)
+
+Functions 330,491; groups 753; largest group 321,171 (97.18% of corpus); top 10 [321171, 223, 139, 120, 93, 92, 80, 78, 78, 74]
+
+| quantity | commit_hrfamily_disjoint | commit_disjoint |
+|---|---|---|
+| train functions / pos rate / mean chars | 321,171 / 0.0543 / 1287 | 264,775 / 0.0572 / 1325 |
+| valid functions / pos rate / mean chars | 4,885 / 0.1529 / 2036 | 32,544 / 0.0587 / 1292 |
+| test functions / pos rate / mean chars | 4,435 / 0.1693 / 2472 | 33,172 / 0.0570 / 1245 |
+| test sharing a commit with train | 0 | 0 |
+| test with own twin in train | 0 | 0 |
+| high-recall family leak: any / same-label % | 0.00 / 0.00 | 38.38 / 37.01 |
+| strict family leak: any / same-label % | 0.07 / 0.05 | 17.12 / 16.42 |
+| length-only floor PR-AUC (test) | 0.2825 | 0.1413 |
+
+**FAIL**: train size 321,171 vs 264,775 (21.30% > 2%); valid size 4,885 vs 32,544 (84.99% > 2%); valid positive rate 0.1529 vs 0.0587 (> 0.003); test size 4,435 vs 33,172 (86.63% > 2%); test positive rate 0.1693 vs 0.0570 (> 0.003); strict family leak: 3 test functions (must be 0); largest group 321,171 functions = 97.18% of corpus (> 15%)
+
+# Direct high-recall clone edges, test -> train (no transitive closure)
+
+Criterion: blind identifiers, 3-token shingles, exact Jaccard >= 0.7; LSH candidates (16 bands x 8 rows; P(candidate | J = 0.7) = 0.613), so the rates are lower bounds.
+
+| split | test n | direct leak % | positives: direct leak % | train functions hit (% of train) | positives hit / train positives |
+|---|---|---|---|---|---|
+| published | 33,050 | 56.45 | 84.46 | 60,535 (22.9%) | 3,724 / 15,145 |
+| random_control | 33,172 | 56.23 | 83.53 | 60,938 (23.02%) | 3,820 / 15,178 |
+| family_disjoint | 33,172 | 44.87 | 59.7 | 38,630 (14.59%) | 2,359 / 15,145 |
+| project_disjoint | 33,165 | 16.53 | 6.87 | 19,199 (7.25%) | 359 / 15,145 |
+| commit_disjoint | 33,172 | 37.15 | 40.4 | 35,192 (13.29%) | 1,646 / 15,145 |
+
+{
+  "seed": 42,
+  "control_pool": "train_minus_decon",
+  "length_decile_edges_chars": [
+    123.0,
+    194.0,
+    278.0,
+    384.0,
+    521.0,
+    715.0,
+    1015.0,
+    1534.0,
+    2774.0
+  ],
+  "reference_train": 264775,
+  "reference_train_pos": 15145,
+  "removed": 35192,
+  "removed_pos": 1646,
+  "removed_neg": 33546,
+  "removed_pct_of_train": 13.29,
+  "train_after": 229583,
+  "train_pos_after": 13499,
+  "borrowed": 0,
+  "unfilled": 0,
+  "borrowed_pct_of_removal": 0.0,
+  "strata": {
+    "label0_decile0": {
+      "decon": 12008,
+      "control_same_stratum": 12008,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile1": {
+      "decon": 6044,
+      "control_same_stratum": 6044,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile2": {
+      "decon": 3304,
+      "control_same_stratum": 3304,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile3": {
+      "decon": 2088,
+      "control_same_stratum": 2088,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile4": {
+      "decon": 1575,
+      "control_same_stratum": 1575,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile5": {
+      "decon": 1374,
+      "control_same_stratum": 1374,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile6": {
+      "decon": 1311,
+      "control_same_stratum": 1311,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile7": {
+      "decon": 1575,
+      "control_same_stratum": 1575,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile8": {
+      "decon": 1691,
+      "control_same_stratum": 1691,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label0_decile9": {
+      "decon": 2576,
+      "control_same_stratum": 2576,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile0": {
+      "decon": 146,
+      "control_same_stratum": 146,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile1": {
+      "decon": 87,
+      "control_same_stratum": 87,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile2": {
+      "decon": 70,
+      "control_same_stratum": 70,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile3": {
+      "decon": 60,
+      "control_same_stratum": 60,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile4": {
+      "decon": 52,
+      "control_same_stratum": 52,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile5": {
+      "decon": 80,
+      "control_same_stratum": 80,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile6": {
+      "decon": 101,
+      "control_same_stratum": 101,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile7": {
+      "decon": 129,
+      "control_same_stratum": 129,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile8": {
+      "decon": 201,
+      "control_same_stratum": 201,
+      "borrowed": 0,
+      "unfilled": 0
+    },
+    "label1_decile9": {
+      "decon": 720,
+      "control_same_stratum": 720,
+      "borrowed": 0,
+      "unfilled": 0
+    }
+  },
+  "sizectrl_overlap_with_decon_removal": 0,
+  "ref_splitfile": "/root/autodl-tmp/diversevul_audit_splitfile_commitdisjoint_seed42.json",
+  "train_hits": "/root/autodl-tmp/direct_edges/diversevul_hr_direct_commit_disjoint_train_hits.json"
+}
+# H4b pre-check (commit_decon / commit_sizectrl vs commit_disjoint)
+
+commit_disjoint train 264,775; removed 35,192 (13.29%), of which 1,646 positives; positives left 13,499; borrowed 0 (0.00% of the removal)
+
+train positive rate: commit_disjoint 0.0572, decon 0.0588, sizectrl 0.0588
+
+| set | n | mean chars | median chars | pos rate | top-10 projects (% of set) | top-10 CWEs (% of set) |
+|---|---|---|---|---|---|---|
+| removed_by_decon | 35,192 | 1256 | 182 | 0.0468 | linux 27.49, gpac 6.75, linux-2.6 5.52, openssl 3.72, server 3.44, qemu 2.56, ImageMagick 1.91, php-src 1.85, net 1.41, vim 1.4 | (none) 16.29, CWE-787 11.03, CWE-125 7.72, CWE-703 7.65, CWE-416 7.1, CWE-119 7.02, CWE-20 6.71, CWE-476 5.69, CWE-400 4.4, CWE-401 3.9 |
+| removed_by_control | 35,192 | 1038 | 186 | 0.0468 | linux 17.32, server 3.85, envoy 3.38, linux-2.6 2.87, php-src 2.6, mongo 2.17, vim 2.16, cimg 2.09, qemu 2.03, ceph 1.83 | (none) 14.21, CWE-787 10.62, CWE-125 8.41, CWE-703 7.91, CWE-119 7.59, CWE-416 7.13, CWE-20 7.0, CWE-476 5.11, CWE-200 3.59, CWE-400 3.41 |
+| kept | 229,583 | 1336 | 574 | 0.0588 | linux 20.69, php-src 3.05, linux-2.6 2.73, envoy 2.42, server 2.22, qemu 2.19, vim 1.94, mongo 1.53, openssl 1.53, gpac 1.44 | (none) 14.76, CWE-787 11.14, CWE-125 8.18, CWE-703 7.86, CWE-119 7.78, CWE-416 6.96, CWE-20 6.93, CWE-476 5.74, CWE-200 3.98, CWE-190 3.28 |
+
+| split | direct leak % (test) | positives: direct leak % |
+|---|---|---|
+| published | 56.45 | 84.46 |
+| random_control | 56.23 | 83.53 |
+| family_disjoint | 44.87 | 59.7 |
+| project_disjoint | 16.53 | 6.87 |
+| commit_disjoint | 37.15 | 40.4 |
+
+**PASS**
+
+# Croft-style re-scoring: test set with family-leaked functions removed (EXPLORATORY, A5)
+
+Leaked = a training function of the arm's split is in the test function's θ=0.7 family. Mean over seeds; 95% bootstrap CI over test functions (paired for the difference). Removal changes the positive rate, so PR/pos is shown too; Δ lift = change in PR/pos with its paired bootstrap CI (same resamples).
+
+| arm | seeds | test n | removed (leaked %) | PR-AUC full | PR-AUC without leaked | Δ (without − full) | pos rate full → without | PR/pos full → without | Δ lift [95% CI] |
+|---|---|---|---|---|---|---|---|---|---|
+| random_control | 4,5 | 33,172 | 9,748 (29.39%) | 0.2572 [0.2401, 0.2766] | 0.2046 [0.1853, 0.2286] | -0.0525 [-0.0675, -0.0361] | 0.0573 → 0.0460 | 4.49 → 4.45 | -0.04 [-0.31, +0.30] |
+| family_disjoint | 4,5 | 33,172 | 0 (0.0%) | 0.2621 [0.2455, 0.2806] | 0.2621 [0.2455, 0.2806] | +0.0000 [+0.0000, +0.0000] | 0.0570 → 0.0570 | 4.60 → 4.60 | +0.00 [+0.00, +0.00] |
+| project_disjoint | 1,2,3 | 33,165 | 1,934 (5.83%) | 0.1472 [0.1367, 0.1595] | 0.1476 [0.1369, 0.1601] | +0.0004 [-0.0013, +0.0018] | 0.0570 → 0.0594 | 2.58 → 2.48 | -0.10 [-0.13, -0.07] |
+| commit_disjoint | 1,2,3 | 33,172 | 5,680 (17.12%) | 0.1723 [0.1599, 0.1863] | 0.1594 [0.1476, 0.1732] | -0.0129 [-0.0205, -0.0060] | 0.0570 → 0.0600 | 3.02 → 2.66 | -0.37 [-0.48, -0.26] |
+
+{
+  "rule": "RESEARCH_PLAN \u00a713.8 precedence",
+  "h4_precheck": "FAIL",
+  "h4b_precheck": "PASS",
+  "design": "H4b",
+  "action": "run_phase4b.sh (after .phase4b_approved)"
+}
+############ SELECTED: H4b (§13.7 failed, §13.8 passed) -- run_phase4b.sh after supervisor OK ############

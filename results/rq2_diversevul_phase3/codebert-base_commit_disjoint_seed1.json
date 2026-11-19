@@ -1,0 +1,179 @@
+{
+  "arm": "commit_disjoint",
+  "model": "microsoft/codebert-base",
+  "seed": 1,
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "splitfile": "/root/autodl-tmp/diversevul_audit_splitfile_commitdisjoint_seed42.json",
+  "epochs": 15,
+  "lr": 1e-05,
+  "max_len": 512,
+  "class_weight": "balanced",
+  "batch_size": 16,
+  "n_train": 264775,
+  "n_valid": 32544,
+  "n_test": 33172,
+  "test": {
+    "pr_auc": 0.1651,
+    "roc_auc": 0.7403,
+    "best_f1": 0.2512,
+    "best_f1_threshold": 0.0173,
+    "mcc": 0.2041,
+    "vd_s": 0.9704,
+    "positive_rate": 0.057,
+    "n": 33172
+  },
+  "length_only_floor": {
+    "pr_auc": 0.1413,
+    "roc_auc": 0.7116,
+    "best_f1": 0.2125,
+    "best_f1_threshold": 0.1139,
+    "mcc": 0.1579,
+    "vd_s": 0.9625,
+    "positive_rate": 0.057,
+    "n": 33172
+  },
+  "worst_family": {
+    "worst_family_pr_auc": 0.2,
+    "worst_family_id": 9407,
+    "families_scored": 13,
+    "median_family_pr_auc": 0.5
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6585,
+      "valid": {
+        "pr_auc": 0.1939,
+        "roc_auc": 0.7857,
+        "best_f1": 0.2791,
+        "best_f1_threshold": 0.6311,
+        "mcc": 0.2324,
+        "vd_s": 0.9591,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.695,
+      "valid": {
+        "pr_auc": 0.1964,
+        "roc_auc": 0.7869,
+        "best_f1": 0.2852,
+        "best_f1_threshold": 0.0964,
+        "mcc": 0.2429,
+        "vd_s": 0.966,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.705,
+      "valid": {
+        "pr_auc": 0.1904,
+        "roc_auc": 0.7871,
+        "best_f1": 0.2753,
+        "best_f1_threshold": 0.2179,
+        "mcc": 0.2303,
+        "vd_s": 0.9665,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.7119,
+      "valid": {
+        "pr_auc": 0.2087,
+        "roc_auc": 0.7948,
+        "best_f1": 0.3025,
+        "best_f1_threshold": 0.2089,
+        "mcc": 0.2564,
+        "vd_s": 0.9644,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.689,
+      "valid": {
+        "pr_auc": 0.2133,
+        "roc_auc": 0.7895,
+        "best_f1": 0.311,
+        "best_f1_threshold": 0.0527,
+        "mcc": 0.265,
+        "vd_s": 0.9623,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.6587,
+      "valid": {
+        "pr_auc": 0.2125,
+        "roc_auc": 0.7892,
+        "best_f1": 0.3107,
+        "best_f1_threshold": 0.7973,
+        "mcc": 0.2645,
+        "vd_s": 0.9686,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.6339,
+      "valid": {
+        "pr_auc": 0.2164,
+        "roc_auc": 0.7838,
+        "best_f1": 0.3191,
+        "best_f1_threshold": 0.0416,
+        "mcc": 0.2734,
+        "vd_s": 0.9649,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.6143,
+      "valid": {
+        "pr_auc": 0.2055,
+        "roc_auc": 0.7781,
+        "best_f1": 0.2985,
+        "best_f1_threshold": 0.0141,
+        "mcc": 0.2511,
+        "vd_s": 0.9628,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.5781,
+      "valid": {
+        "pr_auc": 0.1923,
+        "roc_auc": 0.7747,
+        "best_f1": 0.2833,
+        "best_f1_threshold": 0.0434,
+        "mcc": 0.2351,
+        "vd_s": 0.9675,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    }
+  ],
+  "runtime_seconds": 13474.0,
+  "resumed": false,
+  "epochs_run": 9,
+  "best_epoch": 7,
+  "max_epochs": 15,
+  "patience": 2,
+  "converged": true,
+  "selected_on": "valid pr_auc",
+  "preds_file": "codebert-base_commit_disjoint_seed1.preds.json.gz",
+  "best_weights_file": "codebert-base_commit_disjoint_seed1.best.pt"
+}

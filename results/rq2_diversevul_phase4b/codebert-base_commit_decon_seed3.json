@@ -1,0 +1,151 @@
+{
+  "arm": "commit_decon",
+  "model": "microsoft/codebert-base",
+  "seed": 3,
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "splitfile": "/root/autodl-tmp/diversevul_audit_splitfile_commitdecon_seed42.json",
+  "epochs": 15,
+  "lr": 1e-05,
+  "max_len": 512,
+  "class_weight": "balanced",
+  "batch_size": 16,
+  "n_train": 229583,
+  "n_valid": 32544,
+  "n_test": 33172,
+  "test": {
+    "pr_auc": 0.1513,
+    "roc_auc": 0.7376,
+    "best_f1": 0.2261,
+    "best_f1_threshold": 0.1582,
+    "mcc": 0.174,
+    "vd_s": 0.9614,
+    "positive_rate": 0.057,
+    "n": 33172
+  },
+  "length_only_floor": {
+    "pr_auc": 0.1412,
+    "roc_auc": 0.7115,
+    "best_f1": 0.2126,
+    "best_f1_threshold": 0.101,
+    "mcc": 0.1591,
+    "vd_s": 0.9614,
+    "positive_rate": 0.057,
+    "n": 33172
+  },
+  "worst_family": {
+    "worst_family_pr_auc": 0.1667,
+    "worst_family_id": 9407,
+    "families_scored": 13,
+    "median_family_pr_auc": 0.4167
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6608,
+      "valid": {
+        "pr_auc": 0.1857,
+        "roc_auc": 0.7753,
+        "best_f1": 0.2708,
+        "best_f1_threshold": 0.3702,
+        "mcc": 0.2259,
+        "vd_s": 0.9649,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.6772,
+      "valid": {
+        "pr_auc": 0.191,
+        "roc_auc": 0.7883,
+        "best_f1": 0.2772,
+        "best_f1_threshold": 0.5915,
+        "mcc": 0.2301,
+        "vd_s": 0.957,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.6761,
+      "valid": {
+        "pr_auc": 0.2001,
+        "roc_auc": 0.793,
+        "best_f1": 0.2892,
+        "best_f1_threshold": 0.0622,
+        "mcc": 0.2429,
+        "vd_s": 0.9591,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.6759,
+      "valid": {
+        "pr_auc": 0.1968,
+        "roc_auc": 0.785,
+        "best_f1": 0.2816,
+        "best_f1_threshold": 0.2511,
+        "mcc": 0.2337,
+        "vd_s": 0.9539,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.6825,
+      "valid": {
+        "pr_auc": 0.2276,
+        "roc_auc": 0.8023,
+        "best_f1": 0.3109,
+        "best_f1_threshold": 0.1809,
+        "mcc": 0.2652,
+        "vd_s": 0.9502,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.6704,
+      "valid": {
+        "pr_auc": 0.2133,
+        "roc_auc": 0.7956,
+        "best_f1": 0.2913,
+        "best_f1_threshold": 0.1369,
+        "mcc": 0.2435,
+        "vd_s": 0.9508,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.6492,
+      "valid": {
+        "pr_auc": 0.1882,
+        "roc_auc": 0.7825,
+        "best_f1": 0.2725,
+        "best_f1_threshold": 0.0355,
+        "mcc": 0.2226,
+        "vd_s": 0.9618,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    }
+  ],
+  "runtime_seconds": 9121.0,
+  "resumed": false,
+  "epochs_run": 7,
+  "best_epoch": 5,
+  "max_epochs": 15,
+  "patience": 2,
+  "converged": true,
+  "selected_on": "valid pr_auc",
+  "preds_file": "codebert-base_commit_decon_seed3.preds.json.gz",
+  "best_weights_file": "codebert-base_commit_decon_seed3.best.pt"
+}

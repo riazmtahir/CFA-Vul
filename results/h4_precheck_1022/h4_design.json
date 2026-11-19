@@ -1,0 +1,7 @@
+{
+  "rule": "RESEARCH_PLAN \u00a713.8 precedence",
+  "h4_precheck": "FAIL",
+  "h4b_precheck": "PASS",
+  "design": "H4b",
+  "action": "run_phase4b.sh (after .phase4b_approved)"
+}

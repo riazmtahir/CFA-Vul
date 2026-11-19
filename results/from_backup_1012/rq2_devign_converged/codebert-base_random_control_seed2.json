@@ -1,0 +1,115 @@
+{
+  "arm": "random_control",
+  "model": "microsoft/codebert-base",
+  "seed": 2,
+  "data": "/root/autodl-tmp/data/devign/devign_all.jsonl",
+  "splitfile": "/root/autodl-tmp/devign_audit_splitfile_randomctrl_theta0.7.json",
+  "epochs": 15,
+  "lr": 2e-05,
+  "max_len": 512,
+  "batch_size": 16,
+  "n_train": 21807,
+  "n_valid": 2773,
+  "n_test": 2738,
+  "test": {
+    "pr_auc": 0.7285,
+    "roc_auc": 0.735,
+    "best_f1": 0.6739,
+    "best_f1_threshold": 0.3501,
+    "mcc": 0.3091,
+    "vd_s": 0.8143,
+    "positive_rate": 0.4562,
+    "n": 2738
+  },
+  "length_only_floor": {
+    "pr_auc": 0.4647,
+    "roc_auc": 0.5089,
+    "best_f1": 0.6269,
+    "best_f1_threshold": 0.3704,
+    "mcc": 0.0248,
+    "vd_s": 0.9968,
+    "positive_rate": 0.4562,
+    "n": 2738
+  },
+  "worst_family": null,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.674,
+      "valid": {
+        "pr_auc": 0.6525,
+        "roc_auc": 0.6542,
+        "best_f1": 0.6418,
+        "best_f1_threshold": 0.3997,
+        "mcc": 0.1855,
+        "vd_s": 0.8617,
+        "positive_rate": 0.4562,
+        "n": 2773
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.6202,
+      "valid": {
+        "pr_auc": 0.7123,
+        "roc_auc": 0.7186,
+        "best_f1": 0.6669,
+        "best_f1_threshold": 0.245,
+        "mcc": 0.2692,
+        "vd_s": 0.8261,
+        "positive_rate": 0.4562,
+        "n": 2773
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5646,
+      "valid": {
+        "pr_auc": 0.7299,
+        "roc_auc": 0.7354,
+        "best_f1": 0.682,
+        "best_f1_threshold": 0.2446,
+        "mcc": 0.3188,
+        "vd_s": 0.8063,
+        "positive_rate": 0.4562,
+        "n": 2773
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.4964,
+      "valid": {
+        "pr_auc": 0.7299,
+        "roc_auc": 0.7412,
+        "best_f1": 0.6861,
+        "best_f1_threshold": 0.1768,
+        "mcc": 0.3359,
+        "vd_s": 0.7976,
+        "positive_rate": 0.4562,
+        "n": 2773
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.4222,
+      "valid": {
+        "pr_auc": 0.7264,
+        "roc_auc": 0.7378,
+        "best_f1": 0.6895,
+        "best_f1_threshold": 0.0486,
+        "mcc": 0.3438,
+        "vd_s": 0.8063,
+        "positive_rate": 0.4562,
+        "n": 2773
+      }
+    }
+  ],
+  "runtime_seconds": 612.5,
+  "resumed": false,
+  "epochs_run": 5,
+  "best_epoch": 3,
+  "max_epochs": 15,
+  "patience": 2,
+  "converged": true,
+  "selected_on": "valid pr_auc"
+}

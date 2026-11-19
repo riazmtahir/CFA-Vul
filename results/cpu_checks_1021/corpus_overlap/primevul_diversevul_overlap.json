@@ -1,0 +1,103 @@
+{
+  "note": "DESCRIPTIVE (action A3)",
+  "n": {
+    "primevul": 235768,
+    "diversevul": 330491
+  },
+  "primevul_test_n": 25911,
+  "keys": {
+    "raw": {
+      "primevul_with_key": 235768,
+      "diversevul_with_key": 330491,
+      "primevul_matched": 136716,
+      "primevul_matched_pct": 57.99,
+      "diversevul_matched": 136716,
+      "diversevul_matched_pct": 41.37,
+      "primevul_matched_same_label_pct": 99.85,
+      "primevul_test_in_diversevul_train": {
+        "published": {
+          "count": 18109,
+          "pct_of_primevul_test": 69.89
+        },
+        "random_control": {
+          "count": 18112,
+          "pct_of_primevul_test": 69.9
+        },
+        "family_disjoint": {
+          "count": 18290,
+          "pct_of_primevul_test": 70.59
+        },
+        "project_disjoint": {
+          "count": 17461,
+          "pct_of_primevul_test": 67.39
+        },
+        "commit_disjoint": {
+          "count": 18034,
+          "pct_of_primevul_test": 69.6
+        }
+      }
+    },
+    "norm": {
+      "primevul_with_key": 235768,
+      "diversevul_with_key": 330491,
+      "primevul_matched": 188641,
+      "primevul_matched_pct": 80.01,
+      "diversevul_matched": 186877,
+      "diversevul_matched_pct": 56.55,
+      "primevul_matched_same_label_pct": 99.65,
+      "primevul_test_in_diversevul_train": {
+        "published": {
+          "count": 19280,
+          "pct_of_primevul_test": 74.41
+        },
+        "random_control": {
+          "count": 19329,
+          "pct_of_primevul_test": 74.6
+        },
+        "family_disjoint": {
+          "count": 18583,
+          "pct_of_primevul_test": 71.72
+        },
+        "project_disjoint": {
+          "count": 18029,
+          "pct_of_primevul_test": 69.58
+        },
+        "commit_disjoint": {
+          "count": 18960,
+          "pct_of_primevul_test": 73.17
+        }
+      }
+    },
+    "commit": {
+      "primevul_with_key": 235612,
+      "diversevul_with_key": 330210,
+      "primevul_matched": 138912,
+      "primevul_matched_pct": 58.92,
+      "diversevul_matched": 140130,
+      "diversevul_matched_pct": 42.4,
+      "primevul_matched_same_label_pct": 99.69,
+      "primevul_test_in_diversevul_train": {
+        "published": {
+          "count": 13912,
+          "pct_of_primevul_test": 53.69
+        },
+        "random_control": {
+          "count": 13899,
+          "pct_of_primevul_test": 53.64
+        },
+        "family_disjoint": {
+          "count": 13927,
+          "pct_of_primevul_test": 53.75
+        },
+        "project_disjoint": {
+          "count": 13469,
+          "pct_of_primevul_test": 51.98
+        },
+        "commit_disjoint": {
+          "count": 12967,
+          "pct_of_primevul_test": 50.04
+        }
+      }
+    }
+  }
+}

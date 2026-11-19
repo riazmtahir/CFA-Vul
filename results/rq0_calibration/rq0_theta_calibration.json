@@ -1,0 +1,141 @@
+{
+  "source_root": "$CFA_TOUSIMCC_SIM_DIR",
+  "similarity_column": "t1_sim",
+  "mapping_check_type1_median": 1.0,
+  "thresholds": [
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "categories": [
+    {
+      "category": "Type-1 exact",
+      "n": 48111,
+      "mean": 1.0,
+      "p10": 1.0,
+      "p25": 1.0,
+      "median": 1.0,
+      "p75": 1.0,
+      "capture": {
+        "0.60": 0.9999,
+        "0.70": 0.9999,
+        "0.80": 0.9999,
+        "0.90": 0.9999
+      }
+    },
+    {
+      "category": "Type-2 renamed",
+      "n": 4232,
+      "mean": 0.993,
+      "p10": 0.972,
+      "p25": 1.0,
+      "median": 1.0,
+      "p75": 1.0,
+      "capture": {
+        "0.60": 1.0,
+        "0.70": 1.0,
+        "0.80": 1.0,
+        "0.90": 0.9991
+      }
+    },
+    {
+      "category": "Strong Type-3 (ST3)",
+      "n": 21385,
+      "mean": 0.895,
+      "p10": 0.8,
+      "p25": 0.835,
+      "median": 0.897,
+      "p75": 0.964,
+      "capture": {
+        "0.60": 0.9999,
+        "0.70": 0.99,
+        "0.80": 0.9009,
+        "0.90": 0.4926
+      }
+    },
+    {
+      "category": "Moderate Type-3 (MT3)",
+      "n": 86125,
+      "mean": 0.736,
+      "p10": 0.618,
+      "p25": 0.679,
+      "median": 0.74,
+      "p75": 0.797,
+      "capture": {
+        "0.60": 0.9282,
+        "0.70": 0.6715,
+        "0.80": 0.243,
+        "0.90": 0.0209
+      }
+    },
+    {
+      "category": "Weak Type-3 / Type-4",
+      "n": 109773,
+      "mean": 0.423,
+      "p10": 0.149,
+      "p25": 0.266,
+      "median": 0.432,
+      "p75": 0.584,
+      "capture": {
+        "0.60": 0.2233,
+        "0.70": 0.0659,
+        "0.80": 0.005,
+        "0.90": 0.0001
+      }
+    },
+    {
+      "category": "non-clone",
+      "n": 278846,
+      "mean": 0.353,
+      "p10": 0.102,
+      "p25": 0.186,
+      "median": 0.342,
+      "p75": 0.511,
+      "capture": {
+        "0.60": 0.1289,
+        "0.70": 0.0323,
+        "0.80": 0.0028,
+        "0.90": 0.0001
+      }
+    }
+  ],
+  "parse_diagnostics": {
+    "Type-1 exact": {
+      "rows_read": 48115,
+      "dropped_unparseable": 4,
+      "dropped_out_of_range": 0,
+      "usable": 48111
+    },
+    "Type-2 renamed": {
+      "rows_read": 4233,
+      "dropped_unparseable": 1,
+      "dropped_out_of_range": 0,
+      "usable": 4232
+    },
+    "Strong Type-3 (ST3)": {
+      "rows_read": 21394,
+      "dropped_unparseable": 9,
+      "dropped_out_of_range": 0,
+      "usable": 21385
+    },
+    "Moderate Type-3 (MT3)": {
+      "rows_read": 86340,
+      "dropped_unparseable": 215,
+      "dropped_out_of_range": 0,
+      "usable": 86125
+    },
+    "Weak Type-3 / Type-4": {
+      "rows_read": 109913,
+      "dropped_unparseable": 140,
+      "dropped_out_of_range": 0,
+      "usable": 109773
+    },
+    "non-clone": {
+      "rows_read": 279032,
+      "dropped_unparseable": 186,
+      "dropped_out_of_range": 0,
+      "usable": 278846
+    }
+  }
+}

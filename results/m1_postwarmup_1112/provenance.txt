@@ -1,0 +1,31 @@
+M1 post-warm-up selection sensitivity (referee item 13) and item 57 commit-mate analysis
+POST HOC: written and run after the referee review; the primary pre-specified results are unchanged.
+
+Source archive : m1_item57_full.tgz (md5 742045271f5cdc94d944b170fc00be5d), extracted here unchanged on 12 Nov 2026
+Server         : AutoDL container, data disk /root/autodl-tmp (code in /root/vd)
+GPU            : NVIDIA GeForce RTX 4090 D, driver 580.142 (from the two provenance.txt files below)
+                 Phase 2 ran on an RTX 4090 D with driver 595.71.05 (results/rq2_diversevul_phase2/provenance.txt)
+Software       : PyTorch 2.12.1+cu130 (reported by the author; not recorded in the run logs)
+Precision      : fp16 automatic mixed precision (finetune_vd.py: torch.amp.autocast + GradScaler on CUDA);
+                 no deterministic-algorithm or cuDNN-deterministic setting, so GPU training is not bit-reproducible
+Runner commit  : 5793120 "Citation rounds: printed published pages, Arp 2022"
+                 finetune_vd.py md5 2b19d4d5a3858e726de076668eea098a (same as the repository copy)
+Runner script  : run_m1_sensitivity.sh; flag --select-after-warmup (default off; tag suffix _postwarmup)
+
+Dates (CST, from m1_sensitivity.log, item57.log and m1_autoshutdown.log):
+  2026-11-12 02:37:33  DiverseVul project-disjoint seed 1 started
+  2026-11-12 02:55     item57/item57.{json,md} written (CPU, saved Phase 2 predictions)
+  2026-11-12 04:53:39  seed 2 started
+  2026-11-12 07:10:04  seed 3 started
+  2026-11-12 08:59:48  Devign GraphCodeBERT family-disjoint seed 2 started
+  2026-11-12 09:16:01  all four runs done; no run resumed ("resumed": false), no relaunch by the guard
+  2026-11-12 09:26:28  archive written, instance shut down
+
+Contents
+  rq2_diversevul_m1_postwarmup/   3 runs: codebert-base_project_disjoint_seed{1,2,3}_postwarmup.{json,preds.json.gz},
+                                  provenance.txt (input md5s; the split file md5 equals Phase 2's)
+  rq2_devign_m1_postwarmup/       graphcodebert-base_family_disjoint_seed2_postwarmup.{json,preds.json.gz}, provenance.txt
+  item57/                         item57.json, item57.md (descriptive/exploratory)
+  m1_sensitivity.log, item57.log, m1_autoshutdown.log   server logs, kept as written
+
+Analysis: paper/scripts/m1_numbers.py -> paper/scripts/out/m1_numbers.json

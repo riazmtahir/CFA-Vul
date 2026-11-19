@@ -1,0 +1,167 @@
+{
+  "note": "EXPLORATORY (action A5), not pre-registered",
+  "arms": {
+    "random_control": {
+      "seeds": [
+        4,
+        5
+      ],
+      "n_test": 33172,
+      "n_leaked_removed": 9748,
+      "leaked_pct": 29.39,
+      "pos_rate_full": 0.05730736765947184,
+      "pos_rate_without_leaked": 0.045978483606557374,
+      "pr_auc_full": 0.2571665993942271,
+      "pr_auc_full_ci95": [
+        0.24013660673887216,
+        0.27655580834035814
+      ],
+      "pr_auc_without_leaked": 0.20464831571262543,
+      "pr_auc_without_leaked_ci95": [
+        0.18530689336099346,
+        0.22862822184953208
+      ],
+      "diff_without_minus_full": -0.05251828368160166,
+      "diff_ci95": [
+        -0.0675082390814311,
+        -0.03614588911289494
+      ],
+      "pr_over_pos_full": 4.4874962835903744,
+      "pr_over_pos_without_leaked": 4.4509583539949285,
+      "per_seed": {
+        "s4": {
+          "full": 0.25741522561867713,
+          "without_leaked": 0.20186138458357922
+        },
+        "s5": {
+          "full": 0.25691797316977705,
+          "without_leaked": 0.20743524684167164
+        }
+      }
+    },
+    "family_disjoint": {
+      "seeds": [
+        4,
+        5
+      ],
+      "n_test": 33172,
+      "n_leaked_removed": 0,
+      "leaked_pct": 0.0,
+      "pos_rate_full": 0.05700590859761245,
+      "pos_rate_without_leaked": 0.05700590859761245,
+      "pr_auc_full": 0.26213156106916924,
+      "pr_auc_full_ci95": [
+        0.2455151153782483,
+        0.28056397367721697
+      ],
+      "pr_auc_without_leaked": 0.26213156106916924,
+      "pr_auc_without_leaked_ci95": [
+        0.2455151153782483,
+        0.28056397367721697
+      ],
+      "diff_without_minus_full": 0.0,
+      "diff_ci95": [
+        0.0,
+        0.0
+      ],
+      "pr_over_pos_full": 4.598322656682433,
+      "pr_over_pos_without_leaked": 4.598322656682433,
+      "per_seed": {
+        "s4": {
+          "full": 0.2574474625235886,
+          "without_leaked": 0.2574474625235886
+        },
+        "s5": {
+          "full": 0.26681565961474984,
+          "without_leaked": 0.26681565961474984
+        }
+      }
+    },
+    "project_disjoint": {
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "n_test": 33165,
+      "n_leaked_removed": 1934,
+      "leaked_pct": 5.83,
+      "pos_rate_full": 0.057017940600030154,
+      "pos_rate_without_leaked": 0.0594281323044411,
+      "pr_auc_full": 0.14718424624929718,
+      "pr_auc_full_ci95": [
+        0.13670919895796452,
+        0.15948340994871138
+      ],
+      "pr_auc_without_leaked": 0.1475854236238137,
+      "pr_auc_without_leaked_ci95": [
+        0.13686486977058374,
+        0.1601484830067591
+      ],
+      "diff_without_minus_full": 0.0004011773745165037,
+      "diff_ci95": [
+        -0.001268628042482331,
+        0.001817052310498539
+      ],
+      "pr_over_pos_full": 2.581367280199863,
+      "pr_over_pos_without_leaked": 2.483426920902654,
+      "per_seed": {
+        "s1": {
+          "full": 0.14835469994405986,
+          "without_leaked": 0.14879302783474338
+        },
+        "s2": {
+          "full": 0.1530711002581477,
+          "without_leaked": 0.1535755006697029
+        },
+        "s3": {
+          "full": 0.140126938545684,
+          "without_leaked": 0.1403877423669948
+        }
+      }
+    },
+    "commit_disjoint": {
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "n_test": 33172,
+      "n_leaked_removed": 5680,
+      "leaked_pct": 17.12,
+      "pos_rate_full": 0.05700590859761245,
+      "pos_rate_without_leaked": 0.06001745962461807,
+      "pr_auc_full": 0.17233395873599977,
+      "pr_auc_full_ci95": [
+        0.15989454323592853,
+        0.1863086758768629
+      ],
+      "pr_auc_without_leaked": 0.15938914712804295,
+      "pr_auc_without_leaked_ci95": [
+        0.14764224226000386,
+        0.17316449079438775
+      ],
+      "diff_without_minus_full": -0.012944811607956824,
+      "diff_ci95": [
+        -0.020521545635905778,
+        -0.005991589871134954
+      ],
+      "pr_over_pos_full": 3.023089412580954,
+      "pr_over_pos_without_leaked": 2.6557129896025193,
+      "per_seed": {
+        "s1": {
+          "full": 0.1650404112791829,
+          "without_leaked": 0.15031576432383903
+        },
+        "s2": {
+          "full": 0.17700990612592465,
+          "without_leaked": 0.16300995002664184
+        },
+        "s3": {
+          "full": 0.17495155880289182,
+          "without_leaked": 0.16484172703364797
+        }
+      }
+    }
+  }
+}

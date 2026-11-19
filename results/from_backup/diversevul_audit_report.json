@@ -1,0 +1,97 @@
+{
+  "input_counts": {
+    "train": 264392,
+    "valid": 33049,
+    "test": 33050
+  },
+  "config": {
+    "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+    "train": null,
+    "valid": null,
+    "test": null,
+    "code_field": "func",
+    "label_field": "target",
+    "split_field": "split",
+    "id_field": "idx",
+    "theta": [
+      0.7
+    ],
+    "shingle_k": 5,
+    "perms": 128,
+    "bands": 16,
+    "exhaustive_bucket": 200,
+    "knn_baseline": true,
+    "knn_probe": 50,
+    "limit": null,
+    "report_every": 20000,
+    "seed": 42
+  },
+  "n_representatives": 287485,
+  "thresholds": [
+    {
+      "theta": 0.7,
+      "n_functions": 330491,
+      "n_test_functions": 33050,
+      "type12_exact_groups": 22414,
+      "type12_redundant_functions": 43006,
+      "type12_redundancy_pct": 13.01,
+      "n_families_total": 259209,
+      "n_families_size_gt1": 37954,
+      "largest_family": 353,
+      "family_size_head": {
+        "1": 221255,
+        "2": 28696,
+        "3": 4549,
+        "4": 2115,
+        "5": 652,
+        "6": 500,
+        "7": 261,
+        "8": 279,
+        "9": 143,
+        "10": 99
+      },
+      "families_spanning_multiple_splits": 15322,
+      "families_spanning_train_and_test": 8095,
+      "leaked_test_functions": 9787,
+      "leaked_test_pct": 29.61,
+      "families_with_contradictory_labels": 7457,
+      "cross_project_families": 6064,
+      "verified_clone_pairs": 28276,
+      "jaccard_computations": 5795595,
+      "buckets_exhaustive": 291590,
+      "buckets_pivot_approximated": 163,
+      "lsh_bands": 16,
+      "lsh_rows_per_band": 8,
+      "lsh_scurve_midpoint": 0.707,
+      "runtime_seconds": 55.9,
+      "family_disjoint_split": {
+        "train": 264775,
+        "valid": 32544,
+        "test": 33172,
+        "train_pos_rate": 0.0572,
+        "valid_pos_rate": 0.0587,
+        "test_pos_rate": 0.057,
+        "leaked_test_functions": 0,
+        "leaked_test_pct": 0.0
+      },
+      "random_control_split": {
+        "train": 264775,
+        "valid": 32544,
+        "test": 33172,
+        "train_pos_rate": 0.0573,
+        "valid_pos_rate": 0.0573,
+        "test_pos_rate": 0.0573,
+        "leaked_test_functions": 9748,
+        "leaked_test_pct": 29.39
+      },
+      "knn_retrieval_baseline": {
+        "test_functions": 33050,
+        "test_with_a_clone_in_train": 16720,
+        "coverage_pct": 50.59,
+        "pr_auc": 0.1553,
+        "positive_rate": 0.0584,
+        "note": "approximate 1-NN over LSH co-bucket candidates; similarities are exact Jaccard"
+      }
+    }
+  ]
+}

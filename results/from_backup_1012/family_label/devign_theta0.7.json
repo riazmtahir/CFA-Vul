@@ -1,0 +1,193 @@
+{
+  "data": "/root/autodl-tmp/data/devign/devign_all.jsonl",
+  "famfile": "/root/autodl-tmp/devign_audit_families_theta0.7.json",
+  "id_field": "id",
+  "size_distribution": {
+    "n_functions": 27318,
+    "n_functions_without_family": 0,
+    "n_families_total": 24368,
+    "n_families_size_gt1": 2031,
+    "functions_in_families_gt1": 4981,
+    "functions_in_families_gt1_pct": 18.23,
+    "largest_family_size": 36,
+    "largest_family_share_pct": 0.13,
+    "top10_family_sizes": [
+      36,
+      24,
+      22,
+      21,
+      18,
+      16,
+      15,
+      14,
+      14,
+      14
+    ],
+    "size_gt1_median": 2,
+    "size_gt1_p90": 3,
+    "size_gt1_p99": 9,
+    "size_bins": {
+      "1": {
+        "families": 22337,
+        "functions": 22337
+      },
+      "2": {
+        "families": 1668,
+        "functions": 3336
+      },
+      "3-5": {
+        "families": 303,
+        "functions": 1066
+      },
+      "6-10": {
+        "families": 46,
+        "functions": 334
+      },
+      "11-50": {
+        "families": 14,
+        "functions": 245
+      },
+      "51-200": {
+        "families": 0,
+        "functions": 0
+      },
+      ">200": {
+        "families": 0,
+        "functions": 0
+      }
+    }
+  },
+  "label_consistency": {
+    "families_gt1": 2031,
+    "families_pure_negative": 615,
+    "families_pure_positive": 415,
+    "families_mixed_label": 1001,
+    "families_mixed_label_pct": 49.29,
+    "functions_in_mixed_families": 2330,
+    "functions_in_mixed_families_pct": 8.53,
+    "positives_total": 12460,
+    "positives_in_mixed_families": 1148,
+    "positives_in_mixed_families_pct": 9.21
+  },
+  "cross_project": {
+    "families_gt1": 2031,
+    "cross_project_families": 9,
+    "cross_project_families_pct": 0.44
+  },
+  "arms": {
+    "published": {
+      "n_test": 2732,
+      "n_test_positive": 1255,
+      "leaked_any": 419,
+      "leaked_any_pct": 15.34,
+      "leaked_croft_definition": 274,
+      "leaked_croft_definition_pct": 10.03,
+      "categories": {
+        "clean": {
+          "n": 2313,
+          "pct_of_test": 84.66,
+          "negatives": 1249,
+          "positives": 1064,
+          "pos_rate": 0.46
+        },
+        "leaked_same": {
+          "n": 225,
+          "pct_of_test": 8.24,
+          "negatives": 126,
+          "positives": 99,
+          "pos_rate": 0.44
+        },
+        "leaked_opposite": {
+          "n": 145,
+          "pct_of_test": 5.31,
+          "negatives": 78,
+          "positives": 67,
+          "pos_rate": 0.4621
+        },
+        "leaked_both": {
+          "n": 49,
+          "pct_of_test": 1.79,
+          "negatives": 24,
+          "positives": 25,
+          "pos_rate": 0.5102
+        }
+      }
+    },
+    "random_control": {
+      "n_test": 2738,
+      "n_test_positive": 1249,
+      "leaked_any": 411,
+      "leaked_any_pct": 15.01,
+      "leaked_croft_definition": 276,
+      "leaked_croft_definition_pct": 10.08,
+      "categories": {
+        "clean": {
+          "n": 2327,
+          "pct_of_test": 84.99,
+          "negatives": 1260,
+          "positives": 1067,
+          "pos_rate": 0.4585
+        },
+        "leaked_same": {
+          "n": 240,
+          "pct_of_test": 8.77,
+          "negatives": 144,
+          "positives": 96,
+          "pos_rate": 0.4
+        },
+        "leaked_opposite": {
+          "n": 135,
+          "pct_of_test": 4.93,
+          "negatives": 66,
+          "positives": 69,
+          "pos_rate": 0.5111
+        },
+        "leaked_both": {
+          "n": 36,
+          "pct_of_test": 1.31,
+          "negatives": 19,
+          "positives": 17,
+          "pos_rate": 0.4722
+        }
+      }
+    },
+    "family_disjoint": {
+      "n_test": 2738,
+      "n_test_positive": 1245,
+      "leaked_any": 0,
+      "leaked_any_pct": 0.0,
+      "leaked_croft_definition": 0,
+      "leaked_croft_definition_pct": 0.0,
+      "categories": {
+        "clean": {
+          "n": 2738,
+          "pct_of_test": 100.0,
+          "negatives": 1493,
+          "positives": 1245,
+          "pos_rate": 0.4547
+        },
+        "leaked_same": {
+          "n": 0,
+          "pct_of_test": 0.0,
+          "negatives": 0,
+          "positives": 0,
+          "pos_rate": null
+        },
+        "leaked_opposite": {
+          "n": 0,
+          "pct_of_test": 0.0,
+          "negatives": 0,
+          "positives": 0,
+          "pos_rate": null
+        },
+        "leaked_both": {
+          "n": 0,
+          "pct_of_test": 0.0,
+          "negatives": 0,
+          "positives": 0,
+          "pos_rate": null
+        }
+      }
+    }
+  }
+}

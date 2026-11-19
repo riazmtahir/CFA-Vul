@@ -1,0 +1,92 @@
+{
+  "arm": "random_control",
+  "model": "microsoft/codebert-base",
+  "seed": 3,
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "splitfile": "/root/autodl-tmp/diversevul_audit_splitfile_randomctrl_theta0.7.json",
+  "epochs": 3,
+  "lr": 2e-05,
+  "max_len": 512,
+  "batch_size": 16,
+  "n_train": 264775,
+  "n_valid": 32544,
+  "n_test": 33172,
+  "test": {
+    "pr_auc": 0.2628,
+    "roc_auc": 0.8183,
+    "best_f1": 0.3133,
+    "best_f1_threshold": 0.0722,
+    "mcc": 0.2705,
+    "vd_s": 0.9206,
+    "positive_rate": 0.0573,
+    "n": 33172
+  },
+  "length_only_floor": {
+    "pr_auc": 0.15,
+    "roc_auc": 0.7224,
+    "best_f1": 0.229,
+    "best_f1_threshold": 0.1129,
+    "mcc": 0.1765,
+    "vd_s": 0.9637,
+    "positive_rate": 0.0573,
+    "n": 33172
+  },
+  "worst_family": {
+    "worst_family_pr_auc": 0.0345,
+    "worst_family_id": 8578,
+    "families_scored": 7,
+    "median_family_pr_auc": 0.5
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.2098,
+      "valid": {
+        "pr_auc": 0.2304,
+        "roc_auc": 0.7883,
+        "best_f1": 0.2945,
+        "best_f1_threshold": 0.0945,
+        "mcc": 0.2494,
+        "vd_s": 0.9325,
+        "positive_rate": 0.0573,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.1874,
+      "valid": {
+        "pr_auc": 0.2626,
+        "roc_auc": 0.8146,
+        "best_f1": 0.305,
+        "best_f1_threshold": 0.0846,
+        "mcc": 0.2596,
+        "vd_s": 0.9164,
+        "positive_rate": 0.0573,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.1702,
+      "valid": {
+        "pr_auc": 0.2574,
+        "roc_auc": 0.8143,
+        "best_f1": 0.3041,
+        "best_f1_threshold": 0.0401,
+        "mcc": 0.2645,
+        "vd_s": 0.9191,
+        "positive_rate": 0.0573,
+        "n": 32544
+      }
+    }
+  ],
+  "runtime_seconds": 4375.7,
+  "resumed": false,
+  "epochs_run": 3,
+  "best_epoch": 2,
+  "max_epochs": 3,
+  "patience": 0,
+  "converged": false,
+  "selected_on": "valid pr_auc"
+}

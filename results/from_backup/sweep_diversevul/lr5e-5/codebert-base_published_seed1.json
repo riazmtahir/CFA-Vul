@@ -1,0 +1,107 @@
+{
+  "arm": "published",
+  "model": "microsoft/codebert-base",
+  "seed": 1,
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "splitfile": null,
+  "epochs": 8,
+  "lr": 5e-05,
+  "max_len": 512,
+  "class_weight": "balanced",
+  "batch_size": 16,
+  "n_train": 60000,
+  "n_valid": 33049,
+  "n_test": 33050,
+  "test": {
+    "pr_auc": 0.1039,
+    "roc_auc": 0.6888,
+    "best_f1": 0.1789,
+    "best_f1_threshold": 0.4118,
+    "mcc": 0.1255,
+    "vd_s": 0.9871,
+    "positive_rate": 0.0584,
+    "n": 33050
+  },
+  "length_only_floor": {
+    "pr_auc": 0.1557,
+    "roc_auc": 0.7231,
+    "best_f1": 0.2335,
+    "best_f1_threshold": 0.1226,
+    "mcc": 0.1798,
+    "vd_s": 0.9669,
+    "positive_rate": 0.0584,
+    "n": 33050
+  },
+  "worst_family": {
+    "worst_family_pr_auc": 0.125,
+    "worst_family_id": 9309,
+    "families_scored": 9,
+    "median_family_pr_auc": 0.325
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.7224,
+      "valid": {
+        "pr_auc": 0.0908,
+        "roc_auc": 0.6724,
+        "best_f1": 0.1613,
+        "best_f1_threshold": 0.3928,
+        "mcc": 0.1269,
+        "vd_s": 0.9914,
+        "positive_rate": 0.0566,
+        "n": 33049
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7076,
+      "valid": {
+        "pr_auc": 0.0993,
+        "roc_auc": 0.69,
+        "best_f1": 0.1707,
+        "best_f1_threshold": 0.4118,
+        "mcc": 0.1371,
+        "vd_s": 0.9936,
+        "positive_rate": 0.0566,
+        "n": 33049
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.7033,
+      "valid": {
+        "pr_auc": 0.059,
+        "roc_auc": 0.5208,
+        "best_f1": 0.1096,
+        "best_f1_threshold": 0.4655,
+        "mcc": 0.0176,
+        "vd_s": 1.0,
+        "positive_rate": 0.0566,
+        "n": 33049
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.7027,
+      "valid": {
+        "pr_auc": 0.0567,
+        "roc_auc": 0.5008,
+        "best_f1": 0.1072,
+        "best_f1_threshold": 0.534,
+        "mcc": 0.0049,
+        "vd_s": 0.9995,
+        "positive_rate": 0.0566,
+        "n": 33049
+      }
+    }
+  ],
+  "runtime_seconds": 1924.4,
+  "resumed": false,
+  "epochs_run": 4,
+  "best_epoch": 2,
+  "max_epochs": 8,
+  "patience": 2,
+  "converged": true,
+  "selected_on": "valid pr_auc"
+}

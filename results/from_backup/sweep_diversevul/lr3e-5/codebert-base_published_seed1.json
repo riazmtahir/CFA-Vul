@@ -1,0 +1,93 @@
+{
+  "arm": "published",
+  "model": "microsoft/codebert-base",
+  "seed": 1,
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "splitfile": null,
+  "epochs": 8,
+  "lr": 3e-05,
+  "max_len": 512,
+  "class_weight": "balanced",
+  "batch_size": 16,
+  "n_train": 60000,
+  "n_valid": 33049,
+  "n_test": 33050,
+  "test": {
+    "pr_auc": 0.1197,
+    "roc_auc": 0.7034,
+    "best_f1": 0.1945,
+    "best_f1_threshold": 0.3749,
+    "mcc": 0.1602,
+    "vd_s": 0.9829,
+    "positive_rate": 0.0584,
+    "n": 33050
+  },
+  "length_only_floor": {
+    "pr_auc": 0.1557,
+    "roc_auc": 0.7231,
+    "best_f1": 0.2335,
+    "best_f1_threshold": 0.1226,
+    "mcc": 0.1798,
+    "vd_s": 0.9669,
+    "positive_rate": 0.0584,
+    "n": 33050
+  },
+  "worst_family": {
+    "worst_family_pr_auc": 0.1667,
+    "worst_family_id": 303,
+    "families_scored": 9,
+    "median_family_pr_auc": 0.5
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.7128,
+      "valid": {
+        "pr_auc": 0.1106,
+        "roc_auc": 0.708,
+        "best_f1": 0.1889,
+        "best_f1_threshold": 0.375,
+        "mcc": 0.1437,
+        "vd_s": 0.9856,
+        "positive_rate": 0.0566,
+        "n": 33049
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7026,
+      "valid": {
+        "pr_auc": 0.1024,
+        "roc_auc": 0.6952,
+        "best_f1": 0.1879,
+        "best_f1_threshold": 0.3987,
+        "mcc": 0.156,
+        "vd_s": 0.9877,
+        "positive_rate": 0.0566,
+        "n": 33049
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.7163,
+      "valid": {
+        "pr_auc": 0.1101,
+        "roc_auc": 0.6884,
+        "best_f1": 0.1918,
+        "best_f1_threshold": 0.4623,
+        "mcc": 0.1399,
+        "vd_s": 0.9909,
+        "positive_rate": 0.0566,
+        "n": 33049
+      }
+    }
+  ],
+  "runtime_seconds": 1490.0,
+  "resumed": false,
+  "epochs_run": 3,
+  "best_epoch": 1,
+  "max_epochs": 8,
+  "patience": 2,
+  "converged": true,
+  "selected_on": "valid pr_auc"
+}

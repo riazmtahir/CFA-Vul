@@ -1,0 +1,409 @@
+{
+  "note": "H4b pre-check (RESEARCH_PLAN \u00a713.8, size control amended 21 Oct 2026)",
+  "limits": {
+    "max_removed_pct_of_train": 40.0,
+    "min_train_positives_left": 1000,
+    "max_borrowed_pct_of_removal": 5.0
+  },
+  "commit_disjoint_train": 264775,
+  "removed": 35192,
+  "removed_pct_of_train": 13.291285053347181,
+  "removed_pos": 1646,
+  "train_pos_left": 13499,
+  "borrowed": 0,
+  "borrowed_pct_of_removal": 0.0,
+  "strata": {
+    "label0_decile0": {
+      "decon": 12008,
+      "control": 12008
+    },
+    "label0_decile1": {
+      "decon": 6044,
+      "control": 6044
+    },
+    "label0_decile2": {
+      "decon": 3304,
+      "control": 3304
+    },
+    "label0_decile3": {
+      "decon": 2088,
+      "control": 2088
+    },
+    "label0_decile4": {
+      "decon": 1575,
+      "control": 1575
+    },
+    "label0_decile5": {
+      "decon": 1374,
+      "control": 1374
+    },
+    "label0_decile6": {
+      "decon": 1311,
+      "control": 1311
+    },
+    "label0_decile7": {
+      "decon": 1575,
+      "control": 1575
+    },
+    "label0_decile8": {
+      "decon": 1691,
+      "control": 1691
+    },
+    "label0_decile9": {
+      "decon": 2576,
+      "control": 2576
+    },
+    "label1_decile0": {
+      "decon": 146,
+      "control": 146
+    },
+    "label1_decile1": {
+      "decon": 87,
+      "control": 87
+    },
+    "label1_decile2": {
+      "decon": 70,
+      "control": 70
+    },
+    "label1_decile3": {
+      "decon": 60,
+      "control": 60
+    },
+    "label1_decile4": {
+      "decon": 52,
+      "control": 52
+    },
+    "label1_decile5": {
+      "decon": 80,
+      "control": 80
+    },
+    "label1_decile6": {
+      "decon": 101,
+      "control": 101
+    },
+    "label1_decile7": {
+      "decon": 129,
+      "control": 129
+    },
+    "label1_decile8": {
+      "decon": 201,
+      "control": 201
+    },
+    "label1_decile9": {
+      "decon": 720,
+      "control": 720
+    }
+  },
+  "train_pos_rate": {
+    "commit_disjoint": 0.057199509017089985,
+    "commit_decon": 0.05879790751057352,
+    "commit_sizectrl": 0.05879790751057352
+  },
+  "composition": {
+    "removed_by_decon": {
+      "n": 35192,
+      "mean_chars": 1255.7103318936122,
+      "median_chars": 182.0,
+      "pos_rate": 0.046771993634917026,
+      "top10_projects": [
+        [
+          "linux",
+          27.49
+        ],
+        [
+          "gpac",
+          6.75
+        ],
+        [
+          "linux-2.6",
+          5.52
+        ],
+        [
+          "openssl",
+          3.72
+        ],
+        [
+          "server",
+          3.44
+        ],
+        [
+          "qemu",
+          2.56
+        ],
+        [
+          "ImageMagick",
+          1.91
+        ],
+        [
+          "php-src",
+          1.85
+        ],
+        [
+          "net",
+          1.41
+        ],
+        [
+          "vim",
+          1.4
+        ]
+      ],
+      "top10_cwes": [
+        [
+          "(none)",
+          16.29
+        ],
+        [
+          "CWE-787",
+          11.03
+        ],
+        [
+          "CWE-125",
+          7.72
+        ],
+        [
+          "CWE-703",
+          7.65
+        ],
+        [
+          "CWE-416",
+          7.1
+        ],
+        [
+          "CWE-119",
+          7.02
+        ],
+        [
+          "CWE-20",
+          6.71
+        ],
+        [
+          "CWE-476",
+          5.69
+        ],
+        [
+          "CWE-400",
+          4.4
+        ],
+        [
+          "CWE-401",
+          3.9
+        ]
+      ]
+    },
+    "removed_by_control": {
+      "n": 35192,
+      "mean_chars": 1037.5003978176858,
+      "median_chars": 186.0,
+      "pos_rate": 0.046771993634917026,
+      "top10_projects": [
+        [
+          "linux",
+          17.32
+        ],
+        [
+          "server",
+          3.85
+        ],
+        [
+          "envoy",
+          3.38
+        ],
+        [
+          "linux-2.6",
+          2.87
+        ],
+        [
+          "php-src",
+          2.6
+        ],
+        [
+          "mongo",
+          2.17
+        ],
+        [
+          "vim",
+          2.16
+        ],
+        [
+          "cimg",
+          2.09
+        ],
+        [
+          "qemu",
+          2.03
+        ],
+        [
+          "ceph",
+          1.83
+        ]
+      ],
+      "top10_cwes": [
+        [
+          "(none)",
+          14.21
+        ],
+        [
+          "CWE-787",
+          10.62
+        ],
+        [
+          "CWE-125",
+          8.41
+        ],
+        [
+          "CWE-703",
+          7.91
+        ],
+        [
+          "CWE-119",
+          7.59
+        ],
+        [
+          "CWE-416",
+          7.13
+        ],
+        [
+          "CWE-20",
+          7.0
+        ],
+        [
+          "CWE-476",
+          5.11
+        ],
+        [
+          "CWE-200",
+          3.59
+        ],
+        [
+          "CWE-400",
+          3.41
+        ]
+      ]
+    },
+    "kept": {
+      "n": 229583,
+      "mean_chars": 1335.7737680925852,
+      "median_chars": 574,
+      "pos_rate": 0.05879790751057352,
+      "top10_projects": [
+        [
+          "linux",
+          20.69
+        ],
+        [
+          "php-src",
+          3.05
+        ],
+        [
+          "linux-2.6",
+          2.73
+        ],
+        [
+          "envoy",
+          2.42
+        ],
+        [
+          "server",
+          2.22
+        ],
+        [
+          "qemu",
+          2.19
+        ],
+        [
+          "vim",
+          1.94
+        ],
+        [
+          "mongo",
+          1.53
+        ],
+        [
+          "openssl",
+          1.53
+        ],
+        [
+          "gpac",
+          1.44
+        ]
+      ],
+      "top10_cwes": [
+        [
+          "(none)",
+          14.76
+        ],
+        [
+          "CWE-787",
+          11.14
+        ],
+        [
+          "CWE-125",
+          8.18
+        ],
+        [
+          "CWE-703",
+          7.86
+        ],
+        [
+          "CWE-119",
+          7.78
+        ],
+        [
+          "CWE-416",
+          6.96
+        ],
+        [
+          "CWE-20",
+          6.93
+        ],
+        [
+          "CWE-476",
+          5.74
+        ],
+        [
+          "CWE-200",
+          3.98
+        ],
+        [
+          "CWE-190",
+          3.28
+        ]
+      ]
+    }
+  },
+  "sizectrl_overlap_with_decon_removal": 0,
+  "direct_leak_by_split": {
+    "published": {
+      "direct_leaked_test": 18658,
+      "direct_leaked_test_pct": 56.45,
+      "direct_leaked_test_pos": 1631,
+      "direct_leaked_test_pos_pct": 84.46
+    },
+    "random_control": {
+      "direct_leaked_test": 18651,
+      "direct_leaked_test_pct": 56.23,
+      "direct_leaked_test_pos": 1588,
+      "direct_leaked_test_pos_pct": 83.53
+    },
+    "family_disjoint": {
+      "direct_leaked_test": 14884,
+      "direct_leaked_test_pct": 44.87,
+      "direct_leaked_test_pos": 1129,
+      "direct_leaked_test_pos_pct": 59.7
+    },
+    "project_disjoint": {
+      "direct_leaked_test": 5481,
+      "direct_leaked_test_pct": 16.53,
+      "direct_leaked_test_pos": 130,
+      "direct_leaked_test_pos_pct": 6.87
+    },
+    "commit_disjoint": {
+      "direct_leaked_test": 12324,
+      "direct_leaked_test_pct": 37.15,
+      "direct_leaked_test_pos": 764,
+      "direct_leaked_test_pos_pct": 40.4
+    }
+  },
+  "fails": [],
+  "verdict": "PASS"
+}

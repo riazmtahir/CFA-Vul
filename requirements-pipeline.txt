@@ -1,0 +1,12 @@
+# Pipeline side (audits, split construction, training; GPU for training).
+# Recorded for the runs: PyTorch 2.12.1 built for CUDA 13.0 (2.12.1+cu130), NVIDIA RTX 4090 / RTX 4090 D.
+# The versions of transformers, datasets, scipy and tqdm were not recorded at run time and are therefore
+# not pinned here; any version that loads microsoft/codebert-base and microsoft/graphcodebert-base works
+# with finetune_vd.py. Pin them in your own environment and report them with any rerun.
+torch==2.12.1
+transformers
+datasets
+scipy
+tqdm
+numpy==2.2.6
+scikit-learn==1.7.2

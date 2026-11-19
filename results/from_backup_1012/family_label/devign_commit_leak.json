@@ -1,0 +1,98 @@
+{
+  "data": "/root/autodl-tmp/data/devign/devign_all.jsonl",
+  "famfile": "/root/autodl-tmp/devign_audit_families_theta0.7.json",
+  "functions": 27318,
+  "functions_without_commit_id": 0,
+  "arms": {
+    "published": {
+      "all_test": {
+        "n": 2732,
+        "no_commit_id": 0,
+        "same_commit_in_train": 1777,
+        "same_commit_pct": 65.04,
+        "opposite_same_commit": 0,
+        "opposite_same_commit_pct": 0.0,
+        "opposite_outside_family": 0,
+        "opposite_outside_family_pct": 0.0,
+        "own_twin_in_train": 0,
+        "own_twin_pct": 0.0,
+        "own_twin_outside_family": 0,
+        "own_twin_outside_family_pct": 0.0
+      },
+      "test_positives": {
+        "n": 1255,
+        "no_commit_id": 0,
+        "same_commit_in_train": 730,
+        "same_commit_pct": 58.17,
+        "opposite_same_commit": 0,
+        "opposite_same_commit_pct": 0.0,
+        "opposite_outside_family": 0,
+        "opposite_outside_family_pct": 0.0,
+        "own_twin_in_train": 0,
+        "own_twin_pct": 0.0,
+        "own_twin_outside_family": 0,
+        "own_twin_outside_family_pct": 0.0
+      }
+    },
+    "random_control": {
+      "all_test": {
+        "n": 2738,
+        "no_commit_id": 0,
+        "same_commit_in_train": 1812,
+        "same_commit_pct": 66.18,
+        "opposite_same_commit": 0,
+        "opposite_same_commit_pct": 0.0,
+        "opposite_outside_family": 0,
+        "opposite_outside_family_pct": 0.0,
+        "own_twin_in_train": 0,
+        "own_twin_pct": 0.0,
+        "own_twin_outside_family": 0,
+        "own_twin_outside_family_pct": 0.0
+      },
+      "test_positives": {
+        "n": 1249,
+        "no_commit_id": 0,
+        "same_commit_in_train": 734,
+        "same_commit_pct": 58.77,
+        "opposite_same_commit": 0,
+        "opposite_same_commit_pct": 0.0,
+        "opposite_outside_family": 0,
+        "opposite_outside_family_pct": 0.0,
+        "own_twin_in_train": 0,
+        "own_twin_pct": 0.0,
+        "own_twin_outside_family": 0,
+        "own_twin_outside_family_pct": 0.0
+      }
+    },
+    "family_disjoint": {
+      "all_test": {
+        "n": 2738,
+        "no_commit_id": 0,
+        "same_commit_in_train": 1782,
+        "same_commit_pct": 65.08,
+        "opposite_same_commit": 0,
+        "opposite_same_commit_pct": 0.0,
+        "opposite_outside_family": 0,
+        "opposite_outside_family_pct": 0.0,
+        "own_twin_in_train": 0,
+        "own_twin_pct": 0.0,
+        "own_twin_outside_family": 0,
+        "own_twin_outside_family_pct": 0.0
+      },
+      "test_positives": {
+        "n": 1245,
+        "no_commit_id": 0,
+        "same_commit_in_train": 716,
+        "same_commit_pct": 57.51,
+        "opposite_same_commit": 0,
+        "opposite_same_commit_pct": 0.0,
+        "opposite_outside_family": 0,
+        "opposite_outside_family_pct": 0.0,
+        "own_twin_in_train": 0,
+        "own_twin_pct": 0.0,
+        "own_twin_outside_family": 0,
+        "own_twin_outside_family_pct": 0.0
+      }
+    }
+  }
+}

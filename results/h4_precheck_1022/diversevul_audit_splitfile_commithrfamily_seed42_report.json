@@ -1,0 +1,71 @@
+{
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "hr_famfile": "/root/autodl-tmp/audit_highrecall/diversevul_hr_families_theta0.7.json",
+  "ref_splitfile": "/root/autodl-tmp/diversevul_audit_splitfile_commitdisjoint_seed42.json",
+  "seed": 42,
+  "relations": "same commit_id OR same high-recall theta=0.7 family (connected components)",
+  "n_functions": 330491,
+  "functions_without_hr_family": 0,
+  "functions_without_commit": 0,
+  "n_groups": 753,
+  "n_groups_gt1": 736,
+  "largest_group": {
+    "functions": 321171,
+    "share_pct": 97.18,
+    "partition": "train",
+    "positives": 17447,
+    "commits": 6693
+  },
+  "top10_group_sizes": [
+    321171,
+    223,
+    139,
+    120,
+    93,
+    92,
+    80,
+    78,
+    78,
+    74
+  ],
+  "split_across_partitions": {
+    "commit": 0,
+    "hr_family": 0
+  },
+  "balance_objective": {
+    "greedy": 2.206837,
+    "final": 2.206748,
+    "refine": {
+      "moves": 31,
+      "passes": 2
+    }
+  },
+  "partitions": {
+    "train": {
+      "functions": 321171,
+      "target_functions": 264775,
+      "pos_rate": 0.0543,
+      "target_pos_rate": 0.0572
+    },
+    "valid": {
+      "functions": 4885,
+      "target_functions": 32544,
+      "pos_rate": 0.1529,
+      "target_pos_rate": 0.0587
+    },
+    "test": {
+      "functions": 4435,
+      "target_functions": 33172,
+      "pos_rate": 0.1693,
+      "target_pos_rate": 0.057
+    }
+  },
+  "hr_family_leak_under_this_split": {
+    "leaked_test_functions": 0,
+    "leaked_test_pct": 0.0
+  },
+  "strict_family_leak_under_this_split": {
+    "leaked_test_functions": 3,
+    "leaked_test_pct": 0.07
+  }
+}

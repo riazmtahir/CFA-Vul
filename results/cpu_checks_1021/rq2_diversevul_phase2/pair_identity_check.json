@@ -1,0 +1,85 @@
+{
+  "note": "DESCRIPTIVE (action A4); pairs as in paired_eval.py",
+  "scopes": {
+    "corpus": {
+      "pairs": 14324,
+      "identical": {
+        "raw": 0,
+        "ws": 388,
+        "norm": 1125,
+        "any": 1125
+      },
+      "identical_pct": {
+        "raw": 0.0,
+        "ws": 2.71,
+        "norm": 7.85,
+        "any": 7.85
+      },
+      "ambiguous_groups": 684
+    },
+    "random_control": {
+      "pairs": 144,
+      "identical": {
+        "raw": 0,
+        "ws": 2,
+        "norm": 8,
+        "any": 8
+      },
+      "identical_pct": {
+        "raw": 0.0,
+        "ws": 1.39,
+        "norm": 5.56,
+        "any": 5.56
+      },
+      "ambiguous_groups": 31
+    },
+    "family_disjoint": {
+      "pairs": 688,
+      "identical": {
+        "raw": 0,
+        "ws": 51,
+        "norm": 138,
+        "any": 138
+      },
+      "identical_pct": {
+        "raw": 0.0,
+        "ws": 7.41,
+        "norm": 20.06,
+        "any": 20.06
+      },
+      "ambiguous_groups": 36
+    },
+    "project_disjoint": {
+      "pairs": 1237,
+      "identical": {
+        "raw": 0,
+        "ws": 201,
+        "norm": 248,
+        "any": 248
+      },
+      "identical_pct": {
+        "raw": 0.0,
+        "ws": 16.25,
+        "norm": 20.05,
+        "any": 20.05
+      },
+      "ambiguous_groups": 106
+    },
+    "commit_disjoint": {
+      "pairs": 1515,
+      "identical": {
+        "raw": 0,
+        "ws": 32,
+        "norm": 121,
+        "any": 121
+      },
+      "identical_pct": {
+        "raw": 0.0,
+        "ws": 2.11,
+        "norm": 7.99,
+        "any": 7.99
+      },
+      "ambiguous_groups": 75
+    }
+  }
+}

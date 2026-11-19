@@ -1,0 +1,123 @@
+{
+  "arm": "commit_disjoint",
+  "model": "microsoft/codebert-base",
+  "seed": 2,
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "splitfile": "/root/autodl-tmp/diversevul_audit_splitfile_commitdisjoint_seed42.json",
+  "epochs": 15,
+  "lr": 1e-05,
+  "max_len": 512,
+  "class_weight": "balanced",
+  "batch_size": 16,
+  "n_train": 264775,
+  "n_valid": 32544,
+  "n_test": 33172,
+  "test": {
+    "pr_auc": 0.177,
+    "roc_auc": 0.7521,
+    "best_f1": 0.2534,
+    "best_f1_threshold": 0.2902,
+    "mcc": 0.2064,
+    "vd_s": 0.9508,
+    "positive_rate": 0.057,
+    "n": 33172
+  },
+  "length_only_floor": {
+    "pr_auc": 0.1413,
+    "roc_auc": 0.7116,
+    "best_f1": 0.2125,
+    "best_f1_threshold": 0.1139,
+    "mcc": 0.1579,
+    "vd_s": 0.9625,
+    "positive_rate": 0.057,
+    "n": 33172
+  },
+  "worst_family": {
+    "worst_family_pr_auc": 0.1667,
+    "worst_family_id": 9407,
+    "families_scored": 13,
+    "median_family_pr_auc": 0.4667
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6694,
+      "valid": {
+        "pr_auc": 0.1962,
+        "roc_auc": 0.7731,
+        "best_f1": 0.2835,
+        "best_f1_threshold": 0.1911,
+        "mcc": 0.2415,
+        "vd_s": 0.9508,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.6742,
+      "valid": {
+        "pr_auc": 0.2035,
+        "roc_auc": 0.7856,
+        "best_f1": 0.2975,
+        "best_f1_threshold": 0.2789,
+        "mcc": 0.2503,
+        "vd_s": 0.9628,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.6973,
+      "valid": {
+        "pr_auc": 0.2213,
+        "roc_auc": 0.7982,
+        "best_f1": 0.3068,
+        "best_f1_threshold": 0.3706,
+        "mcc": 0.2609,
+        "vd_s": 0.9518,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.7102,
+      "valid": {
+        "pr_auc": 0.2007,
+        "roc_auc": 0.7966,
+        "best_f1": 0.2927,
+        "best_f1_threshold": 0.5016,
+        "mcc": 0.246,
+        "vd_s": 0.9707,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.712,
+      "valid": {
+        "pr_auc": 0.2025,
+        "roc_auc": 0.7882,
+        "best_f1": 0.2876,
+        "best_f1_threshold": 0.0554,
+        "mcc": 0.2391,
+        "vd_s": 0.9555,
+        "positive_rate": 0.0587,
+        "n": 32544
+      }
+    }
+  ],
+  "runtime_seconds": 7407.6,
+  "resumed": false,
+  "epochs_run": 5,
+  "best_epoch": 3,
+  "max_epochs": 15,
+  "patience": 2,
+  "converged": true,
+  "selected_on": "valid pr_auc",
+  "preds_file": "codebert-base_commit_disjoint_seed2.preds.json.gz",
+  "best_weights_file": "codebert-base_commit_disjoint_seed2.best.pt"
+}

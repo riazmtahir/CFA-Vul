@@ -1,0 +1,82 @@
+{
+  "arm": "published",
+  "model": "microsoft/graphcodebert-base",
+  "seed": 1,
+  "data": "/root/autodl-tmp/data/devign/devign_all.jsonl",
+  "splitfile": null,
+  "epochs": 3,
+  "lr": 2e-05,
+  "max_len": 512,
+  "batch_size": 16,
+  "n_train": 21854,
+  "n_valid": 2732,
+  "n_test": 2732,
+  "test": {
+    "pr_auc": 0.7131,
+    "roc_auc": 0.7175,
+    "best_f1": 0.6756,
+    "best_f1_threshold": 0.2111,
+    "mcc": 0.2966,
+    "vd_s": 0.8335,
+    "positive_rate": 0.4594,
+    "n": 2732
+  },
+  "length_only_floor": {
+    "pr_auc": 0.465,
+    "roc_auc": 0.512,
+    "best_f1": 0.6302,
+    "best_f1_threshold": 0.3748,
+    "mcc": 0.0353,
+    "vd_s": 0.9952,
+    "positive_rate": 0.4594,
+    "n": 2732
+  },
+  "worst_family": null,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6713,
+      "valid": {
+        "pr_auc": 0.6575,
+        "roc_auc": 0.685,
+        "best_f1": 0.6381,
+        "best_f1_threshold": 0.3173,
+        "mcc": 0.234,
+        "vd_s": 0.8349,
+        "positive_rate": 0.4345,
+        "n": 2732
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5996,
+      "valid": {
+        "pr_auc": 0.7044,
+        "roc_auc": 0.7276,
+        "best_f1": 0.6599,
+        "best_f1_threshold": 0.2087,
+        "mcc": 0.3013,
+        "vd_s": 0.8012,
+        "positive_rate": 0.4345,
+        "n": 2732
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5326,
+      "valid": {
+        "pr_auc": 0.7208,
+        "roc_auc": 0.7358,
+        "best_f1": 0.6576,
+        "best_f1_threshold": 0.1396,
+        "mcc": 0.2939,
+        "vd_s": 0.7877,
+        "positive_rate": 0.4345,
+        "n": 2732
+      }
+    }
+  ],
+  "runtime_seconds": 437.5,
+  "resumed": false,
+  "selected_on": "valid pr_auc"
+}

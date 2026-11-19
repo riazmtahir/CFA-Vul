@@ -1,0 +1,8 @@
+m1 sensitivity (Devign) started 2026-11-12 08:59:48 CST
+code: 5793120 Citation rounds: printed published pages, Arp 2022 (md5 finetune_vd.py 2b19d4d5a3858e726de076668eea098a)
+gpu:  NVIDIA GeForce RTX 4090 D, 580.142
+lr:   5e-05 (read from /root/autodl-tmp/rq2_devign_final/graphcodebert-base_family_disjoint_seed2.json)
+split check: partition sizes equal the original run's n_train/n_valid/n_test
+c7500a1c53786550f049ea49639736d1  /root/autodl-tmp/devign_audit_families_theta0.7.json
+db0e586918d8977c4c58dd59beffcba1  /root/autodl-tmp/devign_audit_splitfile_theta0.7.json
+0cfb03e0e2b69332cb639202f9c2245c  /root/autodl-tmp/data/devign/devign_all.jsonl

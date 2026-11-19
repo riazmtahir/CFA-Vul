@@ -1,0 +1,11 @@
+phase 4b started 2026-10-22 06:46:07 CST
+code: 0936287 Amend H4b pre-registration (§13.8): size control drawn from non-clone training functions; borrowing limit in gate
+gpu:  NVIDIA GeForce RTX 4090 D, 595.71.05
+lr:   1e-05
+ba84d1def26d89f1b61cdd3b203fb8b7  /root/autodl-tmp/diversevul_audit_families_theta0.7.json
+55662742499879fd17bd18ce48062c34  /root/autodl-tmp/diversevul_audit_splitfile_commitdecon_seed42.json
+85c7cc23e1c32713c63cf92518ef1208  /root/autodl-tmp/diversevul_audit_splitfile_commitsizectrl_seed42.json
+004c0d09ddcf7fd3f4b99bfb9d975b8e  /root/autodl-tmp/direct_edges/diversevul_hr_direct_commit_disjoint_train_hits.json
+95e7d2e7431a171fdb42e01447a8a98e  /root/autodl-tmp/data/diversevul/diversevul.jsonl
+6b36115a137a9cea5e8731446febf682  /root/autodl-tmp/h4b_precheck.json
+91427369e825f5ae886b31b9d3b125f6  /root/autodl-tmp/h4_design.json

@@ -1,0 +1,337 @@
+{
+  "bcb_root": "$CFA_BCB_DIR",
+  "tousimcc_root": "$CFA_TOUSIMCC_SIM_DIR",
+  "pipeline": "clone_family_audit.normalize_tokens -> shingle_ids(k) -> jaccard_sorted",
+  "shingle_k": 5,
+  "vocabulary_size": 650,
+  "thresholds": [
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "mapping_check_type1_median": 1.0,
+  "band_check": {
+    "Strong Type-3 (ST3)": {
+      "band": [
+        0.7,
+        1.0
+      ],
+      "min": 0.7,
+      "max": 1.0,
+      "share_inside": 1.0
+    },
+    "Moderate Type-3 (MT3)": {
+      "band": [
+        0.5,
+        0.7
+      ],
+      "min": 0.5,
+      "max": 0.6992,
+      "share_inside": 1.0
+    },
+    "Weak Type-3 / Type-4": {
+      "band": [
+        0.0,
+        0.5
+      ],
+      "min": 0.0014,
+      "max": 0.4953,
+      "share_inside": 1.0
+    }
+  },
+  "categories": [
+    {
+      "category": "Type-1 exact",
+      "n": 48116,
+      "mean": 1.0,
+      "p10": 1.0,
+      "p25": 1.0,
+      "median": 1.0,
+      "p75": 1.0,
+      "capture": {
+        "0.60": 0.9999,
+        "0.70": 0.9999,
+        "0.80": 0.9999,
+        "0.90": 0.9999
+      },
+      "tousimcc_capture": {
+        "0.60": 0.9999,
+        "0.70": 0.9999,
+        "0.80": 0.9999,
+        "0.90": 0.9999
+      },
+      "tousimcc_n": 48111,
+      "pairwise_vs_tousimcc": {
+        "n_matched": 48111,
+        "median_diff_ours_minus_tousimcc": 0.0,
+        "mean_diff": -0.0,
+        "pearson_r": 0.9996,
+        "decision_agreement": {
+          "0.60": 1.0,
+          "0.70": 1.0,
+          "0.80": 1.0,
+          "0.90": 1.0
+        }
+      }
+    },
+    {
+      "category": "Type-2 renamed",
+      "n": 4234,
+      "mean": 0.997,
+      "p10": 1.0,
+      "p25": 1.0,
+      "median": 1.0,
+      "p75": 1.0,
+      "capture": {
+        "0.60": 0.9976,
+        "0.70": 0.9962,
+        "0.80": 0.9953,
+        "0.90": 0.9913
+      },
+      "tousimcc_capture": {
+        "0.60": 1.0,
+        "0.70": 1.0,
+        "0.80": 1.0,
+        "0.90": 0.9991
+      },
+      "tousimcc_n": 4232,
+      "pairwise_vs_tousimcc": {
+        "n_matched": 4232,
+        "median_diff_ours_minus_tousimcc": 0.0,
+        "mean_diff": 0.0032,
+        "pearson_r": 0.1135,
+        "decision_agreement": {
+          "0.60": 0.9976,
+          "0.70": 0.9962,
+          "0.80": 0.9953,
+          "0.90": 0.9917
+        }
+      }
+    },
+    {
+      "category": "Strong Type-3 (ST3)",
+      "n": 21395,
+      "mean": 0.422,
+      "p10": 0.046,
+      "p25": 0.091,
+      "median": 0.326,
+      "p75": 0.781,
+      "capture": {
+        "0.60": 0.345,
+        "0.70": 0.2999,
+        "0.80": 0.2251,
+        "0.90": 0.1562
+      },
+      "tousimcc_capture": {
+        "0.60": 0.9999,
+        "0.70": 0.99,
+        "0.80": 0.9009,
+        "0.90": 0.4926
+      },
+      "tousimcc_n": 21385,
+      "pairwise_vs_tousimcc": {
+        "n_matched": 21385,
+        "median_diff_ours_minus_tousimcc": -0.5595,
+        "mean_diff": -0.4728,
+        "pearson_r": 0.4193,
+        "decision_agreement": {
+          "0.60": 0.3453,
+          "0.70": 0.3069,
+          "0.80": 0.32,
+          "0.90": 0.6432
+        }
+      }
+    },
+    {
+      "category": "  of which VST3 (BCB sim >= 0.9)",
+      "n": 4577,
+      "mean": 0.638,
+      "p10": 0.089,
+      "p25": 0.231,
+      "median": 0.803,
+      "p75": 0.976,
+      "capture": {
+        "0.60": 0.5949,
+        "0.70": 0.5733,
+        "0.80": 0.5014,
+        "0.90": 0.4385
+      },
+      "tousimcc_capture_matched_pairs": {
+        "0.60": 1.0,
+        "0.70": 1.0,
+        "0.80": 1.0,
+        "0.90": 0.9703
+      },
+      "tousimcc_n_matched": 4573
+    },
+    {
+      "category": "  of which ST3 proper (BCB sim 0.7-0.9)",
+      "n": 16818,
+      "mean": 0.363,
+      "p10": 0.042,
+      "p25": 0.081,
+      "median": 0.217,
+      "p75": 0.633,
+      "capture": {
+        "0.60": 0.277,
+        "0.70": 0.2255,
+        "0.80": 0.1499,
+        "0.90": 0.0793
+      },
+      "tousimcc_capture_matched_pairs": {
+        "0.60": 0.9998,
+        "0.70": 0.9873,
+        "0.80": 0.874,
+        "0.90": 0.3627
+      },
+      "tousimcc_n_matched": 16812
+    },
+    {
+      "category": "Moderate Type-3 (MT3)",
+      "n": 86341,
+      "mean": 0.087,
+      "p10": 0.013,
+      "p25": 0.026,
+      "median": 0.05,
+      "p75": 0.102,
+      "capture": {
+        "0.60": 0.0073,
+        "0.70": 0.0033,
+        "0.80": 0.0002,
+        "0.90": 0.0001
+      },
+      "tousimcc_capture": {
+        "0.60": 0.9282,
+        "0.70": 0.6715,
+        "0.80": 0.243,
+        "0.90": 0.0209
+      },
+      "tousimcc_n": 86125,
+      "pairwise_vs_tousimcc": {
+        "n_matched": 86125,
+        "median_diff_ours_minus_tousimcc": -0.6657,
+        "mean_diff": -0.6486,
+        "pearson_r": 0.2034,
+        "decision_agreement": {
+          "0.60": 0.0792,
+          "0.70": 0.3316,
+          "0.80": 0.7571,
+          "0.90": 0.979
+        }
+      }
+    },
+    {
+      "category": "Weak Type-3 / Type-4",
+      "n": 109914,
+      "mean": 0.014,
+      "p10": 0.0,
+      "p25": 0.003,
+      "median": 0.008,
+      "p75": 0.016,
+      "capture": {
+        "0.60": 0.0,
+        "0.70": 0.0,
+        "0.80": 0.0,
+        "0.90": 0.0
+      },
+      "tousimcc_capture": {
+        "0.60": 0.2233,
+        "0.70": 0.0659,
+        "0.80": 0.005,
+        "0.90": 0.0001
+      },
+      "tousimcc_n": 109773,
+      "pairwise_vs_tousimcc": {
+        "n_matched": 109773,
+        "median_diff_ours_minus_tousimcc": -0.4181,
+        "mean_diff": -0.4091,
+        "pearson_r": 0.2583,
+        "decision_agreement": {
+          "0.60": 0.7767,
+          "0.70": 0.9341,
+          "0.80": 0.995,
+          "0.90": 0.9999
+        }
+      }
+    },
+    {
+      "category": "non-clone",
+      "n": 279032,
+      "mean": 0.008,
+      "p10": 0.0,
+      "p25": 0.0,
+      "median": 0.003,
+      "p75": 0.01,
+      "capture": {
+        "0.60": 0.0,
+        "0.70": 0.0,
+        "0.80": 0.0,
+        "0.90": 0.0
+      },
+      "tousimcc_capture": {
+        "0.60": 0.1289,
+        "0.70": 0.0323,
+        "0.80": 0.0028,
+        "0.90": 0.0001
+      },
+      "tousimcc_n": 278846,
+      "pairwise_vs_tousimcc": {
+        "n_matched": 278846,
+        "median_diff_ours_minus_tousimcc": -0.3333,
+        "mean_diff": -0.3454,
+        "pearson_r": 0.2651,
+        "decision_agreement": {
+          "0.60": 0.8711,
+          "0.70": 0.9677,
+          "0.80": 0.9972,
+          "0.90": 0.9999
+        }
+      }
+    }
+  ],
+  "parse_diagnostics": {
+    "Type-1 exact": {
+      "pairs_in_file": 48116,
+      "bad_rows": 0,
+      "missing_source": 0,
+      "empty_shingles": 0,
+      "usable": 48116
+    },
+    "Type-2 renamed": {
+      "pairs_in_file": 4234,
+      "bad_rows": 0,
+      "missing_source": 0,
+      "empty_shingles": 0,
+      "usable": 4234
+    },
+    "Strong Type-3 (ST3)": {
+      "pairs_in_file": 21395,
+      "bad_rows": 0,
+      "missing_source": 0,
+      "empty_shingles": 0,
+      "usable": 21395
+    },
+    "Moderate Type-3 (MT3)": {
+      "pairs_in_file": 86341,
+      "bad_rows": 0,
+      "missing_source": 0,
+      "empty_shingles": 0,
+      "usable": 86341
+    },
+    "Weak Type-3 / Type-4": {
+      "pairs_in_file": 109914,
+      "bad_rows": 0,
+      "missing_source": 0,
+      "empty_shingles": 15,
+      "usable": 109914
+    },
+    "non-clone": {
+      "pairs_in_file": 279033,
+      "bad_rows": 1,
+      "missing_source": 0,
+      "empty_shingles": 14,
+      "usable": 279032
+    }
+  }
+}

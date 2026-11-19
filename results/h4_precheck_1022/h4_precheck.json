@@ -1,0 +1,104 @@
+{
+  "note": "H4 pre-check (RESEARCH_PLAN \u00a713.7); written before any H4 run",
+  "limits": {
+    "size_rel": 0.02,
+    "pos_rate_abs": 0.003,
+    "largest_group_pct": 15.0
+  },
+  "n_functions": 330491,
+  "groups": 753,
+  "largest_group": 321171,
+  "largest_group_pct": 97.17995346318054,
+  "top10_group_sizes": [
+    321171,
+    223,
+    139,
+    120,
+    93,
+    92,
+    80,
+    78,
+    78,
+    74
+  ],
+  "splits": {
+    "commit_hrfamily_disjoint": {
+      "partitions": {
+        "train": {
+          "functions": 321171,
+          "pos_rate": 0.0543230864555019,
+          "mean_chars": 1286.8866086913201
+        },
+        "valid": {
+          "functions": 4885,
+          "pos_rate": 0.15291709314227225,
+          "mean_chars": 2035.9132036847493
+        },
+        "test": {
+          "functions": 4435,
+          "pos_rate": 0.16933483652762119,
+          "mean_chars": 2472.163472378805
+        }
+      },
+      "test_sharing_a_commit_with_train": 0,
+      "test_with_own_twin_in_train": 0,
+      "hr_family_leak": {
+        "any": 0,
+        "any_pct": 0.0,
+        "croft_def": 0,
+        "croft_def_pct": 0.0
+      },
+      "strict_family_leak": {
+        "any": 3,
+        "any_pct": 0.06764374295377677,
+        "croft_def": 2,
+        "croft_def_pct": 0.04509582863585118
+      },
+      "length_floor_pr_auc": 0.2824663193735105
+    },
+    "commit_disjoint": {
+      "partitions": {
+        "train": {
+          "functions": 264775,
+          "pos_rate": 0.057199509017089985,
+          "mean_chars": 1325.132308563875
+        },
+        "valid": {
+          "functions": 32544,
+          "pos_rate": 0.05865904621435595,
+          "mean_chars": 1292.4275442477876
+        },
+        "test": {
+          "functions": 33172,
+          "pos_rate": 0.05700590859761245,
+          "mean_chars": 1244.9496864825758
+        }
+      },
+      "test_sharing_a_commit_with_train": 0,
+      "test_with_own_twin_in_train": 0,
+      "hr_family_leak": {
+        "any": 12733,
+        "any_pct": 38.38478234655734,
+        "croft_def": 12276,
+        "croft_def_pct": 37.00711443385988
+      },
+      "strict_family_leak": {
+        "any": 5680,
+        "any_pct": 17.122874713613893,
+        "croft_def": 5446,
+        "croft_def_pct": 16.417460508862895
+      },
+      "length_floor_pr_auc": 0.1412559167248602
+    }
+  },
+  "fails": [
+    "train size 321,171 vs 264,775 (21.30% > 2%)",
+    "valid size 4,885 vs 32,544 (84.99% > 2%)",
+    "valid positive rate 0.1529 vs 0.0587 (> 0.003)",
+    "test size 4,435 vs 33,172 (86.63% > 2%)",
+    "test positive rate 0.1693 vs 0.0570 (> 0.003)",
+    "strict family leak: 3 test functions (must be 0)",
+    "largest group 321,171 functions = 97.18% of corpus (> 15%)"
+  ],
+  "verdict": "FAIL"
+}

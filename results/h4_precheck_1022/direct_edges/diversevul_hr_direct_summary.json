@@ -1,0 +1,91 @@
+{
+  "criterion": {
+    "rename": "blind",
+    "shingle_k": 3,
+    "theta": 0.7,
+    "perms": 128,
+    "bands": 16,
+    "exhaustive": false,
+    "lsh_pair_prob_at_theta": 0.613
+  },
+  "n_functions": 330491,
+  "n_representatives": 284746,
+  "splits": {
+    "published": {
+      "n_test": 33050,
+      "n_test_pos": 1931,
+      "direct_leaked_test": 18658,
+      "direct_leaked_test_pct": 56.45,
+      "direct_leaked_test_pos": 1631,
+      "direct_leaked_test_pos_pct": 84.46,
+      "n_train": 264392,
+      "train_hit": 60535,
+      "train_hit_pct": 22.9,
+      "train_hit_pos": 3724,
+      "train_pos": 15145,
+      "rep_edges": 90824,
+      "mixed_representatives": 5049
+    },
+    "random_control": {
+      "n_test": 33172,
+      "n_test_pos": 1901,
+      "direct_leaked_test": 18651,
+      "direct_leaked_test_pct": 56.23,
+      "direct_leaked_test_pos": 1588,
+      "direct_leaked_test_pos_pct": 83.53,
+      "n_train": 264775,
+      "train_hit": 60938,
+      "train_hit_pct": 23.02,
+      "train_hit_pos": 3820,
+      "train_pos": 15178,
+      "rep_edges": 90216,
+      "mixed_representatives": 5044
+    },
+    "family_disjoint": {
+      "n_test": 33172,
+      "n_test_pos": 1891,
+      "direct_leaked_test": 14884,
+      "direct_leaked_test_pct": 44.87,
+      "direct_leaked_test_pos": 1129,
+      "direct_leaked_test_pos_pct": 59.7,
+      "n_train": 264775,
+      "train_hit": 38630,
+      "train_hit_pct": 14.59,
+      "train_hit_pos": 2359,
+      "train_pos": 15145,
+      "rep_edges": 60936,
+      "mixed_representatives": 312
+    },
+    "project_disjoint": {
+      "n_test": 33165,
+      "n_test_pos": 1891,
+      "direct_leaked_test": 5481,
+      "direct_leaked_test_pct": 16.53,
+      "direct_leaked_test_pos": 130,
+      "direct_leaked_test_pos_pct": 6.87,
+      "n_train": 264793,
+      "train_hit": 19199,
+      "train_hit_pct": 7.25,
+      "train_hit_pos": 359,
+      "train_pos": 15145,
+      "rep_edges": 26578,
+      "mixed_representatives": 603
+    },
+    "commit_disjoint": {
+      "n_test": 33172,
+      "n_test_pos": 1891,
+      "direct_leaked_test": 12324,
+      "direct_leaked_test_pct": 37.15,
+      "direct_leaked_test_pos": 764,
+      "direct_leaked_test_pos_pct": 40.4,
+      "n_train": 264775,
+      "train_hit": 35192,
+      "train_hit_pct": 13.29,
+      "train_hit_pos": 1646,
+      "train_pos": 15145,
+      "rep_edges": 58227,
+      "mixed_representatives": 2274
+    }
+  },
+  "runtime_seconds": 357.6
+}

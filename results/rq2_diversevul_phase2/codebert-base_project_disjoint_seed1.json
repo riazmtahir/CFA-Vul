@@ -1,0 +1,95 @@
+{
+  "arm": "project_disjoint",
+  "model": "microsoft/codebert-base",
+  "seed": 1,
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "splitfile": "/root/autodl-tmp/diversevul_audit_splitfile_projectdisjoint_seed42.json",
+  "epochs": 15,
+  "lr": 1e-05,
+  "max_len": 512,
+  "class_weight": "balanced",
+  "batch_size": 16,
+  "n_train": 264793,
+  "n_valid": 32533,
+  "n_test": 33165,
+  "test": {
+    "pr_auc": 0.1484,
+    "roc_auc": 0.7393,
+    "best_f1": 0.227,
+    "best_f1_threshold": 0.3663,
+    "mcc": 0.1813,
+    "vd_s": 0.9677,
+    "positive_rate": 0.057,
+    "n": 33165
+  },
+  "length_only_floor": {
+    "pr_auc": 0.1444,
+    "roc_auc": 0.7273,
+    "best_f1": 0.22,
+    "best_f1_threshold": 0.1078,
+    "mcc": 0.1676,
+    "vd_s": 0.963,
+    "positive_rate": 0.057,
+    "n": 33165
+  },
+  "worst_family": {
+    "worst_family_pr_auc": 0.0556,
+    "worst_family_id": 5047,
+    "families_scored": 21,
+    "median_family_pr_auc": 0.5
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6545,
+      "valid": {
+        "pr_auc": 0.1917,
+        "roc_auc": 0.7504,
+        "best_f1": 0.2701,
+        "best_f1_threshold": 0.5451,
+        "mcc": 0.2204,
+        "vd_s": 0.956,
+        "positive_rate": 0.0587,
+        "n": 32533
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.6778,
+      "valid": {
+        "pr_auc": 0.168,
+        "roc_auc": 0.7436,
+        "best_f1": 0.2518,
+        "best_f1_threshold": 0.5771,
+        "mcc": 0.1999,
+        "vd_s": 0.9806,
+        "positive_rate": 0.0587,
+        "n": 32533
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.6973,
+      "valid": {
+        "pr_auc": 0.1683,
+        "roc_auc": 0.729,
+        "best_f1": 0.2462,
+        "best_f1_threshold": 0.4364,
+        "mcc": 0.1937,
+        "vd_s": 0.9654,
+        "positive_rate": 0.0587,
+        "n": 32533
+      }
+    }
+  ],
+  "runtime_seconds": 4522.0,
+  "resumed": false,
+  "epochs_run": 3,
+  "best_epoch": 1,
+  "max_epochs": 15,
+  "patience": 2,
+  "converged": true,
+  "selected_on": "valid pr_auc",
+  "preds_file": "codebert-base_project_disjoint_seed1.preds.json.gz",
+  "best_weights_file": "codebert-base_project_disjoint_seed1.best.pt"
+}

@@ -1,0 +1,92 @@
+{
+  "arm": "published",
+  "model": "microsoft/codebert-base",
+  "seed": 2,
+  "data": "/root/autodl-tmp/data/diversevul/diversevul.jsonl",
+  "splitfile": null,
+  "epochs": 3,
+  "lr": 2e-05,
+  "max_len": 512,
+  "batch_size": 16,
+  "n_train": 264392,
+  "n_valid": 33049,
+  "n_test": 33050,
+  "test": {
+    "pr_auc": 0.2516,
+    "roc_auc": 0.7984,
+    "best_f1": 0.3073,
+    "best_f1_threshold": 0.0841,
+    "mcc": 0.2608,
+    "vd_s": 0.9254,
+    "positive_rate": 0.0584,
+    "n": 33050
+  },
+  "length_only_floor": {
+    "pr_auc": 0.1559,
+    "roc_auc": 0.7233,
+    "best_f1": 0.2341,
+    "best_f1_threshold": 0.1159,
+    "mcc": 0.1805,
+    "vd_s": 0.9658,
+    "positive_rate": 0.0584,
+    "n": 33050
+  },
+  "worst_family": {
+    "worst_family_pr_auc": 0.2,
+    "worst_family_id": 303,
+    "families_scored": 9,
+    "median_family_pr_auc": 1.0
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.2114,
+      "valid": {
+        "pr_auc": 0.2313,
+        "roc_auc": 0.7852,
+        "best_f1": 0.2966,
+        "best_f1_threshold": 0.1022,
+        "mcc": 0.2513,
+        "vd_s": 0.9272,
+        "positive_rate": 0.0566,
+        "n": 33049
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.1994,
+      "valid": {
+        "pr_auc": 0.246,
+        "roc_auc": 0.7929,
+        "best_f1": 0.3111,
+        "best_f1_threshold": 0.1262,
+        "mcc": 0.2667,
+        "vd_s": 0.9208,
+        "positive_rate": 0.0566,
+        "n": 33049
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.1846,
+      "valid": {
+        "pr_auc": 0.25,
+        "roc_auc": 0.805,
+        "best_f1": 0.3232,
+        "best_f1_threshold": 0.0794,
+        "mcc": 0.2805,
+        "vd_s": 0.9326,
+        "positive_rate": 0.0566,
+        "n": 33049
+      }
+    }
+  ],
+  "runtime_seconds": 4356.5,
+  "resumed": false,
+  "epochs_run": 3,
+  "best_epoch": 3,
+  "max_epochs": 3,
+  "patience": 0,
+  "converged": false,
+  "selected_on": "valid pr_auc"
+}
