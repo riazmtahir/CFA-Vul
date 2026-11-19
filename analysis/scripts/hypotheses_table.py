@@ -98,7 +98,7 @@ expect("H3 rel", 100 * eff["random_to_commit"]["relative_change_pr_auc"]["relati
 expect("H4b rel", 100 * h4bn["relative_change_pr_auc"], -14.5, 1)
 
 body = "\n".join(" & ".join(r[:5]) + " & " + r[5] + r" \\" for r in rows)
-tex = r"""\begin{table}[tbp]
+tex = r"""\begin{table}[!tbp]
 \centering
 \caption{Hypotheses and outcomes at a glance. H1--H4b: pre-specified hypotheses, whose decision rules
 were committed before the results they decide (Section~\ref{sec:design-prereg}). $\Delta$PR-AUC: paired change in test PR-AUC

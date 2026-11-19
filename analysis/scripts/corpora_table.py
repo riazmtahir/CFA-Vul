@@ -48,7 +48,7 @@ for c, (name, projects, source, role) in SPEC.items():
 if proj_dv != 800 or (pv["train"], pv["valid"], pv["test"]) != (633, 218, 222):
     fails.append(("projects", proj_dv, pv))
 
-tex = r"""\begin{table}[tbp]
+tex = r"""\begin{table}[!tbp]
 \centering
 \caption{Corpora. Vulnerable: share of functions labeled vulnerable. Projects: distinct projects;
 for PrimeVul per partition (train / validation / test); for Devign, its public part as reported

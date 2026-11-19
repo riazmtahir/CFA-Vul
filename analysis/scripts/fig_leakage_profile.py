@@ -67,7 +67,7 @@ fs.apply()
 # Two panels so the two denominators never share an axis (review item 50); every bar carries its value
 # (item 49). Drawn at print size (0.75 linewidth). Bars are measures, not splits: grey fills and a hatch;
 # each split on the x axis carries its figstyle marker in its colour under the label.
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(fs.MAIN_075, 4.3), sharex=True,
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(fs.MAIN_075, 3.9), sharex=True,
                                gridspec_kw={"height_ratios": [3, 1.6]})
 def bars(ax, measures, w):
     for j, (name, vals, color, hatch) in enumerate(measures):

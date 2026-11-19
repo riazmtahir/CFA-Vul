@@ -57,7 +57,7 @@ HR_ROWS = [
 body = "\n".join(f"{lab} & " + " & ".join(fn(c) for c, _ in CORPORA) + r" \\" for lab, fn in ROWS)
 body += "\n\\midrule\n\\multicolumn{4}{l}{\\emph{High-recall criterion (exploratory): leaked any / same-label (\\%)}} \\\\\n"
 body += "\n".join(f"{lab} & " + " & ".join(fn(c) for c, _ in CORPORA) + r" \\" for lab, fn in HR_ROWS)
-tab = r"""\begin{table}[tbp]
+tab = r"""\begin{table}[!tbp]
 \centering
 \caption{Clone-family audit at $\theta=0.7$ (Algorithm~\ref{alg:families}). Type-1/2 redundant:
 functions collapsed onto another function with the same Type-2 normal form (group size

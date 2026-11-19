@@ -100,7 +100,7 @@ _rep = json.load(open(os.path.join(ROOT, "results", "from_backup", "diversevul_a
 KNN_DV = [x for x in _rep["thresholds"] if abs(x["theta"] - 0.7) < 1e-9][0]["knn_retrieval_baseline"]["pr_auc"]
 rc13 = A["random_control_s1_3"]["pr_auc"]
 fd13 = A["family_disjoint_s1_3"]["pr_auc"]
-t1 = r"""\begin{table}[tbp]
+t1 = r"""\begin{table}[!tbp]
 \centering
 \caption{Test PR-AUC of CodeBERT on DiverseVul per split: mean (sample sd) over the training
 seeds. Published: the split released with the corpus (called the original split
@@ -141,7 +141,7 @@ for key, label, hyp in CONTRASTS:
     n = d["pr_auc"]["n"]
     lines.append(f"{label} & " + " & ".join(sgn(d[m]['mean']) for m, _ in METRICS) + r" \\")
     lines.append(f"\\quad {hyp}, $n={n}$ & " + " & ".join(ci(d[m]) for m, _ in METRICS) + r" \\[2pt]")
-t2 = r"""\begin{table}[tbp]
+t2 = r"""\begin{table}[!tbp]
 \centering
 \caption{Paired $\Delta$ (Eq.~\eqref{eq:paired}) with 95\% $t$-intervals below each mean.
 Second line: the analysis the contrast belongs to, the family contrast or a pre-specified hypothesis H

@@ -61,7 +61,7 @@ for corpus, arms in ARMS.items():
         rows.append(f"\\quad {label} & {int(p['n']):,} & {pct(p['same_commit'])} & {pct(p['opp_label'])} & "
                     f"{pct(p['own_twin'])} & {pct(p['own_twin_outside_family'])} & "
                     f"{pct(a['same_commit'])} & {pct(a['own_twin'])} \\\\")
-t3 = r"""\begin{table}[tbp]
+t3 = r"""\begin{table}[!tbp]
 \centering
 \caption{Commit-level exposure of test functions to training (descriptive audit, \%).
 $n$: test positives. Commit: a training function from the same commit. Opposite label: one with the opposite
@@ -97,7 +97,7 @@ for arm, label in (("random_control", "Random control"), ("family_disjoint", "Fa
         lines.append("\\quad\\quad $n$ / 95\\% CI & " + " & ".join(f"{g[k]['n']:,}" for k in LOCS) +
                      f" & [{sgn(c['raw_ci95'][0])}, {sgn(c['raw_ci95'][1])}]"
                      f" & [{sgn(c['std_ci95'][0])}, {sgn(c['std_ci95'][1])}] \\\\[2pt]")
-t4 = r"""\begin{table}[tbp]
+t4 = r"""\begin{table}[!tbp]
 \centering
 \caption{Exploratory counterpart effect on DiverseVul (not pre-specified). Test functions grouped
 by where their counterpart (Eq.~\eqref{eq:twin}) is: in training, only in validation or
