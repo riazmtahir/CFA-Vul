@@ -2,8 +2,7 @@
 
 The training runs read the split and family files listed below. Their MD5 checksums are those recorded at
 run time in the `provenance.txt` files under `results/` (Phase 2, Phase 3, Phase 4b and the M1 reruns).
-After you place a file here, check it with `md5sum splits/<file>` (Linux) or
-`Get-FileHash -Algorithm MD5 splits\<file>` (Windows).
+After you place the files here, check all of them with `python splits/check_splits.py`.
 
 | File | MD5 at run time | Used by |
 |---|---|---|
